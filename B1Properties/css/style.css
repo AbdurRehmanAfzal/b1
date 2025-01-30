@@ -666,6 +666,10 @@ h6, .h6 {
   gap: 2px !important;
 }
 
+.gap5 {
+  gap: 5px !important;
+}
+
 .gap6 {
   gap: 6px !important;
 }
@@ -9523,11 +9527,11 @@ body::-webkit-scrollbar {
 .flat-cities .inner.style-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px 5px;
+  gap: 5px 5px;
   grid-template-areas: "aa bb cc" "aa dd ee";
 }
 .flat-cities .inner.style-1 .cities-item img {
-  height: 320px;
+  height: 333px;
 }
 .flat-cities .inner.style-1 .cities-item.item-1 img {
   height: 670px;
@@ -9641,7 +9645,7 @@ body::-webkit-scrollbar {
 
 .best-properties .inner {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
   gap: 5px 5px;
   grid-template-rows: auto;
   grid-template-areas: "aa aa dd dd" "bb cc dd dd";
