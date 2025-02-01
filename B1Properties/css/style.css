@@ -217,7 +217,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   font-weight: 400;
   color: var(--Text);
   -webkit-font-smoothing: antialiased;
@@ -235,7 +235,7 @@ img {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 28px;
@@ -543,7 +543,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Quotesa", sans-serif;
+  font-family: "PlayfairDisplay-Regular", sans-serif;
   color: var(--Secondary);
   margin: 0;
   font-weight: 600;
@@ -966,8 +966,8 @@ a:hover, a:focus {
   margin-right: -14px !important;
 }
 .cl-container .row > * {
-  padding-left: 14px !important;
-  padding-right: 14px !important;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
 }
 .cl-container.full {
   width: 100%;
@@ -3502,12 +3502,12 @@ ul.grid-tags li a:hover {
   left: -21px;
 }
 .ft-download.style-1 li a .app div:first-child {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   font-size: 12px;
   color: var(--Fourth);
 }
 .ft-download.style-1 li a .app div:last-child {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   font-size: 15px;
   color: var(--Fourth);
 }
@@ -3557,7 +3557,7 @@ ul.grid-tags li a:hover {
   padding: 4px 25px;
   border-radius: 60px;
   background-color: rgba(255, 255, 255, 0.1019607843);
-  font-family: "DM Sans", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 28px;
@@ -3565,7 +3565,7 @@ ul.grid-tags li a:hover {
   margin-bottom: 25px;
 }
 .download-app .content-right .heading {
-  font-family: "DM Sans", sans-serif;
+  font-family: "PlayfairDisplay-Regular", sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 42px;
@@ -3573,7 +3573,7 @@ ul.grid-tags li a:hover {
   margin-bottom: 35px;
 }
 .download-app .content-right p {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   color: var(--White);
   margin-bottom: 35px;
 }
@@ -4185,7 +4185,7 @@ ul.grid-tags li a:hover {
   align-items: center;
   justify-content: center;
   color: var(--White);
-  font-family: "Jost";
+  font-family: "Lora-Regular";
   font-size: 8px;
   font-weight: 700;
   line-height: 12px;
@@ -6794,7 +6794,7 @@ ul.grid-tags li a:hover {
 .progress-wrap::after {
   position: absolute;
   content: "\ea3a";
-  font-family: "icomoon";
+  font-family: "Lora-Regular";
   text-align: center;
   line-height: 50px;
   font-size: 16px;
@@ -7847,7 +7847,7 @@ form input[type=color] {
   width: 100%;
   padding: 12px 18px;
   font-size: 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   font-weight: 400;
   line-height: 28px;
   background-color: var(--White);
@@ -7872,7 +7872,7 @@ form input[type=url]::placeholder,
 form input[type=search]::placeholder,
 form input[type=tel]::placeholder,
 form input[type=color]::placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 28px;
@@ -8072,7 +8072,7 @@ form input[type=reset],
 form input[type=submit] {
   padding: 14px 22px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora-Regular", sans-serif;
   font-weight: 400;
   line-height: 20px;
   background-color: var(--White);
@@ -13090,7 +13090,7 @@ body::-webkit-scrollbar {
 .slider-homes {
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 40px;
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: -15px;
@@ -15357,4 +15357,12 @@ a {
 
 .call-btn:hover {
   background-color: #0056b3;
+}
+
+.p0{
+  padding: 0 !important;
+}
+
+.p5{
+  padding: 5px !important;
 }
