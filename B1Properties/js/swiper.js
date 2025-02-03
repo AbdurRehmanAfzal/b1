@@ -90,7 +90,7 @@ if($('div').hasClass("slider-testimonials")) {
 
 if($('div').hasClass("slider-testimonials-1")) {
     var swiper =  new Swiper(".slider-testimonials-1", {
-        spaceBetween: 28,
+        spaceBetween: 5,
         slidesPerView: 3,
         observer: true,
         observeParents: true,
@@ -145,7 +145,7 @@ if($('div').hasClass("slider-brand")) {
 
 if($('div').hasClass("slider-featured")) {
     var swiper = new Swiper(".slider-featured", {
-        spaceBetween: 28,
+        spaceBetween: 5,
         slidesPerView: 'auto',
         observer: true,
         observeParents: true,
@@ -282,7 +282,7 @@ if($('div').hasClass("slider-3-center")) {
 
 if($('div').hasClass("slider-4-center")) {
     var swiper = new Swiper(".slider-4-center", {
-        spaceBetween: 28,
+        spaceBetween: 5,
         loop: true,
         observer: true,
         observeParents: true,
@@ -299,7 +299,7 @@ if($('div').hasClass("slider-4-center")) {
 
 if($('div').hasClass("slider-homes")) {
     var swiper =  new Swiper(".slider-homes", {
-        spaceBetween: 28,
+        spaceBetween: 5,
         slidesPerView: 3,
         observer: true,
         observeParents: true,
@@ -324,7 +324,7 @@ if($('div').hasClass("slider-homes")) {
 
 if($('div').hasClass("slider-news")) {
     var swiper =  new Swiper(".slider-news", {
-        spaceBetween: 28,
+        spaceBetween: 5,
         slidesPerView: 4,
         observer: true,
         observeParents: true,
@@ -371,7 +371,7 @@ if($('div').hasClass("slider-cities")) {
 
 if($('div').hasClass("slider-discover")) {
     var swiper =  new Swiper(".slider-discover", {
-        spaceBetween: 28,
+        spaceBetween: 5,
         slidesPerView: 3,
         observer: true,
         observeParents: true,
@@ -446,7 +446,7 @@ if($('div').hasClass("slider-cities-2")) {
 
 if($('div').hasClass("slider-recent-properties")) {
     var swiper =  new Swiper(".slider-recent-properties", {
-        spaceBetween: 28,
+        spaceBetween: 5,
         slidesPerView: 4,
         observer: true,
         observeParents: true,
