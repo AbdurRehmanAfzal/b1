@@ -1,13 +1,13 @@
 
 @font-face {
   font-family: "Lora-Regular";
-  src: url("/B1Properties/font/Lora/Lora-Regular.ttf") format("truetype");
+  src: url("/B1Properties/font/satoshi/Satoshi-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "PlayfairDisplay-Regular";
-  src: url("/B1Properties/font/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("truetype");
+  src: url("/B1Properties/font/satoshi/Satoshi-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

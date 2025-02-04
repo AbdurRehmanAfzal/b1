@@ -761,6 +761,9 @@ h6, .h6 {
 .mt-4 {
   margin-top: 4px !important;
 }
+.mt-5 {
+  margin-top: 5px !important;
+}
 
 .mt-10 {
   margin-top: 10px !important;
@@ -1041,7 +1044,7 @@ ul.breadcrumbs.style-1 li {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  margin-bottom: 29px;
+  margin-bottom: 5px;
 }
 .wg-blog .image {
   overflow: hidden;
@@ -1090,7 +1093,7 @@ ul.breadcrumbs.style-1 li {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  margin-bottom: 27px;
+  margin-bottom: 5px;
 }
 .wg-blog.style-row .image {
   width: 35.6%;
@@ -1189,6 +1192,7 @@ ul.breadcrumbs.style-1 li {
   justify-content: start;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 25px;
 }
 .wg-pagination li {
   min-width: 40px;
@@ -1781,6 +1785,7 @@ ul.list-text li::before {
   background-color: var(--White);
   padding-top: 10px;
 }
+
 .box-dream:hover {
   box-shadow: 0px 6px 15px 0px rgba(64, 79, 104, 0.0509803922);
 }
@@ -4481,10 +4486,9 @@ ul.grid-tags li a:hover {
   transition: all 0.3s ease;
 }
 .agents-item .image {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   flex-shrink: 0;
-  border-radius: 50%;
   overflow: hidden;
 }
 .agents-item .image img {
@@ -8574,13 +8578,13 @@ body::-webkit-scrollbar {
 }
 
 .main-content {
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
 }
 .main-content.pt-200 {
   padding-top: 200px;
 }
 .main-content.style-1 {
-  padding-bottom: 156px;
+  /* padding-bottom: 156px; */
 }
 .main-content.spacing-20 {
   padding: 20px;
@@ -10225,7 +10229,7 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 .property-grid-wrap > .box-dream {
-  max-width: 435px;
+  max-width: 455px;
 }
 .property-grid-wrap > .box-dream .image {
   margin: 0 9px;
@@ -10241,8 +10245,8 @@ body::-webkit-scrollbar {
 }
 .property-grid-wrap.type-2-cols {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 20px;
+  grid-template-columns: repeat(2, 0fr);
+  gap: 5px 5px;
 }
 
 .property-grid-wrap-v2 .top {
@@ -10467,7 +10471,7 @@ body::-webkit-scrollbar {
   padding: 31px 40px 38px 40px;
 }
 .property-single-wrap.v6 .content-wrap > *:not(:last-child) {
-  margin-bottom: 30px !important;
+  margin-bottom: 5px !important;
 }
 .property-single-wrap.v6 .content-wrap .overview h4 {
   margin-bottom: 33px;
@@ -10495,7 +10499,7 @@ body::-webkit-scrollbar {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -10547,7 +10551,7 @@ body::-webkit-scrollbar {
   background-color: var(--White);
 }
 .property-single-wrap.v7 .content-wrap > *:not(:last-child) {
-  margin-bottom: 30px !important;
+  margin-bottom: 5px !important;
 }
 .property-single-wrap.v7 .content-wrap .list-item {
   display: grid;
@@ -12430,8 +12434,7 @@ body::-webkit-scrollbar {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-left: 57px;
+  gap: 5px;
 }
 .sidebar .sidebar-title {
   font-weight: 500;
@@ -14352,8 +14355,8 @@ a {
     grid-template-areas: "aa aa" "aa aa" "dd dd" "dd dd" "dd dd" "bb cc" "bb cc" !important;
   }
   .agents-item .image {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
   }
   .property-list-wrap.v1 .form-sidebar-left {
     display: none;
@@ -15365,4 +15368,8 @@ a {
 
 .p5{
   padding: 5px !important;
+}
+
+.mr5{
+  margin-right: 5px !important;
 }
