@@ -935,7 +935,7 @@ h6, .h6 {
 -------------------------------------------------------------- */
 a {
   text-decoration: none;
-  color: var(--Secondary);
+  color: var(--White);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -7565,7 +7565,7 @@ ul.grid-tags li a:hover {
   padding: 18px 26px;
   border-radius: 12px;
   border: 0;
-  background: #e69b06;
+  background: #0D1317;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -9267,7 +9267,7 @@ body::-webkit-scrollbar {
   color: var(--White);
 }
 .account-bar.style-1 a {
-  color: var(--Fourth);
+  color: var(--white);
 }
 .account-bar.type-container {
   background-color: unset;
