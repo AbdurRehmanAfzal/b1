@@ -935,7 +935,7 @@ h6, .h6 {
 -------------------------------------------------------------- */
 a {
   text-decoration: none;
-  color: var(--White);
+  color: var(--Secondary);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -6730,7 +6730,7 @@ ul.grid-tags li a:hover {
   padding-top: 216px;
   padding-bottom: 229px;
   text-align: center;
-  background-image: url(../images/section/parallax-1.jpg);
+  background-image: url(../images/section/2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6861,9 +6861,9 @@ ul.grid-tags li a:hover {
   position: relative;
   z-index: 100;
 }
-#header_main .header-inner {
+/* #header_main .header-inner {
   padding: 20px 20px 0 20px !important;
-}
+} */
 #header_main .header-inner.background-white .header-inner-wrap {
   background-color: var(--White);
 }
@@ -6875,8 +6875,8 @@ ul.grid-tags li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid var(--Border);
-  border-radius: 24px;
+  /* border: 1px solid var(--Border); */
+  /* border-radius: 24px; */
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -7565,7 +7565,8 @@ ul.grid-tags li a:hover {
   padding: 18px 26px;
   border-radius: 12px;
   border: 0;
-  background: #0D1317;
+  color: var(--White);
+  background: #000;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -7768,6 +7769,22 @@ ul.grid-tags li a:hover {
 .tf-button-icon-before.style-1:hover i {
   color: var(--Third);
 }
+
+.tf-button-primary0 {
+  background: linear-gradient(45deg, black, gold);
+  color: white; /* Ensures text is readable */
+  border: none; /* Optional: Removes default border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+  text-decoration: none; /* Removes underline */
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+}
+
+.tf-button-primary0:hover {
+  background: linear-gradient(45deg, gold, black);
+}
+
 
 .tf-button-other {
   display: -webkit-box;
@@ -9267,7 +9284,7 @@ body::-webkit-scrollbar {
   color: var(--White);
 }
 .account-bar.style-1 a {
-  color: var(--white);
+  color: var(--Fourth);
 }
 .account-bar.type-container {
   background-color: unset;
@@ -9275,7 +9292,7 @@ body::-webkit-scrollbar {
   padding-bottom: 0;
 }
 .account-bar.type-container .wrap {
-  background-color: var(--Fourth);
+  background-color: var(--Secondary);
   padding-top: 91px;
   padding-bottom: 94px;
   border-radius: 16px;
