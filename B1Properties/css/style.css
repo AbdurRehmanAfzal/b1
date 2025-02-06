@@ -452,8 +452,12 @@ p > video {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgb(6 6 6 / 0%) 0%, rgb(2 6 12 / 30%) 61.39%, rgb(0 0 0 / 90%) 100%);
- 
+  background: linear-gradient(
+    180deg, 
+    rgb(6 6 6 / 80%) 0%,   /* Darker top */
+    rgba(255, 255, 255, 0.123) 60%, /* White/Light in the middle */
+    rgb(0 0 0 / 90%) 100%  /* Dark bottom */
+  );
   pointer-events: none; /* Ensures overlay does not interfere with clicks */
 }
 
@@ -1942,7 +1946,7 @@ ul.list-text li::before {
   font-weight: 600;
   font-size: 21px;
   line-height: 25px;
-  color: var(--Third);
+  color: var(--Primary);
 }
 .box-dream .content .location {
   display: -webkit-box;
@@ -6471,13 +6475,13 @@ ul.grid-tags li a:hover {
 }
 .slider.home10 .wrap-slider .counter {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 100px; /* Move it up slightly (adjust value as needed) */
+  right: 0; /* Position to the right */
   width: 100%;
   max-width: 960px;
   height: 150px;
-  border-radius: 0px 24px 0px 0px;
-  padding: 45px 102px 45px 260px;
+  border-radius: 0px 0px 0px 0px; /* Adjust border-radius */
+  padding: 45px 260px 45px 102px; /* Adjust padding */
   background-color: var(--Secondary);
   display: -webkit-box;
   display: -moz-box;
@@ -6486,6 +6490,8 @@ ul.grid-tags li a:hover {
   display: flex;
   justify-content: space-between;
 }
+
+
 .slider.home10 .wrap-slider .counter .number-counter div {
   font-size: 30px;
   font-weight: 500;
@@ -7453,7 +7459,7 @@ ul.grid-tags li a:hover {
   gap: 10px;
   padding: 10px 24px;
   border: 1px solid var(--Secondary);
-  border-radius: 120px;
+  border-radius: 12px;
   color: var(--Secondary);
   font-weight: 500;
   font-size: 16px;
@@ -7635,7 +7641,7 @@ ul.grid-tags li a:hover {
   background-color: #112e29;
 }
 .tf-button-primary.style-bg-white {
-  background-color: var(--Secondary);
+  background-color: var(--Border);
   border: 1px solid var(--Primary);
 
 }
@@ -10224,7 +10230,7 @@ body::-webkit-scrollbar {
 }
 
 .estate-agent {
-  background-color: rgb(249, 249, 249);
+  background-color: rgb(255, 255, 255);
 }
 .estate-agent .content-left {
   height: 100%;
