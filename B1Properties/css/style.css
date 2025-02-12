@@ -14794,7 +14794,7 @@ a {
     padding-bottom: 50px;
   }
   .luxury-home .image {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     max-width: unset !important;
   }
   .group-icon {
@@ -15163,7 +15163,7 @@ a {
     border-radius: 0 !important;
   }
   .slider .wrap-slider .slider-content {
-    padding: 156px 0 100px !important;
+    padding: 256px 0 100px !important;
   }
   .slider .wrap-slider .slider-content h1 {
     font-size: 32px;
@@ -15528,4 +15528,37 @@ a {
 
 .mr5{
   margin-right: 5px !important;
+}
+
+.f-button.is-prev{
+  overflow: hidden;
+}
+
+.f-button.is-next{
+  overflow: hidden;
+}
+
+.sticky-button {
+  display: none; 
+}
+
+@media (max-width: 1024px) {
+  .sticky-button {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; 
+      background: transparent;
+      padding: 10px;  
+  }
+
+  .sticky-button {
+      width: 100%;
+      margin: 0; 
+  }
+  .head-title{
+    padding: 15px;
+  }
 }

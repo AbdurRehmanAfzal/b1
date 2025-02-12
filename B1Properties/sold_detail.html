@@ -358,8 +358,8 @@
             <div class="main-content default">
 
                 <!-- slider -->
-                <section class="slider home7">
-                    <div class="swiper-container slider-home7 slider-effect-fade arrow-style-1 pagination-style-1">
+                <section class="slider home7" style="border-radius: 5px; overflow: hidden;"> 
+                    <div class="swiper-container auto-swiper slider-home7 slider-effect-fade arrow-style-1 pagination-style-1">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="wrap-slider">
@@ -445,9 +445,34 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="image wow fadeInLeft">
-                                    <img src="images/slider/original11.webp" alt="">
-                                    
+                                <div class="image wow fadeInLeft" style="border-radius: 5px; overflow: hidden;">
+                                    <!-- <img src="images/slider/original11.webp" alt=""> -->
+                                    <div class="swiper-container auto-swiper slider-home7 slider-effect-fade arrow-style-1 pagination-style-1">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="wrap-slider">
+                                                    <div class="image">
+                                                        <img src="images/slider/original11.webp" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="wrap-slider">
+                                                    <div class="image">
+                                                        <img src="images/slider/B1Sider/Exterior/2.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="wrap-slider">
+                                                    <div class="image">
+                                                        <img src="images/slider/B1Sider/Exterior/3.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -792,7 +817,18 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
+    <!-- <script src="js/swiper.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          new Swiper(".auto-swiper", {
+            loop: true,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+            },
+          });
+        });
+      </script>
     <script src="js/countto.js"></script>
     <script src="js/circletype.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFC3m2n0jBRFTMvUNZc0-6Y0Rzlcadzcw"></script>
