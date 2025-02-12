@@ -18,3 +18,9 @@
 *.woff
 *.woff2
 *.eot
+# Ignore all zip, pdf, doc, and webp files
+*.zip
+*.pdf
+*.doc
+*.docx
+*.webp
