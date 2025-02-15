@@ -4539,7 +4539,7 @@ ul.grid-tags li a:hover {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  align-items: center;.
+  align-items: center;
   justify-content: space-between;
   gap: 53px;
   color: var(--Secondary);
@@ -6444,7 +6444,7 @@ ul.grid-tags li a:hover {
 .slider.home9 .wrap-slider {
   position: relative;
   border-radius: 24px;
-  background-image: url(../images/slider/original6.webp);
+  background-image: url(../images/offplan/crestlane1/19.webp);
   background-attachment: fixed;
 }
 .slider.home9 .wrap-slider::before {
@@ -6487,7 +6487,7 @@ ul.grid-tags li a:hover {
 }
 .slider.home10 .wrap-slider {
   position: relative;
-  background-image: url(../images/slider/original1.webp);
+  background-image: url(../images/offplan/crestlane1/2.webp);
   background-attachment: fixed;
   height: 100vh;
 }
@@ -6532,7 +6532,7 @@ ul.grid-tags li a:hover {
 }
 .slider.home10 .wrap-slider .counter {
   position: absolute;
-  bottom: 100px; /* Move it up slightly (adjust value as needed) */
+  bottom: 160px; /* Move it up slightly (adjust value as needed) */
   right: 0; /* Position to the right */
   width: 100%;
   max-width: 960px;
@@ -15562,3 +15562,139 @@ a {
     padding: 15px;
   }
 }
+.flaticon-cinema-screen::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/cinema-screen.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-Cycling-Trails::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/Cycling-Trails.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-Fitness-Centre::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/Fitness-Centre.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-GREEN-PARKS::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/GREEN-PARKS.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-Jogging-Trails::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/Jogging-Trails.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-Kids-Play-Area:before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/Kids-Play-Area.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-property-location::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/property-location.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-property-sizes::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/property-sizes.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-Restaurants::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/Restaurants.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-Sports-Facilities::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/Sports-Facilities.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-starting-payment-plan::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/starting-payment-plan.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-starting-price::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/starting-price.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-Supermarket::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/Supermarket.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-Swimming-Pool::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/Swimming-Pool.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flaticon-water-featues::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Set width as needed */
+  height: 40px; /* Set height as needed */
+  background-image: url('../images/icon/water-featues.png'); /* Adjust the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
