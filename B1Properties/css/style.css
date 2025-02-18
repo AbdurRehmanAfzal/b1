@@ -15698,3 +15698,31 @@ a {
   background-repeat: no-repeat;
 }
 
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  width: 200px;
+  margin: 20px auto; /* Centers the QR container */
+  /* border: 2px solid #000; Placeholder border */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.qr-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #000000; /* Image border */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.verified-text {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+  font-size: 16px;
+  text-align: center; /* Ensures text is centered under the QR code */
+}
