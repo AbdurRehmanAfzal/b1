@@ -192,36 +192,37 @@
                         </div>
                         <div class="row justify-center">
                             <div class="col-xxl-8">
-                                <form class="form-send-message">
+                                <form class="form-send-message" action="send_email.php" method="post">
                                     <div class="cols">
                                         <fieldset class="name wow fadeInUp has-top-title">
-                                            <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="Ali" aria-required="true" required="">
+                                            <input type="text" placeholder="Name" name="name" required>
                                             <label for="">Name</label>
                                         </fieldset>
                                         <fieldset class="phone wow fadeInUp has-top-title">
-                                            <input type="number" placeholder="Phone" class="" name="phone" tabindex="2" value="" aria-required="true" required="">
+                                            <input type="number" placeholder="Phone" name="phone" required>
                                             <label for="">Phone</label>
                                         </fieldset>
                                     </div>
                                     <fieldset class="email wow fadeInUp has-top-title">
-                                        <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="hello@b1properties.ae" aria-required="true" required="">
+                                        <input type="email" placeholder="Email" name="email" required>
                                         <label for="">Email</label>
                                     </fieldset>
                                     <fieldset class="message wow fadeInUp has-top-title">
-                                        <textarea name="message" rows="4" placeholder="Your Message" class="" tabindex="2" aria-required="true" required="">Lorem Ipsum</textarea>
+                                        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
                                         <label for="">Your Message</label>
-                                  </fieldset>
-                                    <div class="checkbox-item wow fadeInUp">
+                                    </fieldset>
+                                    <!--<div class="checkbox-item wow fadeInUp">
                                         <label>
                                             <p>I consent to having this website store my submitted information</p>
-                                            <input type="checkbox">
+                                            <input type="checkbox" name="consent" required>
                                             <span class="btn-checkbox"></span>
                                         </label>
-                                    </div>
+                                    </div>-->
                                     <div class="button-submit wow fadeInUp">
-                                        <button class="tf-button-primary w-full" type="submit">Send Message<i class="icon-arrow-right-add"></i></button>
+                                        <button class="tf-button-primary w-full" type="submit">Send Message</button>
                                     </div>
                                 </form>
+                                
                             </div>
                         </div>
                     </div>

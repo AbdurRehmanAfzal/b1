@@ -541,26 +541,25 @@
                                     <div class="content-wrap">
                                         <div class="schedule">
                                             <h4 class="wow fadeInUp">Schedule a tour</h4>
-                                            <form class="form-schedule">
+                                            <form class="form-schedule" action="send_email_book_appointment.php" method="post">
                                                 <div class="cols">
                                                     <fieldset class="message">
                                                         <input type="date" name="date" value="2023-11-20">
                                                     </fieldset>
-                                                    <div class="nice-select" tabindex="0">
-                                                        <span class="current">Please Select Time</span>
-                                                        <ul class="list">    
-                                                            <li data-value class="option selected">6 AM</li>
-                                                            <li data-value="For Ren" class="option">12 AM</li>
-                                                            <li data-value="Sold" class="option">6 PM</li>
-                                                        </ul>
-                                                    </div>
+                                                    <fieldset class="message">
+                                                        <select name="time" required>
+                                                            <option value="6 AM">6 AM</option>
+                                                            <option value="12 PM">12 PM</option>
+                                                            <option value="6 PM">6 PM</option>
+                                                        </select>
+                                                    </fieldset> 
                                                 </div>
                                                 <div class="widget-tabs style-4">
-                                                    <ul class="widget-menu-tab">
-                                                        <li class="item-title active">
+                                                    <ul class="widget-menu-tab" style="justify-content: center;">
+                                                        <li class="item-title active" onclick="setAppointmentType('In Person')">
                                                             <span class="inner">In Person</span>
                                                         </li>
-                                                        <li class="item-title">
+                                                        <li class="item-title" onclick="setAppointmentType('Video Chat')">
                                                             <span class="inner">Video Chat</span>
                                                         </li>
                                                     </ul>
@@ -630,7 +629,7 @@
                                                 </div>
                                             </div>
                                             <div class="title wow fadeInUp">Enquire About This Property</div>
-                                            <form class="form-comment">
+                                            <form class="form-comment" action="send_email.php" method="post">
                                                 <div class="cols">
                                                     <fieldset class="name wow fadeInUp has-top-title">
                                                         <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="Ali Tufan" aria-required="true" required="">
@@ -646,14 +645,13 @@
                                                         <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
                                                         <label for="">Email</label>
                                                     </fieldset>
-                                                    <div class="nice-select wow fadeInUp" data-wow-delay="0.1s" tabindex="0">
-                                                        <span class="current">Please Select Time</span>
-                                                        <ul class="list">    
-                                                            <li data-value class="option selected">6 AM</li>
-                                                            <li data-value="For Ren" class="option">12 AM</li>
-                                                            <li data-value="Sold" class="option">6 PM</li>
-                                                        </ul>
-                                                    </div>
+                                                    <fieldset class="message">
+                                                        <select name="time" required>
+                                                            <option value="6 AM">6 AM</option>
+                                                            <option value="12 PM">12 PM</option>
+                                                            <option value="6 PM">6 PM</option>
+                                                        </select>
+                                                    </fieldset> 
                                                 </div>
                                                 <fieldset class="message wow fadeInUp has-top-title">
                                                     <textarea name="message" rows="4" placeholder="Message" class="" tabindex="2" aria-required="true" required="">Hello, I am interested in [Renovated apartment at last floor]</textarea>
@@ -986,6 +984,33 @@
      <script>
          new Mmenu(document.querySelector("#menu"));
      </script>
+     <script>
+        function setAppointmentType(type) {
+            document.getElementById('appointment_type').value = type;
+        }
+    </script>
+    <script>
+        document.querySelector(".form-send-message").addEventListener("submit", function(event) {
+            event.preventDefault();
+        
+            let formData = new FormData(this);
+        
+            fetch("send_email_book_appointment.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === "success") {
+                    alert("Appointment successfully booked!");
+                    this.reset();
+                } else {
+                    alert("There was an error. Please try again.");
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+        </script>
 
 </body>
 
