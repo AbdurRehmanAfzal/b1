@@ -9021,7 +9021,7 @@ body::-webkit-scrollbar {
 }
 
 .blog-single-wrap .image-head {
-  margin-bottom: 40px;
+  margin-bottom: 5px;
 }
 .blog-single-wrap .image-head img {
   width: 100%;
@@ -15726,3 +15726,31 @@ a {
   font-size: 16px;
   text-align: center; /* Ensures text is centered under the QR code */
 }
+  .whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #25D366; /* WhatsApp Green */
+    text-decoration: none;
+    border: 2px solid #25D366;
+    background: transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-button:hover {
+    background: #25D366;
+    color: white;
+  }
+
+  .whatsapp-button i {
+    font-size: 20px;
+    color: #25D366;
+  }
+
+  .whatsapp-button:hover i {
+    color: white;
+  }
