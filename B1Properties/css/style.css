@@ -15754,3 +15754,6 @@ a {
   .whatsapp-button:hover i {
     color: white;
   }
+  .features p {
+    font-weight: 600; /* Semi-bold */
+}
