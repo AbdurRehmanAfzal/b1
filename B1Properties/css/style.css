@@ -9390,7 +9390,7 @@ body::-webkit-scrollbar {
 .account-bar {
   padding-top: 91px;
   padding-bottom: 94px;
-  background-color: #FFF8F6;
+  background-color: #ffffff;
   border-radius: 24px;
 }
 .account-bar h3 {
@@ -15754,3 +15754,22 @@ a {
   .whatsapp-button:hover i {
     color: white;
   }
+  .features p {
+    font-weight: 600; /* Semi-bold */
+}
+.tf-button-primary1 {
+  border: 1px solid black;  /* Black border */
+  background-color: white;  /* White background */
+  color: black;  /* Black text */
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.tf-button-primary1:hover {
+  background-color: black;  /* Black background on hover */
+  color: white;  /* White text on hover */
+}
