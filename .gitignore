@@ -9,7 +9,6 @@
 *.svg
 *.webp
 *.ico
-*.psd
 *.eps
 # Ignore all font files
 *.otf
