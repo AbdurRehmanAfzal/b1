@@ -1,0 +1,8 @@
+/* Test case 1: Check if the --Text variable is defined */
+:root {
+  --Text: #3D3E3F;
+}
+
+body {
+  color: var(--Text);
+}
