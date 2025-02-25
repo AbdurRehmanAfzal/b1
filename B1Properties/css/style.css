@@ -6826,7 +6826,7 @@ ul.grid-tags li a:hover {
   padding-top: 216px;
   padding-bottom: 229px;
   text-align: center;
-  background-image: url(../images/section/2.jpg);
+  background-image: url(../images/palm.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6853,7 +6853,7 @@ ul.grid-tags li a:hover {
 }
 .parallax-wrap.style-1 {
   padding-bottom: 228px;
-  background-image: url(../images/section/parallax-2.jpg);
+  background-image: url(../images/palm.jpg);
 }
 .parallax-wrap.style-1::before {
   position: absolute;
@@ -9763,7 +9763,30 @@ body::-webkit-scrollbar {
 .exclusive-properties .inner .cities-item {
   margin-bottom: 0;
 }
+.exclusive-properties1 .inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 5px;
+}
 
+.exclusive-properties1 .inner .item-1 {
+  grid-area: auto;
+}
+.exclusive-properties1 .inner .item-2 {
+  grid-area: auto;
+}
+.exclusive-properties1 .inner .item-3 {
+  grid-area: auto;
+}
+.exclusive-properties1 .inner .item-4 {
+  grid-area: auto;
+}
+@media (max-width: 768px) {
+  .exclusive-properties1 .inner {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
 .choose-us {
   border-radius: 24px;
   background-color: var(--Primary);
