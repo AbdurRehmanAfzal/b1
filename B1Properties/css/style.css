@@ -3154,7 +3154,7 @@ ul.list-text li::before {
   position: relative;
   border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 23px;
+  margin-bottom: px;
 }
 .experts-item .image img {
   width: 100%;
@@ -6444,7 +6444,10 @@ ul.grid-tags li a:hover {
 .slider.home9 .wrap-slider {
   position: relative;
   border-radius: 24px;
-  background-image: url(../images/offplan/crestlane1/19.webp);
+  /* ../images/offplan/crestlane1/19.webp */
+  /* ../images/offplan/edenpark/1.webp */
+  /* ../images/offplan/dubai-hills/1.webp */
+  background-image: url(../images/offplan/palm-jebel-ali/6.webp);
   background-attachment: fixed;
 }
 .slider.home9 .wrap-slider::before {
@@ -6487,7 +6490,10 @@ ul.grid-tags li a:hover {
 }
 .slider.home10 .wrap-slider {
   position: relative;
-  background-image: url(../images/offplan/crestlane1/2.webp);
+  /* ../images/offplan/edenpark/2.webp */
+  /* (../images/offplan/crestlane1/2.webp */
+  /* ../images/offplan/dubai-hills/3.webp */
+  background-image: url(../images/offplan/palm-jebel-ali/2.webp);
   background-attachment: fixed;
   height: 100vh;
 }
@@ -6826,7 +6832,7 @@ ul.grid-tags li a:hover {
   padding-top: 216px;
   padding-bottom: 229px;
   text-align: center;
-  background-image: url(../images/palm.jpg);
+  background-image: url(../images/palmj.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6853,7 +6859,7 @@ ul.grid-tags li a:hover {
 }
 .parallax-wrap.style-1 {
   padding-bottom: 228px;
-  background-image: url(../images/palm.jpg);
+  background-image: url(../images/palmj.webp);
 }
 .parallax-wrap.style-1::before {
   position: absolute;
@@ -15795,4 +15801,48 @@ a {
 .tf-button-primary1:hover {
   background-color: black;  /* Black background on hover */
   color: white;  /* White text on hover */
+}
+.image-about {
+  width: 700px;
+  height: 600px;
+  overflow: hidden; /* Ensures no content overflows */
+  border-radius: 6px; /* Adjust the curve as needed */
+
+}
+
+.image-about img {
+  width: 100%; /* Makes the image fit the div width */
+  height: 100%; /* Makes the image stretch to fit */
+  object-fit: cover; /* Ensures the image maintains aspect ratio while filling the div */
+}
+@media (max-width: 768px) { /* Targets tablets and mobile */
+  .image-about {
+      width: 100%; /* Full width on smaller screens */
+      height: auto; /* Maintain aspect ratio */
+  }
+  
+  .image-about img {
+      height: auto;
+      object-fit: contain; /* Ensures the whole image is visible */
+      border-radius: 6px; /* Adjust the curve as needed */
+
+  }
+}
+.image-agent {
+  width: 100%;
+  height: 200px; /* Adjust as needed */
+  overflow: hidden;
+}
+.image-agent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-head1 img{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }

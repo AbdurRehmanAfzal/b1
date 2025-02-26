@@ -1,0 +1,25 @@
+# Ignore all image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.svg
+*.webp
+*.ico
+*.psd
+*.eps
+# Ignore all font files
+*.otf
+*.ttf
+*.woff
+*.woff2
+*.eot
+# Ignore all zip, pdf, doc, and webp files
+*.zip
+*.pdf
+*.doc
+*.docx
+*.webp
