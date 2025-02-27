@@ -5645,7 +5645,7 @@ ul.grid-tags li a:hover {
   padding-top: 90px;
   padding-bottom: 101px;
   border-radius: 24px;
-  background-color: #F9F9F9;
+  background-color: #ffffff;
 }
 .flat-title.page-property-grid-3 .content .breadcrumbs {
   margin-bottom: 23px;
@@ -14535,7 +14535,7 @@ a {
     grid-template-areas: "aa bb" "cc dd" "ee ff";
   }
   .best-properties .inner {
-    gap: 10px !important;
+    gap: 5px !important;
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-areas: "aa aa" "aa aa" "dd dd" "dd dd" "dd dd" "bb cc" "bb cc" !important;
   }
