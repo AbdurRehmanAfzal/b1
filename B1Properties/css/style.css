@@ -4,7 +4,7 @@
   --Primary: #8F5F00;
   --Secondary: #1A1A1A;
   --Third: #EB664E;
-  --Fourth: #1F4B43;
+  --Fourth: #8F5F00;
   --Border: #EBEBEB;
 }
 
@@ -10327,7 +10327,7 @@ body::-webkit-scrollbar {
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 .estate-agent .content-left h2 {
@@ -15845,4 +15845,50 @@ a {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+/* Main dropdown styling */
+.main-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+.main-dropdown li {
+  position: relative;
+}
+
+.main-dropdown li a {
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.main-dropdown li:hover > a {
+  background-color: #f5f5f5;
+}
+
+/* Sub-dropdown styling */
+.sub-dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  min-width: 200px;
+  border-radius: 8px;;
+}
+
+.main-dropdown li:hover > .sub-dropdown {
+  display: block;
+}
+
+/* Show main dropdown on hover */
+.has-children:hover > .main-dropdown {
+  display: block;
 }

@@ -36,6 +36,14 @@
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="../images/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+        @media (max-width: 768px) {
+            .wrap-slider {
+                height: 50vh !important;
+            }
+          }
+    </style>
+
 
 </head>
 
@@ -68,15 +76,32 @@
                                 <ul class="navigation">
                                     <!-- Private Listings Dropdown -->
                                     <li class="has-children"><a href="javascript:void(0);">Private Listings</a>
-                                        <ul>
-                                            <li><a href="../exclusive/Bvlgari.html">Bvlgari</a></li>
-                                            <li><a href="../exclusive/mansion al barari.html">Mansion Al Barari</a></li>
-                                            <li><a href="../exclusive/ocean mansion.html">Ocean Mansion</a></li>
-                                            <li><a href="../exclusive/Villa Frond A.html">Villa Frond A</a></li>
-                                            <li><a href="../exclusive/Villa Frond D.html">Villa Frond D</a></li>
-                                            <li><a href="../exclusive/Villa Frond L.html">Villa Frond L</a></li>
-                                            <li><a href="../exclusive/Villa Palm.html">Villa Palm</a></li>
-                                            <li><a href="../exclusive/Villa Valiente.html">Villa Valiente</a></li>
+                                        <ul class="main-dropdown">
+                                                            <!-- Jumeirah Bay Island -->
+                                            <li class="has-children"><a href="javascript:void(0);">Jumeirah Bay Island</a>
+                                                <ul class="sub-dropdown">
+                                                    <li><a href="../exclusive/Bvlgari.html">Bvlgari</a></li>
+                                                    <li><a href="../exclusive/ocean mansion.html">Ocean Mansion</a></li>
+                                                </ul>
+                                            </li>
+                                    
+                                            <!-- Al Barari -->
+                                            <li class="has-children"><a href="javascript:void(0);">Al Barari</a>
+                                                <ul class="sub-dropdown">
+                                                    <li><a href="../exclusive/mansion al barari.html">Mansion Al Barari</a></li>
+                                                </ul>
+                                            </li>
+                                    
+                                            <!-- Palm Jumeirah -->
+                                            <li class="has-children"><a href="javascript:void(0);">Palm Jumeirah</a>
+                                                <ul class="sub-dropdown">
+                                                    <li><a href="../exclusive/Villa Frond A.html">Villa Frond A</a></li>
+                                                    <li><a href="../exclusive/Villa Frond D.html">Villa Frond D</a></li>
+                                                    <li><a href="../exclusive/Villa Frond L.html">Villa Frond L</a></li>
+                                                    <li><a href="../exclusive/Villa Palm.html">Villa Palm</a></li>
+                                                    <li><a href="../exclusive/Villa Valiente.html">Villa Valiente</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
             
@@ -111,10 +136,11 @@
                         </div>
                         <div class="header-right">
                             <div class="header-btn">
-                                <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary w-full style-bg-white1"
-                                    style="color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
-                                    <i class="flaticon-whatsapp"></i> WhatsApp
-                                </a>
+                                <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary w-full"
+                                style="background-color: #ffffff; color: green; border: 1px solid green; border-radius: 30px; padding: 10px 20px; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                                <i class="flaticon-whatsapp" style="color: green"></i>
+                                WhatsApp
+                            </a>
                             </div>
                         </div>
                         <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
@@ -130,14 +156,34 @@
                         <li>
                             <span>Private Listings</span>
                             <ul>
-                                <li><a href="../exclusive/Bvlgari.html">Bvlgari</a></li>
-                                <li><a href="../exclusive/mansion al barari.html">Mansion Al Barari</a></li>
-                                <li><a href="../exclusive/ocean mansion.html">Ocean Mansion</a></li>
-                                <li><a href="../exclusive/Villa Frond A.html">Villa Frond A</a></li>
-                                <li><a href="../exclusive/Villa Frond D.html">Villa Frond D</a></li>
-                                <li><a href="../exclusive/Villa Frond L.html">Villa Frond L</a></li>
-                                <li><a href="../exclusive/Villa Palm.html">Villa Palm</a></li>
-                                <li><a href="../exclusive/Villa Valiente.html">Villa Valiente</a></li>
+                                <!-- Jumeirah Bay Island -->
+                                <li>
+                                    <span>Jumeirah Bay Island</span>
+                                    <ul>
+                                        <li><a href="../exclusive/Bvlgari.html">Bvlgari</a></li>
+                                        <li><a href="../exclusive/ocean mansion.html">Ocean Mansion</a></li>
+                                    </ul>
+                                </li>
+                        
+                                <!-- Al Barari -->
+                                <li>
+                                    <span>Al Barari</span>
+                                    <ul>
+                                        <li><a href="../exclusive/mansion al barari.html">Mansion Al Barari</a></li>
+                                    </ul>
+                                </li>
+                        
+                                <!-- Palm Jumeirah -->
+                                <li>
+                                    <span>Palm Jumeirah</span>
+                                    <ul>
+                                        <li><a href="../exclusive/Villa Frond A.html">Villa Frond A</a></li>
+                                        <li><a href="../exclusive/Villa Frond D.html">Villa Frond D</a></li>
+                                        <li><a href="../exclusive/Villa Frond L.html">Villa Frond L</a></li>
+                                        <li><a href="../exclusive/Villa Palm.html">Villa Palm</a></li>
+                                        <li><a href="../exclusive/Villa Valiente.html">Villa Valiente</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="../offplan.html">New Opportunities</a></li>
@@ -389,7 +435,7 @@
                                 <div class="group-icon">
                                     <h3 class="wow fadeInUp">Make a Offer to the Owner</h3>
                                     
-                                    <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary style-blue wow fadeInUp">make an offer<i class="icon-arrow-right-add"></i></a>
+                                    <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary wow fadeInUp">make an offer<i class="icon-arrow-right-add"></i></a>
                                    
                                 </div>
                             </div>
@@ -397,7 +443,7 @@
                                 <div class="group-icon">
                                     <h3 class="wow fadeInUp">Sell with Us</h3>
                                    
-                                    <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary style-blue wow fadeInUp">Contact Us<i class="icon-arrow-right-add"></i></a>
+                                    <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary wow fadeInUp">Contact Us<i class="icon-arrow-right-add"></i></a>
                                     
                                 </div>
                             </div>
