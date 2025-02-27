@@ -15892,3 +15892,6 @@ a {
 .has-children:hover > .main-dropdown {
   display: block;
 }
+.capitalize {
+  text-transform: capitalize;
+}
