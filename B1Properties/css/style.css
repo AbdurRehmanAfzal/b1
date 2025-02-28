@@ -1244,6 +1244,7 @@ ul.breadcrumbs.style-1 li {
   justify-content: start;
   flex-wrap: wrap;
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 .wg-pagination li {
   min-width: 40px;
@@ -2887,10 +2888,10 @@ ul.list-text li::before {
   overflow: hidden;
 }
 .properties-slider .swiper-button-next {
-  right: 20px !important;
+  right: 10px !important;
 }
 .properties-slider .swiper-button-prev {
-  left: 20px !important;
+  left: 10px !important;
 }
 
 .properties-content-default {
@@ -6329,10 +6330,10 @@ ul.grid-tags li a:hover {
   color: var(--White);
 }
 .slider.home7 .swiper-button-next {
-  right: 60px !important;
+  right: 10px !important;
 }
 .slider.home7 .swiper-button-prev {
-  left: 60px !important;
+  left: 10px !important;
 }
 .slider.home7 > form {
   max-width: 1050px;
@@ -6670,11 +6671,13 @@ ul.grid-tags li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 9px;
+  padding-bottom: 10px;
 }
 .luxury-home .content h2 {
   color: var(--White);
   margin-bottom: 34px;
+  margin-top: 25px;
+
 }
 .luxury-home .content .text-content {
   color: var(--White);
@@ -12982,7 +12985,7 @@ body::-webkit-scrollbar {
   bottom: 0px;
 }
 .pagination-style-2 > .swiper-pagination .swiper-pagination-bullet {
-  margin: 10px 12.5px;
+  margin: 30px 12.5px;
   background-color: var(--Secondary);
   position: relative;
 }
@@ -14594,7 +14597,7 @@ a {
 }
 @media (max-width: 767px) {
   .smilar-homes .box-dream {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   .property-single-wrap .head-title {
     flex-wrap: wrap;
@@ -14820,7 +14823,7 @@ a {
     width: 45%;
   }
   .luxury-home .content {
-    padding-bottom: 50px;
+    padding-bottom: 10px;
   }
   .luxury-home .image {
     /* margin-bottom: 40px; */
@@ -15163,7 +15166,7 @@ a {
     border-radius: 0 !important;
   }
   .tf-section {
-    padding: 40px 6px !important;
+    padding: 60px 6px !important;
     border-radius: 0 !important;
   }
   .tf-section::before {
@@ -15893,5 +15896,8 @@ a {
   display: block;
 }
 .capitalize {
+  text-transform: capitalize;
+}
+h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize;
 }
