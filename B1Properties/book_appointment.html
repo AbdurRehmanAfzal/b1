@@ -244,7 +244,7 @@
                         </div>
                         <div class="row justify-center">
                             <div class="col-xxl-8">
-                                <form class="form-send-message" action="send_email_book_appointment.php" method="post">
+                                <form class="form-send-message" action="email_script/send_email_book_appointment.php" method="post">
                                     <div class="cols">
                                         <fieldset class="message">
                                             <input type="date" name="date" value="2024-1-20">
@@ -452,7 +452,7 @@
         
             let formData = new FormData(this);
         
-            fetch("send_email_book_appointment.php", {
+            fetch("email_script/send_email_book_appointment.php", {
                 method: "POST",
                 body: formData
             })

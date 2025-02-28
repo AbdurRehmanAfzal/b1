@@ -678,7 +678,7 @@
                                         
                                         <div class="schedule">
                                             <h4 class="wow fadeInUp">Schedule a tour</h4>
-                                            <form class="form-schedule" action="send_email_book_appointment.php" method="post">
+                                            <form class="form-schedule" action="email_script/send_email_book_appointment.php" method="post">
                                                 <div class="cols">
                                                     <fieldset class="message">
                                                         <input type="date" name="date" value="2023-11-20">
@@ -766,7 +766,7 @@
                                                 </div>
                                             </div>
                                             <div class="title wow fadeInUp">Enquire About This Property</div>
-                                            <form class="form-comment" action="send_email.php" method="post">
+                                            <form class="form-comment" action="email_script/send_email.php" method="post">
                                                 <div class="cols">
                                                     <fieldset class="name wow fadeInUp has-top-title">
                                                         <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="Ali Tufan" aria-required="true" required="">
@@ -976,7 +976,7 @@
         
             let formData = new FormData(this);
         
-            fetch("send_email_book_appointment.php", {
+            fetch("email_script/send_email_book_appointment.php", {
                 method: "POST",
                 body: formData
             })
