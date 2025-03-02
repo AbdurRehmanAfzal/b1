@@ -51,7 +51,7 @@
         [
           locationData(
             './../images/image-box/map-location-1.jpg',
-            'AED199,999',
+            'AED 199,999',
             'property-single-v1.html',
             'Archer House',
             '4',

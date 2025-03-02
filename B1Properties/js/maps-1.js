@@ -50,17 +50,16 @@
       var locations = [
         [
           locationData(
-            './../images/image-box/map-location-1.jpg',
-            'AED199,999',
-            'property-single-v1.html',
-            'Archer House',
-            '4',
-            '3',
-            '2660',
+            '../images/offplan/crestlane1/1.webp',
+            'AED 2.6M',
+            '../offplan/offplan_crestlane.html',
+            'Crestlane',
+            '',
+            '',
+            '',
           ),
-
-          40.707370,
-          -74.001643,
+          25.206601693236248,
+          55.25710989825548,
           1,
           '<div></div>',
         ],
