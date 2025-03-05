@@ -515,28 +515,50 @@
                                         </div>
                                     </div>
                                    
-                                    <div class="schedule">
-                                        <h4 class="wow fadeInUp">Schedule meeting with me</h4>
-                                        <form class="form-schedule">
+                                    <div class="contact-info">
+                                        <div class="flex items-center justify-between gap30 flex-wrap wow fadeInUp">
+                                            <h4 class="mb-0">Contact Information</h4>
+                                            <a href="../index.html" class="tf-button-default">More Villas</a>
+                                        </div>
+                                        <div class="person wow fadeInUp">
+                                            <div class="image1">
+                                                <img src="../images/author/author-14.png" alt="" height="150px", width="150px">
+                                            </div>
+                                            <div class="content">
+                                                <div class="name">
+                                                    <a href="team/roshan.html">B1 Agent</a>
+                                                </div>
+                                                <p>sale@b1properties.ae</p>
+                                                <p>+971 4 39 38 155</p>
+                                            </div>
+                                        </div>
+                                        <form class="form-schedule" action="email_script/send_email_book_appointment.php" method="post">
                                             <div class="cols">
                                                 <fieldset class="message">
-                                                    <input type="date" name="date" value="2024-1-20">
+                                                    <input type="date" name="date" value="2023-11-20">
                                                 </fieldset>
-                                                <div class="nice-select" tabindex="0">
-                                                    <span class="current">Please Select Time</span>
-                                                    <ul class="list">    
-                                                        <li data-value class="option selected">6 AM</li>
-                                                        <li data-value="For Ren" class="option">12 AM</li>
-                                                        <li data-value="Sold" class="option">6 PM</li>
-                                                    </ul>
-                                                </div>
+                                                <fieldset class="message">
+                                                    <select name="time" required>
+                                                        <option value="10 AM">10 AM</option>
+                                                        <option value="11 AM">11 AM</option>
+                                                        <option value="12 PM">12 PM</option>
+                                                        <option value="1 PM">1 PM</option>
+                                                        <option value="2 PM">2 PM</option>
+                                                        <option value="3 PM">3 PM</option>
+                                                        <option value="4 PM">4 PM</option>
+                                                        <option value="5 PM">5 PM</option>
+                                                        <option value="6 PM">6 PM</option>
+                                                        <option value="7 PM">7 PM</option>
+                                                    </select>
+                                                    
+                                                </fieldset> 
                                             </div>
                                             <div class="widget-tabs style-4">
-                                                <ul class="widget-menu-tab">
-                                                    <li class="item-title active">
+                                                <ul class="widget-menu-tab" style="justify-content: center;">
+                                                    <li class="item-title active" onclick="setAppointmentType('In Person')">
                                                         <span class="inner">In Person</span>
                                                     </li>
-                                                    <li class="item-title">
+                                                    <li class="item-title" onclick="setAppointmentType('Video Chat')">
                                                         <span class="inner">Video Chat</span>
                                                     </li>
                                                 </ul>
@@ -582,6 +604,13 @@
                                                         </fieldset>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="checkbox-item wow fadeInUp">
+                                                <label>
+                                                    <p>By submitting this form I agree to<span>Terms of Use</span></p>
+                                                    <input type="checkbox">
+                                                    <span class="btn-checkbox"></span>
+                                                </label>
                                             </div>
                                             <div class="button-submit">
                                                 <button class="tf-button-primary w-full" type="submit">Submit a Tour Request<i class="icon-arrow-right-add"></i></button>
