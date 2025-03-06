@@ -6570,7 +6570,9 @@ ul.grid-tags li a:hover {
   padding: 20px 20px 0 20px;
 }
 .slider.page-404 .wrap-slider {
-  background-image: url(../images/section/404.jpg);
+  background-image: url(../images/thank1.jpg);
+  height: auto;
+  width: auto;
   background-attachment: unset;
   border-radius: 24px;
 }

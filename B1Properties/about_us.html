@@ -228,10 +228,10 @@
                                                         <div class="text fade-item fade-item-1">Signature Your LifeStyle</div>
                                                         <h1 class="fade-item fade-item-2">About Us</h1>
                                                         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">
-                                                            <a href="#" class="tf-button-primary fade-item fade-item-4">Download Profile<i class="flaticon-gallery"></i></a>
-                                                            <a href="#" class="tf-button-primary fade-item fade-item-4">Download Portfolio<i class="flaticon-gallery"></i></a>
+                                                            <a href="#" class="tf-button-primary fade-item fade-item-4" data-bs-toggle="modal" data-bs-target="#profile">Download Profile<i class="flaticon-gallery"></i></a>
+                                                            <a href="#" class="tf-button-primary fade-item fade-item-4" data-bs-toggle="modal" data-bs-target="#Portfolio">Download Portfolio<i class="flaticon-gallery"></i></a>
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -801,6 +801,84 @@
         </svg>
     </div>-->
     <!-- /go top button -->
+    <div class="modal fade modalCenter" id="profile">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-sm">
+                <a href="" class="btn-hide-modal" data-bs-dismiss="modal"><i class="icon-close"></i></a>
+                
+                <div class="content-right">
+                    <h4>Find out if the luxury real estate in Dubai is the right choice for you.</h4>
+                    <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="email_script/send_quiz_data.php" onsubmit="window.location.href='images/profile.pdf'; return false;">
+                        <div class="list">
+                            <div class="group-form">
+                                <div class="widget-content-inner active">
+                                    <div class="cols">
+                                        <fieldset class="name has-top-title">
+                                            <input type="text" placeholder="Name" name="name" required>
+                                            <label>Name</label>
+                                        </fieldset>
+                                        <fieldset class="phone has-top-title">
+                                            <input type="number" placeholder="Phone" name="phone" required>
+                                            <label>Phone</label>
+                                        </fieldset>
+                                        <fieldset class="email has-top-title">
+                                            <input type="email" placeholder="Email" name="email" required>
+                                            <label>Email</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="button-submit">
+                            <button type="submit" class="tf-button-primary">Submit</button>
+                        </div>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modalCenter" id="Portfolio">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-sm">
+                <a href="" class="btn-hide-modal" data-bs-dismiss="modal"><i class="icon-close"></i></a>
+                
+                <div class="content-right">
+                    <h4>Find out if the luxury real estate in Dubai is the right choice for you.</h4>
+                    <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="email_script/send_quiz_data.php" onsubmit="window.location.href='images/Portfolio.pdf'; return false;">
+                        <div class="list">
+                            <div class="group-form">
+                                <div class="widget-content-inner active">
+                                    <div class="cols">
+                                        <fieldset class="name has-top-title">
+                                            <input type="text" placeholder="Name" name="name" required>
+                                            <label>Name</label>
+                                        </fieldset>
+                                        <fieldset class="phone has-top-title">
+                                            <input type="number" placeholder="Phone" name="phone" required>
+                                            <label>Phone</label>
+                                        </fieldset>
+                                        <fieldset class="email has-top-title">
+                                            <input type="email" placeholder="Email" name="email" required>
+                                            <label>Email</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="button-submit">
+                            <button type="submit" class="tf-button-primary">Submit</button>
+                        </div>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Javascript -->
     <script src="js/jquery.min.js"></script>
