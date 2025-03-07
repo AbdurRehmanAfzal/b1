@@ -10213,7 +10213,7 @@ body::-webkit-scrollbar {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  gap: 19px;
+  gap: 5px;
 }
 .featured-categories.style-3 .wrap .cities-item {
   margin-bottom: 0;
@@ -15903,4 +15903,116 @@ body, h1, h2, h3, h4, h5, h6, span, div, a, li, td, th, button, input, label {
 
 p {
   text-transform: capitalize !important;
+}
+/* Prevent background scrolling when popup is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: flex-start; /* Align popup to start below header */
+  overflow: hidden;
+}
+
+/* Popup Content - Full Width with Equal Left & Right Margins */
+/* Popup Content - Full Width, Equal Margins, and Bottom Space */
+.popup-content {
+  background: white;
+  width: calc(100% - 40px); /* Full width minus 20px margin on both sides */
+  height: calc(100vh - 20px); /* Full height minus 200px for header + 20px margin at bottom */
+  margin: 0 auto 20px auto; /* 20px bottom margin */
+  position: absolute;
+  top: 130px; /* Start after header */
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Iframe Container - Initially Allows Only Half Scrolling */
+#popupContainer {
+  width: 100%;
+  height: 50%; /* Initially allow only half scrolling */
+  overflow-y: scroll;
+  flex-grow: 1;
+  transition: height 0.3s ease-in-out;
+}
+
+/* Hide scrollbar while keeping scrolling functional */
+#popupContainer::-webkit-scrollbar {
+  display: none;
+}
+#popupContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Iframe inside popup */
+#popupIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  transition: filter 0.1s ease-in-out; /* Smooth blur effect */
+}
+
+/* Blur effect ONLY on iframe when scrolled to bottom */
+#popupIframe.blur {
+  filter: blur(5px);
+}
+
+/* Close Button (Top-Right Corner, Bigger & Clickable) */
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  background: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.close-popup:hover {
+  background: 8F5F00;
+}
+
+/* More Details Button - Initially Hidden, Centered in the Popup */
+#moreDetailsLink {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  background: #000000;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+#moreDetailsLink:hover {
+  background: #8F5F00;
 }
