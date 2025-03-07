@@ -2003,7 +2003,7 @@ ul.list-text li::before {
   color: var(--Text);
 }
 .box-dream.has-border {
-  border: 1px solid var(--Border);
+  /* border: 1px solid var(--Border); */
   padding-top: 9px;
 }
 .box-dream.has-border:hover {
@@ -5597,8 +5597,8 @@ ul.grid-tags li a:hover {
 }
 
 .flat-title {
-  padding-top: 90px;
-  padding-bottom: 94px;
+  padding-top: 50px;
+  padding-bottom: 20px;
   position: relative;
   z-index: 20;
 }
