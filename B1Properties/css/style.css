@@ -1963,7 +1963,7 @@ ul.list-text li::before {
   font-weight: 600;
   font-size: 21px;
   line-height: 25px;
-  color: var(--Primary);
+  color: var(--Secondary);
 }
 .box-dream .content .location {
   display: -webkit-box;
@@ -2574,7 +2574,7 @@ ul.list-text li::before {
   bottom: 30px;
   right: 30px;
   padding: 9px 30px 12px 30px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
   border-radius: 6px;
 }
 .cities-item.style-5::after {
@@ -9711,7 +9711,7 @@ body::-webkit-scrollbar {
   height: 330px;
 }
 .flat-cities.style-3 .inner {
-  margin-bottom: 196px;
+  margin-bottom: 5px;
 }
 .flat-cities.style-4 {
   padding-top: 114px;
@@ -14840,7 +14840,7 @@ a {
     right: 15px;
   }
   .exclusive-properties .inner {
-    gap: 10px;
+    gap: 5px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "aa" "bb" "cc" "dd" "ee" "ff";
   }
@@ -14945,7 +14945,7 @@ a {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 5px 5px;
-    margin-bottom: 70px;
+    margin-bottom: 5px;
     grid-template-areas: "aa" "bb" "cc" "dd" "ee";
   }
   ul.grid-tags {
