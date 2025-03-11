@@ -1065,38 +1065,87 @@
                 <!-- /flat-brand -->
 
                  <!-- flat-title -->
-                 <div class="flat-title">
-                    <div class="cl-container full">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="content">
-                                    <h2>Secure Your Next Investment in Dubai</h2>
-                                    <ul class="breadcrumbs">
-                                        <li><a href="index.html">Home</a></li><li>/</li><li>Off Plans</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /flat-title -->
-                <section class="account-bar">
-                    
+                 <section class="tf-section send-message">
                     <div class="cl-container">
                         <div class="row">
                             <div class="col-12">
-                                <div class="flex justify-between items-center flex-wrap gap15">
-                                    <div>
-                                        <h3 class="wow fadeInUp">Buy Exclusive
-                                            properties with B1</h3>
-                                        <div class="text wow fadeInUp">We only work with the best companies around the globe</div>
-                                    </div>
-                                    <a href="offplan.html" class="tf-button-primary wow fadeInUp">Book Appointment<i class="icon-arrow-right-add"></i></a>
+                                <div class="heading-section text-center">
+                                    <h2 class="wow fadeInUp">Secure Your Next Investment in Dubai</h2>
+                                    <div class="text wow fadeInUp">Shaping Signature LifeStyle with B1</div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row justify-center">
+                            <div class="col-xxl-8">
+                                <form class="form-send-message" action="email_script/send_email_book_appointment.php" method="post">
+                                    <div class="cols">
+                                        <fieldset class="message">
+                                            <input type="date" name="date" value="2024-1-20">
+                                        </fieldset>
+                                        <fieldset class="message">
+                                            <select name="time" required>
+                                                <option value="10 AM">10 AM</option>
+                                                <option value="11 AM">11 AM</option>
+                                                <option value="12 PM">12 PM</option>
+                                                <option value="1 PM">1 PM</option>
+                                                <option value="2 PM">2 PM</option>
+                                                <option value="3 PM">3 PM</option>
+                                                <option value="4 PM">4 PM</option>
+                                                <option value="5 PM">5 PM</option>
+                                                <option value="6 PM">6 PM</option>
+                                                <option value="7 PM">7 PM</option>
+                                            </select>
+                                            
+                                        </fieldset>                                        
+                                    </div>
+                                    <div class="cols">
+                                        <div class="widget-tabs style-4">
+                                            <ul class="widget-menu-tab" style="justify-content: center;">
+                                                <li class="item-title active" onclick="setAppointmentType('In Person')">
+                                                    <span class="inner">In Person</span>
+                                                </li>
+                                                <li class="item-title" onclick="setAppointmentType('Video Chat')">
+                                                    <span class="inner">Video Chat</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <input type="hidden" name="appointment_type" id="appointment_type" value="In Person">
+                                    </div>
+                                    <div class="cols">
+                                        <fieldset class="name wow fadeInUp has-top-title">
+                                            <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="" aria-required="true" required="">
+                                            <label for="">Name</label>
+                                        </fieldset>
+                                        <fieldset class="phone wow fadeInUp has-top-title">
+                                            <input type="number" placeholder="Phone" class="" name="phone" tabindex="2" value="" aria-required="true" required="">
+                                            <label for="">Phone</label>
+                                        </fieldset>
+                                    </div>
+                                    <fieldset class="email wow fadeInUp has-top-title">
+                                        <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
+                                        <label for="">Email</label>
+                                    </fieldset>
+                                    <fieldset class="message wow fadeInUp has-top-title">
+                                        <textarea name="message" rows="4" placeholder="Your Message" value="" class="" tabindex="2" aria-required="true" required=""></textarea>
+                                        <label for="">Your Message</label>
+                                  </fieldset>
+                                    <div class="checkbox-item wow fadeInUp">
+                                        <label>
+                                            <p>I consent to having this website store my submitted information</p>
+                                            <input type="checkbox">
+                                            <span class="btn-checkbox"></span>
+                                        </label>
+                                    </div>
+                                    <div class="button-submit wow fadeInUp">
+                                        <button class="tf-button-primary w-full" type="submit">Book Appointment<i class="icon-arrow-right-add"></i></button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </section>
+                <!-- /flat-title -->
+                
     
                 <!-- agency-list-wrap -->
                 <!--<div class="agency-list-wrap">
