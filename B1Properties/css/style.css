@@ -476,6 +476,24 @@ p > video {
   pointer-events: none;
 }
 
+.agent-image {
+  position: relative;
+  filter: grayscale(100%);
+}
+
+/* .agent-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      180deg, 
+      rgb(77, 64, 64) 0%,   
+      rgba(17, 15, 15, 0) 100%
+  );
+  pointer-events: none;
+} */
+
+
 
 /* Forms
 -------------------------------------------------------------- */
@@ -16016,3 +16034,4 @@ body.no-scroll {
 #moreDetailsLink:hover {
   background: #8F5F00;
 }
+

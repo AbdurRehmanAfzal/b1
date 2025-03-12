@@ -47,6 +47,36 @@
             }
             
         }
+        /* Ensure the image container has a fixed height */
+        .box-dream .image {
+            height: 300px; /* Adjust this value as needed */
+            overflow: hidden; /* Hide any overflow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          /* Ensure the image fills the container and maintains aspect ratio */
+          .box-dream .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+          }
+          
+          /* Ensure all property cards have the same height */
+          .box-dream {
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Ensure the card takes full height */
+          }
+          
+          .box-dream .content {
+            flex: 1; /* Allow the content to take remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute space evenly */
+          }
+          
     </style>
 
 </head>
@@ -145,27 +175,6 @@
                             <div class="swiper-slide">
                                 <div class="wrap-slider" style="height: 100vh;">
                                     <div class="image">
-                                        <img src="images/exclusive/Ocean Mansion/images/EXTERIOR_3-2.webp" alt="">
-                                    </div>
-                                    <div class="slider-item">
-                                        <div class="cl-container">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="slider-content">
-                                                        <div class="text fade-item fade-item-1">Bvlgari Resorts & Hotel</div>
-                                                        <h1 class="fade-item fade-item-2">Ocean Mansion</h1>
-                                                        <div class="text-1 fade-item fade-item-3">AED 180,000,000</div>
-                                                        <a href="exclusive/ocean mansion.html" class="tf-button-primary m-auto fade-item fade-item-4">View Details<i class="icon-arrow-right-add"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="wrap-slider" style="height: 100vh;">
-                                    <div class="image">
                                         <img src="images/exclusive/bvlgari/1.webp" alt="">
                                     </div>
                                     <div class="slider-item">
@@ -184,6 +193,28 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="wrap-slider" style="height: 100vh;">
+                                    <div class="image">
+                                        <img src="images/exclusive/Ocean Mansion/images/EXTERIOR_3-2.webp" alt="">
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="cl-container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="slider-content">
+                                                        <div class="text fade-item fade-item-1">Bvlgari Resorts & Hotel</div>
+                                                        <h1 class="fade-item fade-item-2">Ocean Mansion</h1>
+                                                        <div class="text-1 fade-item fade-item-3">AED 180,000,000</div>
+                                                        <a href="exclusive/ocean mansion.html" class="tf-button-primary m-auto fade-item fade-item-4">View Details<i class="icon-arrow-right-add"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
                             <div class="swiper-slide">
                                 <div class="wrap-slider" style="height: 100vh;">
                                     <div class="image">
@@ -271,7 +302,7 @@
                             <div class="swiper-slide">
                                 <div class="wrap-slider" style="height:100vh;">
                                     <div class="image">
-                                        <img src="images/exclusive/Mansion Al Barari/images/33.webp" alt="">
+                                        <img src="images/exclusive/Mansion Al Barari/images/0.png" alt="">
                                     </div>
                                     <div class="slider-item">
                                         <div class="cl-container">
@@ -313,616 +344,437 @@
               
               
                 <section class="tf-section flat-experts style-1">
-                      <!-- property-grid -->
-                <div class="property-grid-wrap-v2">
-                    <div class="cl-container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="top">
-                                    <!--<div class="sub wow fadeInUp">
-                                        <p>9,998 results</p>
-                                        <div class="sort-wrap">
-                                            <p>Sort by</p>
-                                            <div class="nice-select default" tabindex="0">
-                                                <span class="current">Newest listings</span>
-                                                <ul class="list">    
-                                                    <li data-value class="option selected">Newest</li>
-                                                    <li data-value="For Ren" class="option">Oldest</li>
-                                                    <li data-value="Sold" class="option">3 days</li>
-                                                </ul>
+                    <!-- property-grid -->
+                    <div class="property-grid-wrap-v2">
+                        <div class="cl-container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="top">
+                                        <!--<div class="sub wow fadeInUp">
+                                            <p>9,998 results</p>
+                                            <div class="sort-wrap">
+                                                <p>Sort by</p>
+                                                <div class="nice-select default" tabindex="0">
+                                                    <span class="current">Newest listings</span>
+                                                    <ul class="list">    
+                                                        <li data-value class="option selected">Newest</li>
+                                                        <li data-value="For Ren" class="option">Oldest</li>
+                                                        <li data-value="Sold" class="option">3 days</li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>-->
+                                        </div>-->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Bvlgari.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/bvlgari/0.png" alt="">
+                            <div class="row">
+                                <!-- Sorted Property Cards -->
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Bvlgari.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream no-bg arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/bvlgari/0.png" alt="">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/bvlgari/4.webp" alt="">
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="exclusive/Bvlgari.html">Bvlgari</a>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/bvlgari/5.webp" alt="">
-                                                    </div>
+                                                <div class="price">AED 495,000,000</div>
+                                            </div>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/bvlgari/6.webp" alt="">
-                                                    </div>
-                                                </div>-->
+                                                <p>Bvlgari Resorts & Hotel</p>
                                             </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="exclusive/Bvlgari.html">Bvlgari</a>
-                                            </div>
-                                            <div class="price">AED 495,000,000</div>
-                                        </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
-                                            </div>
-                                            <p>Bvlgari Resorts & Hotel</p>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>4 Beds</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>6 Baths</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>BUA 12,837 Sqft</p>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>4 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>6 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>BUA 12,837 Sqft</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Palm.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Palm/images/12.webp" alt="">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/La solare.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/g11/images/home.png" alt="">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Palm/images/13.webp" alt="">
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="exclusive/La solare.html">La solare</a>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Palm/images/1.webp" alt="">
-                                                    </div>
+                                                <div class="price">AED 165,000,000</div>
+                                            </div>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Palm/images/12.webp" alt="">
-                                                    </div>
-                                                </div>-->
+                                                <p>Palm Jumeirah</p>
                                             </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="exclusive/Villa Palm.html">Villa Palm</a>
-                                            </div>
-                                            <div class="price">AED 85,000,000</div>
-                                        </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
-                                            </div>
-                                            <p>Palm Jumeirah</p>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>5 Beds</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>7 Baths</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>BUA 7362 Sqft</p>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>5 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>7 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>16,174.5 Sqft</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Frond L.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond L/images/0.png" alt="">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/ocean mansion.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/Ocean Mansion/images/EXTERIOR_3-2.webp" alt="">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond L/images/36-2.webp" alt="">
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="ocean mansion.html">Ocean Mansion</a>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond L/images/36-2.webp" alt="">
-                                                    </div>
+                                                <div class="price">AED 180,000,000</div>
+                                            </div>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond L/images/36-2.webp" alt="">
-                                                    </div>
-                                                </div>-->
+                                                <p>Bvlgari Resorts & Hotel</p>
                                             </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="exclusive/Villa Frond L.html">Villa Frond L</a>
-                                            </div>
-                                            <div class="price">AED 75,000,000</div>
-                                        </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
-                                            </div>
-                                            <p>Palm Jumeirah</p>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>4 Beds</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>5 Baths</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>BUA 6054 Sqft</p>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>5 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>7 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>BUA 12,837 Sqft</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/ocean mansion.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Ocean Mansion/images/EXTERIOR_3-2.webp" alt="">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Valiente.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/Villa Valiente/0000.png" alt="">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Ocean Mansion/images/2.webp" alt="">
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="exclusive/Villa Valiente.html">Villa Valiente</a>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Ocean Mansion/images/3.webp" alt="">
-                                                    </div>
+                                                <div class="price">AED 95,000,000</div>
+                                            </div>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Ocean Mansion/images/4.webp" alt="">
-                                                    </div>
-                                                </div>-->
+                                                <p>Palm Jumeirah</p>
                                             </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="ocean mansion.html">Ocean Mansion</a>
-                                            </div>
-                                            <div class="price">AED 180,000,000</div>
-                                        </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
-                                            </div>
-                                            <p>Bvlgari Resorts & Hotel</p>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>5 Beds</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>7 Baths</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>BUA 12,837 Sqft</p>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>5 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>7 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>BUA 11,103 Sqft</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/mansion al barari.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Mansion Al Barari/images/38.webp" alt="">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Frond A.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/Villa Frond A/images/exterior_night.webp" alt="">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Mansion Al Barari/images/38.webp" alt="">
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="exclusive/Villa Frond A.html">Villa Frond A</a>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Mansion Al Barari/images/38.webp" alt="">
-                                                    </div>
+                                                <div class="price">AED 135,000,000</div>
+                                            </div>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Mansion Al Barari/images/38.webp" alt="">
-                                                    </div>
-                                                </div>-->
+                                                <p>Palm Jumeirah</p>
                                             </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="exclusive/mansion al barari.html">Mansion Al Barari</a>
-                                            </div>
-                                            <div class="price">AED 75,000,000</div>
-                                        </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
-                                            </div>
-                                            <p>Al Barari</p>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>5 Beds</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>6 Baths</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>13800 Sqft</p>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>6 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>7 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>BUA 9,749 Sqft</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Frond A.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond A/images/exterior_night.webp" alt="">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Palm.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/Villa Palm/images/12.webp" alt="">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond A/images/1.webp" alt="">
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="exclusive/Villa Palm.html">Villa Palm</a>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond A/images/exterior_night.webp" alt="">
-                                                    </div>
+                                                <div class="price">AED 85,000,000</div>
+                                            </div>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond A/images/exterior_night.webp" alt="">
-                                                    </div>
-                                                </div>-->
+                                                <p>Palm Jumeirah</p>
                                             </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="exclusive/Villa Frond A.html">Villa Frond A</a>
-                                            </div>
-                                            <div class="price">AED 135,000,000</div>
-                                        </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
-                                            </div>
-                                            <p>Palm Jumeirah</p>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>6 Beds</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>7 Baths</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>BUA 9749 Sqft</p>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>5 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>7 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>BUA 7,362 Sqft</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Frond D.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond D/images/30.webp" alt="">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/mansion al barari.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/Mansion Al Barari/images/38.webp" alt="">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond D/images/30.webp" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond D/images/30.webp" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Frond D/images/30.webp" alt="">
-                                                    </div>
-                                                </div>-->
                                             </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="exclusive/mansion al barari.html">Mansion Al Barari</a>
+                                                </div>
+                                                <div class="price">AED 75,000,000</div>
+                                            </div>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
+                                                </div>
+                                                <p>Al Barari</p>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>5 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>6 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>13,800 Sqft</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="exclusive/Villa Frond D.html">Villa Frond D</a>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Frond L.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/Villa Frond L/images/0.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="price">AED 2,600,000 P.A</div>
                                         </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="exclusive/Villa Frond L.html">Villa Frond L</a>
+                                                </div>
+                                                <div class="price">AED 75,000,000</div>
                                             </div>
-                                            <p>Palm Jumeirah</p>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
+                                                </div>
+                                                <p>Palm Jumeirah</p>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>4 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>5 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>BUA 6,054 Sqft</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>4 Beds</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Frond D.html">
+                                        <div class="">
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="image">
+                                                            <img class="" src="images/exclusive/Villa Frond D/images/30.webp" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>5 Baths</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="exclusive/Villa Frond D.html">Villa Frond D</a>
+                                                </div>
+                                                <div class="price">AED 2,600,000 P.A</div>
                                             </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>BUA 4797 Sqft</p>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
+                                                </div>
+                                                <p>Palm Jumeirah</p>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-hotel"></i>
+                                                    <p>4 Beds</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-bath-tub"></i>
+                                                    <p>5 Baths</p>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>BUA 4,797 Sqft</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Valiente.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Valiente/0000.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Valiente/images/1.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Valiente/images/1.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Valiente/images/1.png" alt="">
-                                                    </div>
-                                                </div>-->
-                                            </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="exclusive/Villa Valiente.html">Villa Valiente</a>
-                                            </div>
-                                            <div class="price">AED 95,000,000</div>
-                                        </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
-                                            </div>
-                                            <p>Palm Jumeirah</p>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>5 Beds</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>7 Baths</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>BUA 11103 Sqft</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="wg-pagination justify-center wow fadeInUp">
+                                        <li>
+                                            <a href="#"><i class="icon-keyboard_arrow_left"></i></a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-keyboard_arrow_right"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.2s" data-page-url="exclusive/Villa Valiente.html">
-                                    <div class="image">
-                                       
-                                        <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                        <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/g11/images/home.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <!--<div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Valiente/images/1.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Valiente/images/1.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="image">
-                                                        <img class="" src="images/exclusive/Villa Valiente/images/1.png" alt="">
-                                                    </div>
-                                                </div>-->
-                                            </div>
-                                            <!--<div class="swiper-pagination box-dream-pagination"></div>
-                                            <div class="box-dream-next swiper-button-next"></div>
-                                            <div class="box-dream-prev swiper-button-prev"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="head">
-                                            <div class="title">
-                                                <a href="exclusive/La solare.html">La solare</a>
-                                            </div>
-                                            <div class="price">AED 165,000,000</div>
-                                        </div>
-                                        <div class="location">
-                                            <div class="icon">
-                                                <i class="flaticon-location"></i>
-                                            </div>
-                                            <p>Palm Jumeirah</p>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="item">
-                                                <i class="flaticon-hotel"></i>
-                                                <p>5 Beds</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-bath-tub"></i>
-                                                <p>7 Baths</p>
-                                            </div>
-                                            <div class="item">
-                                                <i class="flaticon-minus-front"></i>
-                                                <p>16,174.5 sqft</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <ul class="wg-pagination justify-center wow fadeInUp">
-                                    <li>
-                                        <a href="#"><i class="icon-keyboard_arrow_left"></i></a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="icon-keyboard_arrow_right"></i></a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- /property-grid -->
+                    <!-- /property-grid -->
                 </section>
                 
 
@@ -1080,7 +932,7 @@
                             <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text">hi@b1properties.ae +971 4 39 38 155</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;">info@b1properties.ae +971 4 39 38 155</div></li>
                                 </ul>
                             </div>
                             <div class="footer-cl-5">
