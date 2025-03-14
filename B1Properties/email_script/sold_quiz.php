@@ -9,12 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'] ?? '';
     $phone = $_POST['phone'] ?? '';
     $email = $_POST['email'] ?? '';
-    $property_status = $_POST['property_status'] ?? '';
-    $invested_in_dubai = $_POST['invested_in_dubai'] ?? '';
-    $interest = $_POST['interest'] ?? '';
+    $meeting_preference = $_POST['meeting_preference'] ?? '';
+    $budget = $_POST['budget'] ?? '';
 
     // Validate required fields
-    if (empty($name) || empty($phone) || empty($email) || empty($property_status) || empty($invested_in_dubai) || empty($interest)) {
+    if (empty($name) || empty($phone) || empty($email) || empty($meeting_preference) || empty($budget)) {
         echo "error"; // Return error if any required field is empty
         exit;
     }
@@ -23,9 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($name);
     $phone = htmlspecialchars($phone);
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $property_status = htmlspecialchars($property_status);
-    $invested_in_dubai = htmlspecialchars($invested_in_dubai);
-    $interest = htmlspecialchars($interest);
+    $meeting_preference = htmlspecialchars($meeting_preference);
+    $budget = htmlspecialchars($budget);
 
     // Prepare email content (optional)
     $to = "your-email@example.com"; // Replace with your email address
@@ -35,9 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Name:</strong> $name</p>
         <p><strong>Phone:</strong> $phone</p>
         <p><strong>Email:</strong> $email</p>
-        <p><strong>Property Status:</strong> $property_status</p>
-        <p><strong>Invested in Dubai:</strong> $invested_in_dubai</p>
-        <p><strong>Interest:</strong> $interest</p>
+        <p><strong>Meeting Preference:</strong> $meeting_preference</p>
+        <p><strong>Budget:</strong> $budget</p>
     ";
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";

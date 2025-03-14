@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $appointment_type = htmlspecialchars($_POST['appointment_type']); // Ensure this is passed from the form
 
     // Prepare email content
-    $to = "info@b1properties.ae"; // Change this to the recipient email
+    $to = "abdurrehmanafzal786@gmail.com"; // Change this to the recipient email
     $subject = "New Tour Request";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";

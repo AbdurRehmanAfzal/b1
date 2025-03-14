@@ -631,7 +631,7 @@
                                 <div class="col-md-6">
                                 </div>
                                 <div class="col-md-6">
-                                    <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="email_script/send_quiz_data.php">
+                                    <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/send_quiz_data.php">
                                         <div class="list">
                                             <div class="group-form">
                                                 <div class="widget-content-inner active">
@@ -916,10 +916,12 @@
                                     <li><a href="../contact.html">Contact</a></li>
                                 </ul>
                             </div>
-                            <div class="footer-cl-4">
+                             <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;">info@b1properties.ae +971 4 39 38 155</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;">info@b1properties.ae</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;">+971 4 39 38 155</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;">+971 56 433 8399</div></li>
                                 </ul>
                             </div>
                             <div class="footer-cl-5">
@@ -981,6 +983,31 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+    <script>
+        document.querySelector("#property-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            let formData = new FormData(this); // Gather form data
+    
+            fetch("../email_script/send_quiz_data.php", { // Replace with the correct path to your PHP script
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text()) // Parse the response as text
+            .then(data => {
+                if (data === "success") {
+                    alert("Your information has been submitted successfully!");
+                    window.location.href = "../thankyou.html"; // Redirect to the thank you page
+                } else {
+                    alert("There was an error. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("There was an error. Please try again.");
+            });
+        });
     </script>
 
 </body>

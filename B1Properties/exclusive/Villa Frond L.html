@@ -639,7 +639,7 @@
                                                     <p>+971 4 39 38 155</p>
                                                 </div>
                                             </div>
-                                            <form class="form-schedule" action="../email_script/exclusive_book_appointment.php" method="post">
+                                            <form class="form-schedule" id="exclusive-property-form" action="../email_script/exclusive_book_appointment.php" method="post">
                                                 <div class="cols">
                                                     <fieldset class="message">
                                                         <input type="date" name="date" value="2023-11-20">
@@ -657,8 +657,7 @@
                                                             <option value="6 PM">6 PM</option>
                                                             <option value="7 PM">7 PM</option>
                                                         </select>
-                                                        
-                                                    </fieldset> 
+                                                    </fieldset>
                                                 </div>
                                                 <div class="widget-tabs style-4">
                                                     <ul class="widget-menu-tab" style="justify-content: center;">
@@ -673,31 +672,11 @@
                                                         <div class="widget-content-inner active">
                                                             <div class="cols">
                                                                 <fieldset class="name has-top-title">
-                                                                    <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="" aria-required="true" required="">
+                                                                    <input type="text" placeholder="Name" class="" name="name" tabindex="2" value="" aria-required="true" required="">
                                                                     <label for="">Name</label>
                                                                 </fieldset>
                                                                 <fieldset class="phone has-top-title">
-                                                                    <input type="number" placeholder="Phone" class="" name="number" tabindex="2" value="" aria-required="true" required="">
-                                                                    <label for="">Phone</label>
-                                                                </fieldset>
-                                                                <fieldset class="email has-top-title">
-                                                                    <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
-                                                                    <label for="">Email</label>
-                                                                </fieldset>
-                                                            </div>
-                                                            <fieldset class="message has-top-title">
-                                                                <textarea name="message" rows="4" placeholder="Your Comment" class="" tabindex="2" aria-required="true" required=""></textarea>
-                                                                <label for="">Your Comment</label>
-                                                            </fieldset>
-                                                        </div>
-                                                        <div class="widget-content-inner">
-                                                            <div class="cols">
-                                                                <fieldset class="name has-top-title">
-                                                                    <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="" aria-required="true" required="">
-                                                                    <label for="">Name</label>
-                                                                </fieldset>
-                                                                <fieldset class="phone has-top-title">
-                                                                    <input type="number" placeholder="Phone" class="" name="number" tabindex="2" value="" aria-required="true" required="">
+                                                                    <input type="number" placeholder="Phone" class="" name="phone" tabindex="2" value="" aria-required="true" required="">
                                                                     <label for="">Phone</label>
                                                                 </fieldset>
                                                                 <fieldset class="email has-top-title">
@@ -715,13 +694,14 @@
                                                 <div class="checkbox-item wow fadeInUp">
                                                     <label>
                                                         <p>By submitting this form I agree to<span> Terms of Use</span></p>
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" required>
                                                         <span class="btn-checkbox"></span>
                                                     </label>
                                                 </div>
                                                 <div class="button-submit">
                                                     <button class="tf-button-primary w-full" type="submit">Submit a Tour Request<i class="icon-arrow-right-add"></i></button>
                                                 </div>
+                                                <input type="hidden" name="appointment_type" id="appointment_type" value="In Person">
                                             </form>
                                         </div>
                                         
@@ -834,10 +814,12 @@
                                     <li><a href="../contact.html">Contact</a></li>
                                 </ul>
                             </div>
-                            <div class="footer-cl-4">
+                             <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;">info@b1properties.ae +971 4 39 38 155</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;">info@b1properties.ae</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;">+971 4 39 38 155</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;">+971 56 433 8399</div></li>
                                 </ul>
                             </div>
                             <div class="footer-cl-5">
@@ -906,13 +888,12 @@
         function setAppointmentType(type) {
             document.getElementById('appointment_type').value = type;
         }
-    </script>
-     <script>
-        document.querySelector(".form-schedule").addEventListener("submit", function(event) {
+        
+        document.querySelector("#exclusive-property-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
-    
+        
             let formData = new FormData(this); // Gather form data
-    
+        
             fetch("../email_script/exclusive_book_appointment.php", { // Replace with the correct path to your PHP script
                 method: "POST",
                 body: formData
@@ -921,7 +902,7 @@
             .then(data => {
                 if (data === "success") {
                     alert("Appointment successfully booked!");
-                    window.location.href = "thankyou.html"; // Redirect to the thank you page
+                    window.location.href = "../thankyou.html"; // Redirect to the thank you page
                 } else {
                     alert("There was an error. Please try again.");
                 }
