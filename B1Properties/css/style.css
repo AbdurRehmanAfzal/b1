@@ -1977,6 +1977,7 @@ ul.list-text li::before {
   font-size: 19px;
   line-height: 28px;
 }
+
 .box-dream .content .price {
   font-weight: 600;
   font-size: 21px;
@@ -2714,7 +2715,6 @@ ul.list-text li::before {
   font-size: 19px;
   line-height: 28px;
   color: var(--Secondary);
-  text-transform: capitalize;
 }
 .box-icon .title:hover {
   color: var(--Fourth);
@@ -2732,7 +2732,6 @@ ul.list-text li::before {
   font-size: 21px;
   font-weight: 600;
   line-height: 30px;
-  text-transform: capitalize;
 }
 .box-icon.style-2 {
   display: -webkit-box;
@@ -3002,7 +3001,6 @@ ul.list-text li::before {
 }
 .counter .number-counter p {
   color: var(--White);
-  text-transform: capitalize;
 }
 .counter .number-counter.style-1 {
   border-radius: 6px;
@@ -15915,13 +15913,18 @@ a {
 .has-children:hover > .main-dropdown {
   display: block;
 }
-body, h1, h2, h3, h4, h5, h6, span, div, a, li, td, th, button, input, label {
-  text-transform: capitalize;
+/* Make all text lowercase */
+body {
+  text-transform: lowercase;
+}
+.lowercase {
+  text-transform: lowercase !important;
+}
+/* Capitalize only the first letter of each element */
+body *::first-letter {
+  text-transform: uppercase;
 }
 
-p {
-  text-transform: capitalize !important;
-}
 /* Prevent background scrolling when popup is open */
 body.no-scroll {
   overflow: hidden;
@@ -16034,4 +16037,12 @@ body.no-scroll {
 #moreDetailsLink:hover {
   background: #8F5F00;
 }
+.price,
+.text-1.fade-item.fade-item-3 {
+    text-transform: uppercase !important;
+}
 
+.fade-item.fade-item-2,
+.title {
+  text-transform: capitalize !important;
+}

@@ -403,75 +403,68 @@
                                     </div>-->
                                    
                                     <div class="schedule">
-                                        <h4 class="wow fadeInUp">Schedule meeting with me</h4>
-                                        <form class="form-schedule">
+                                        <h4 class="wow fadeInUp">Schedule your appointment</h4>
+                                        <form class="form-schedule" action="../email_script/send_email_book_appointment.php" method="post">
                                             <div class="cols">
                                                 <fieldset class="message">
                                                     <input type="date" name="date" value="2024-1-20">
                                                 </fieldset>
-                                                <div class="nice-select" tabindex="0">
-                                                    <span class="current">Please Select Time</span>
-                                                    <ul class="list">    
-                                                        <li data-value class="option selected">6 AM</li>
-                                                        <li data-value="For Ren" class="option">12 AM</li>
-                                                        <li data-value="Sold" class="option">6 PM</li>
+                                                <fieldset class="message">
+                                                    <select name="time" required>
+                                                        <option value="10 AM">10 AM</option>
+                                                        <option value="11 AM">11 AM</option>
+                                                        <option value="12 PM">12 PM</option>
+                                                        <option value="1 PM">1 PM</option>
+                                                        <option value="2 PM">2 PM</option>
+                                                        <option value="3 PM">3 PM</option>
+                                                        <option value="4 PM">4 PM</option>
+                                                        <option value="5 PM">5 PM</option>
+                                                        <option value="6 PM">6 PM</option>
+                                                        <option value="7 PM">7 PM</option>
+                                                    </select>
+                                                    
+                                                </fieldset>                                        
+                                            </div>
+                                            <div class="cols">
+                                                <div class="widget-tabs style-4">
+                                                    <ul class="widget-menu-tab" style="justify-content: center;">
+                                                        <li class="item-title active" onclick="setAppointmentType('In Person')">
+                                                            <span class="inner">In Person</span>
+                                                        </li>
+                                                        <li class="item-title" onclick="setAppointmentType('Video Chat')">
+                                                            <span class="inner">Video Chat</span>
+                                                        </li>
                                                     </ul>
                                                 </div>
+                                                <input type="hidden" name="appointment_type" id="appointment_type" value="In Person">
                                             </div>
-                                            <div class="widget-tabs style-4">
-                                                <ul class="widget-menu-tab">
-                                                    <li class="item-title active">
-                                                        <span class="inner">In Person</span>
-                                                    </li>
-                                                    <li class="item-title">
-                                                        <span class="inner">Video Chat</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="widget-content-tab">
-                                                    <div class="widget-content-inner active">
-                                                        <div class="cols">
-                                                            <fieldset class="name has-top-title">
-                                                                <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="" aria-required="true" required="">
-                                                                <label for="">Name</label>
-                                                            </fieldset>
-                                                            <fieldset class="phone has-top-title">
-                                                                <input type="number" placeholder="Phone" class="" name="number" tabindex="2" value="" aria-required="true" required="">
-                                                                <label for="">Phone</label>
-                                                            </fieldset>
-                                                            <fieldset class="email has-top-title">
-                                                                <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
-                                                                <label for="">Email</label>
-                                                            </fieldset>
-                                                        </div>
-                                                        <fieldset class="message has-top-title">
-                                                            <textarea name="message" rows="4" placeholder="Your Comment" class="" tabindex="2" aria-required="true" required=""></textarea>
-                                                            <label for="">Your Comment</label>
-                                                        </fieldset>
-                                                    </div>
-                                                    <div class="widget-content-inner">
-                                                        <div class="cols">
-                                                            <fieldset class="name has-top-title">
-                                                                <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="" aria-required="true" required="">
-                                                                <label for="">Name</label>
-                                                            </fieldset>
-                                                            <fieldset class="phone has-top-title">
-                                                                <input type="number" placeholder="Phone" class="" name="number" tabindex="2" value="" aria-required="true" required="">
-                                                                <label for="">Phone</label>
-                                                            </fieldset>
-                                                            <fieldset class="email has-top-title">
-                                                                <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
-                                                                <label for="">Email</label>
-                                                            </fieldset>
-                                                        </div>
-                                                        <fieldset class="message has-top-title">
-                                                            <textarea name="message" rows="4" placeholder="Your Comment" class="" tabindex="2" aria-required="true" required=""></textarea>
-                                                            <label for="">Your Comment</label>
-                                                        </fieldset>
-                                                    </div>
-                                                </div>
+                                            <div class="cols">
+                                                <fieldset class="name wow fadeInUp has-top-title">
+                                                    <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="" aria-required="true" required="">
+                                                    <label for="">Name</label>
+                                                </fieldset>
+                                                <fieldset class="phone wow fadeInUp has-top-title">
+                                                    <input type="number" placeholder="Phone" class="" name="phone" tabindex="2" value="" aria-required="true" required="">
+                                                    <label for="">Phone</label>
+                                                </fieldset>
                                             </div>
-                                            <div class="button-submit">
-                                                <button class="tf-button-primary w-full" type="submit">Submit a Tour Request<i class="icon-arrow-right-add"></i></button>
+                                            <fieldset class="email wow fadeInUp has-top-title">
+                                                <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
+                                                <label for="">Email</label>
+                                            </fieldset>
+                                            <fieldset class="message wow fadeInUp has-top-title">
+                                                <textarea name="message" rows="4" placeholder="Your Message" value="" class="" tabindex="2" aria-required="true" required=""></textarea>
+                                                <label for="">Your Message</label>
+                                          </fieldset>
+                                            <div class="checkbox-item wow fadeInUp">
+                                                <label>
+                                                    <p>I consent to having this website store my submitted information</p>
+                                                    <input type="checkbox">
+                                                    <span class="btn-checkbox"></span>
+                                                </label>
+                                            </div>
+                                            <div class="button-submit wow fadeInUp">
+                                                <button class="tf-button-primary w-full" type="submit">Book Appointment<i class="icon-arrow-right-add"></i></button>
                                             </div>
                                         </form>
                                     </div>
@@ -567,14 +560,14 @@
                                 <ul class="navigation-menu-footer">
                                     <li><div class="text" style="text-transform: lowercase;">info@b1properties.ae</div></li>
                                     <li><div class="text" style="text-transform: lowercase;">+971 4 39 38 155</div></li>
-                                    <li><div class="text" style="text-transform: lowercase;">+971 56 433 8399</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;">+971 5 64 33 8399</div></li>
                                 </ul>
                             </div>
                             <div class="footer-cl-5">
                                 <div class="ft-title">Our Address</div>
-                                <ul class="navigation-menu-footer">
+                               <ul class="navigation-menu-footer">
                                     <li><div class="text">M Floor, First Motors Building<br>
-                                        Al Waha St., Sheikh Zayed Rd.,<br>
+                                        Al Waha St., Sheikh Zayed Rd.
                                         Al Qouz 1, Dubai, UAE.</div></li>
                                 </ul>
                             </div>
@@ -631,6 +624,36 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+    <script>
+        function setAppointmentType(type) {
+            document.getElementById('appointment_type').value = type;
+        }
+    </script>
+    <script>
+        document.querySelector(".form-schedule").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            let formData = new FormData(this); // Gather form data
+    
+            fetch("../email_script/send_email_book_appointment.php", { // Replace with the correct path to your PHP script
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text()) // Parse the response as text
+            .then(data => {
+                if (data === "success") {
+                    alert("Appointment successfully booked!");
+                    window.location.href = "../thankyou.html"; // Redirect to the thank you page
+                } else {
+                    alert("There was an error. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("There was an error. Please try again.");
+            });
+        });
     </script>
 
 </body>
