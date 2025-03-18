@@ -1,0 +1,196 @@
+.
+├── about_us.html
+├── blog_detail.html
+├── blog.html
+├── book_appointment.html
+├── contact.html
+├── css
+│   ├── animate.min.css
+│   ├── animation.css
+│   ├── bootstrap.css
+│   ├── bootstrap-select.min.css
+│   ├── jquery.fancybox.min.css
+│   ├── magnific-popup.min.css
+│   ├── mmenu.css
+│   ├── nice-select.css
+│   ├── nouislider.min.css
+│   ├── style.css
+│   ├── swiper-bundle.min.css
+│   └── test_style.css
+├── email_script
+│   ├── exclusive_book_appointment.php
+│   ├── send_email_book_appointment.php
+│   ├── send_email.php
+│   ├── send_quiz_data.php
+│   └── sold_quiz.php
+├── exclusive
+│   ├── Bvlgari.html
+│   ├── La solare.html
+│   ├── mansion al barari.html
+│   ├── ocean mansion.html
+│   ├── Villa Frond A.html
+│   ├── Villa Frond D.html
+│   ├── Villa Frond J.html
+│   ├── Villa Frond L.html
+│   ├── Villa Palm.html
+│   └── Villa Valiente.html
+├── exclusive.html
+├── font
+│   ├── CottorwayPro
+│   │   └── TTF
+│   │       ├── CottorwayPro-Black.ttf
+│   │       ├── CottorwayPro-Bold.ttf
+│   │       ├── CottorwayPro-ExtraBold.ttf
+│   │       ├── CottorwayPro-ExtraLight.ttf
+│   │       ├── CottorwayPro-Light.ttf
+│   │       ├── CottorwayPro-Medium.ttf
+│   │       ├── CottorwayPro-Regular.ttf
+│   │       ├── CottorwayPro-SemiBold.ttf
+│   │       └── CottorwayPro-Thin.ttf
+│   ├── fonts.css
+│   ├── JacquesPro
+│   │   └── TTF
+│   │       ├── JacquesPro-Bold.ttf
+│   │       ├── JacquesPro-ExtraBold.ttf
+│   │       ├── JacquesPro-ExtraLight.ttf
+│   │       ├── JacquesPro-Light.ttf
+│   │       ├── JacquesPro-Medium.ttf
+│   │       ├── JacquesPro-Regular.ttf
+│   │       ├── JacquesPro-SemiBold.ttf
+│   │       └── JacquesPro-Thin.ttf
+│   ├── Lora
+│   │   ├── Lora-BoldItalic.ttf
+│   │   ├── Lora-Bold.ttf
+│   │   ├── Lora-Italic.ttf
+│   │   ├── Lora-MediumItalic.ttf
+│   │   ├── Lora-Medium.ttf
+│   │   ├── Lora-Regular.ttf
+│   │   ├── Lora-SemiBoldItalic.ttf
+│   │   └── Lora-SemiBold.ttf
+│   ├── merumatta-elegant-monotype-2024-05-03-00-56-15-utc
+│   │   └── TTF
+│   │       └── Merumatta.ttf
+│   ├── PlayfairDisplay
+│   │   ├── PlayfairDisplay-BlackItalic.ttf
+│   │   ├── PlayfairDisplay-Black.ttf
+│   │   ├── PlayfairDisplay-BoldItalic.ttf
+│   │   ├── PlayfairDisplay-Bold.ttf
+│   │   ├── PlayfairDisplay-ExtraBoldItalic.ttf
+│   │   ├── PlayfairDisplay-ExtraBold.ttf
+│   │   ├── PlayfairDisplay-Italic.ttf
+│   │   ├── PlayfairDisplay-MediumItalic.ttf
+│   │   ├── PlayfairDisplay-Medium.ttf
+│   │   ├── PlayfairDisplay-Regular.ttf
+│   │   ├── PlayfairDisplay-SemiBoldItalic.ttf
+│   │   └── PlayfairDisplay-SemiBold.ttf
+│   ├── Quotesa
+│   │   └── TTF
+│   │       └── Quotesa.ttf
+│   └── satoshi
+│       ├── example.html
+│       ├── Satoshi-BlackItalic.woff
+│       ├── Satoshi-Black.woff
+│       ├── Satoshi-BoldItalic.woff
+│       ├── Satoshi-Bold.woff
+│       ├── Satoshi-Italic.woff
+│       ├── Satoshi-LightItalic.woff
+│       ├── Satoshi-Light.woff
+│       ├── Satoshi-MediumItalic.woff
+│       ├── Satoshi-Medium.woff
+│       ├── Satoshi-Regular.woff
+│       └── style.css
+├── icon
+│   ├── flaticon_just-home.16a9acf.delayed
+│   ├── flaticon_just-home9acf.eot
+│   ├── flaticon_just-home9acf.svg
+│   ├── flaticon_just-home9acf.ttf
+│   ├── flaticon_just-home9acf.woff
+│   ├── flaticon_just-home.css
+│   └── icomoon
+│       ├── fonts
+│       │   ├── icomoon13278.eot
+│       │   ├── icomoon13278.svg
+│       │   ├── icomoon13278.ttf
+│       │   ├── icomoon13278.woff
+│       │   ├── icomoon53ff.eot
+│       │   ├── icomoon53ff.svg
+│       │   ├── icomoon53ff.ttf
+│       │   └── icomoon53ff.woff
+│       └── style.css
+├── images
+├── index copy.html
+├── index.html
+├── js
+│   ├── apexcharts.js
+│   ├── area-chart.js
+│   ├── Auto-Swiper.js
+│   ├── bootstrap.min.js
+│   ├── bootstrap-select.min.js
+│   ├── circletype.min.js
+│   ├── countto.js
+│   ├── infobox.min.js
+│   ├── jquery.fancybox.js
+│   ├── jquery.min.js
+│   ├── jquery.nice-select.min.js
+│   ├── magnific-popup.min.js
+│   ├── main.js
+│   ├── maps-1.js
+│   ├── maps-2.js
+│   ├── maps.js
+│   ├── marker.js
+│   ├── messages.js
+│   ├── mmenu.js
+│   ├── morris.js
+│   ├── morris.min.js
+│   ├── nouislider.min.js
+│   ├── rangle-slider.js
+│   ├── raphael.min.js
+│   ├── scrollmagic.js
+│   ├── sticky.min.js
+│   ├── swiper-bundle.min.js
+│   ├── swiper.js
+│   └── wow.min.js
+├── offplan
+│   ├── 0.png
+│   ├── beach gate.html
+│   ├── bluewater bay.html
+│   ├── d1 west villa.html
+│   ├── edenhouse-dubaihills.html
+│   ├── edenpark.html
+│   ├── lagoon views.html
+│   ├── offplan_crestlane.html
+│   ├── palm jebel ali.html
+│   ├── sunrise bay.html
+│   └── tower b damac bay.html
+├── offplan_detail.html
+├── offplan.html
+├── pop.html
+├── property_detail.html
+├── sold
+│   ├── sold bluewater7.html
+│   ├── sold casadelsole.html
+│   ├── sold framed allure.html
+│   ├── sold g23.html
+│   ├── sold jbr.html
+│   ├── sold opus.html
+│   ├── sold riva del lusso.html
+│   ├── sold royalatlantis.html
+│   ├── sold Serene Versante.html
+│   ├── sold sole mare.html
+│   └── sold zabeel.html
+├── sold_detail.html
+├── sold.html
+├── team
+│   ├── Adelina.html
+│   ├── kamol.html
+│   ├── laura.html
+│   ├── oleg.html
+│   ├── ozan.html
+│   ├── roshan.html
+│   └── zilla.html
+├── team_detail.html
+├── team.html
+├── thankyou.html
+└── tree.txt
+
+23 directories, 170 files
