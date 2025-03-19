@@ -47,7 +47,7 @@
           './../images/image-box/map-location-1.jpg',
           'AED 250,000',
           'property-single-v1.html',
-          'City Walk Crestlane, Dubai',
+          'Citywalk Crestlane, Dubai',
           '5',
           '4',
           '3200'

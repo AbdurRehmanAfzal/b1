@@ -16046,7 +16046,3 @@ body.no-scroll {
 .title {
   text-transform: capitalize !important;
 }
-.text::after {
-  content: "Dubai";
-  text-transform: capitalize;
-}
