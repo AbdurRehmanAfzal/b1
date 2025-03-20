@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $interest = htmlspecialchars($interest);
 
     // Prepare email content (optional)
-    $to = "your-email@example.com"; // Replace with your email address
+    $to = "abdurrehmanafzal786@gmail.com"; // Replace with your email address
     $subject = "New Luxury Property Inquiry";
     $message = "
         <h2>New Inquiry Received</h2>
