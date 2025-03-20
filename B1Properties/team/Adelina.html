@@ -204,9 +204,9 @@
                                     <div class="sidebar-item sidebar-contact-info-1">
                                         <div class="sidebar-title">Contact Me</div>
                                         <div class="contact-info mb-0">
-                                            <form class="form-comment" action="email_script/send_email.php" method="post">
+                                            <form class="form-comment" action="../email_script/send_email.php" method="post">
                                                 <fieldset class="name has-top-title">
-                                                    <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="" aria-required="true" required="">
+                                                    <input type="text" placeholder="Name" class="" name="name" tabindex="2" value="" aria-required="true" required="">
                                                     <label for="">Name</label>
                                                 </fieldset>
                                                 <fieldset class="phone has-top-title">
@@ -352,7 +352,7 @@
                                     
                                             <!-- Bluewater Bay -->
                                             <div class="col-md-6">
-                                                <a href="https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-bluewaters-bluewaters-bay-bluewaters-bay-building-2-13221314.html" target="_blank" class="box-dream-link">
+                                                <a href="https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-bluewaters-bluewaters-bay-bluewaters-bay-building-2-13737058.html" target="_blank" class="box-dream-link">
                                                     <div class="box-dream has-border wow fadeInUp">
                                                         <div class="image" style="height: 300px; overflow: hidden;">
                                                             <div class="list-tags"></div>
@@ -470,7 +470,7 @@
                                     
                                             <!-- Tower B Damac Bay -->
                                             <div class="col-md-6">
-                                                <a href="https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-harbour-damac-bay-tower-b-13464660.html" target="_blank" class="box-dream-link">
+                                                <a href="https://www.propertyfinder.ae/en/plp/buy/apartment-for-sale-dubai-dubai-harbour-damac-bay-tower-b-13737433.html" target="_blank" class="box-dream-link">
                                                     <div class="box-dream has-border wow fadeInUp">
                                                         <div class="image" style="height: 300px; overflow: hidden;">
                                                             <div class="list-tags"></div>
@@ -533,7 +533,7 @@
                                         <form class="form-schedule" action="../email_script/send_email_book_appointment.php" method="post">
                                             <div class="cols">
                                                 <fieldset class="message">
-                                                    <input type="date" name="date" value="2024-1-20">
+                                                    <input type="date" name="date" value="2025-1-1">
                                                 </fieldset>
                                                 <fieldset class="message">
                                                     <select name="time" required>
@@ -566,8 +566,7 @@
                                             </div>
                                             <div class="cols">
                                                 <fieldset class="name wow fadeInUp has-top-title">
-                                                    <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="" aria-required="true" required="">
-                                                    <label for="">Name</label>
+                                                    <input type="text" placeholder="Name" class="" name="name" tabindex="2" value="" aria-required="true" required="">
                                                 </fieldset>
                                                 <fieldset class="phone wow fadeInUp has-top-title">
                                                     <input type="number" placeholder="Phone" class="" name="phone" tabindex="2" value="" aria-required="true" required="">
@@ -766,16 +765,16 @@
     <script>
         document.querySelector(".form-schedule").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
-    
+        
             let formData = new FormData(this); // Gather form data
-    
+        
             fetch("../email_script/send_email_book_appointment.php", { // Replace with the correct path to your PHP script
                 method: "POST",
                 body: formData
             })
             .then(response => response.text()) // Parse the response as text
             .then(data => {
-                if (data === "success") {
+                if (data.trim() === "success") { // Use .trim() to remove any extra whitespace
                     alert("Appointment successfully booked!");
                     window.location.href = "../thankyou.html"; // Redirect to the thank you page
                 } else {
