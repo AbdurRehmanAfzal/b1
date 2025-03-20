@@ -15924,6 +15924,9 @@ body {
 body *::first-letter {
   text-transform: uppercase;
 }
+a {
+  text-transform: capitalize;
+}
 
 /* Prevent background scrolling when popup is open */
 body.no-scroll {
@@ -16043,6 +16046,6 @@ body.no-scroll {
 }
 
 .fade-item.fade-item-2,
-.title {
+.title, h3.fadeInUp, h2.fadeInUp {
   text-transform: capitalize !important;
 }
