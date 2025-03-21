@@ -765,9 +765,9 @@
     <script>
         document.querySelector(".form-schedule").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
-        
+    
             let formData = new FormData(this); // Gather form data
-        
+    
             fetch("../email_script/send_email_book_appointment.php", { // Replace with the correct path to your PHP script
                 method: "POST",
                 body: formData

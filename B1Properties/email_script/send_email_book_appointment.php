@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
     $date = htmlspecialchars($_POST['date']);
     $time = htmlspecialchars($_POST['time']);
-    $name = htmlspecialchars($_POST['text']);
+    $name = htmlspecialchars($_POST['name']);
     $phone = htmlspecialchars($_POST['phone']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
