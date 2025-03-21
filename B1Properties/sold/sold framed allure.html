@@ -357,7 +357,7 @@
 
                 <!-- parallax -->
                 <!-- group-icon -->
-                <section class="tf-section">
+                  <section class="tf-section">
                     <div class="cl-container">
                         <div class="row">
                             <div class="col-lg-6">
@@ -372,7 +372,7 @@
                                 <div class="group-icon">
                                     <h3 class="wow fadeInUp">Sell with Us</h3>
                                    
-                                    <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary wow fadeInUp">Contact Us<i class="icon-arrow-right-add"></i></a>
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modelsell" class="tf-button-primary wow fadeInUp">Contact Us<i class="icon-arrow-right-add"></i></a>
                                     
                                 </div>
                             </div>
@@ -569,7 +569,71 @@
             </div>
         </div>
     </div>
-    <script>
+
+    <div class="modal fade modalCenter" id="modelsell">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-sm">
+                <a href="" class="btn-hide-modal" data-bs-dismiss="modal"><i class="icon-close"></i></a>
+                
+                <div class="content-right">
+                    <h4>Sell With Us</h4>
+                    <form id="sell-property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/send_sell_data.php">
+                        <div class="list">
+                            <div class="group-form">
+                                <div class="widget-content-inner active">
+                                    <div class="cols">
+                                        <fieldset class="name has-top-title">
+                                            <input type="text" placeholder="Name" name="name" required>
+                                            <label>Name</label>
+                                        </fieldset>
+                                        <fieldset class="phone has-top-title">
+                                            <input type="number" placeholder="Phone" name="phone" required>
+                                            <label>Phone</label>
+                                        </fieldset>
+                                        <fieldset class="email has-top-title">
+                                            <input type="email" placeholder="Email" name="email" required>
+                                            <label>Email</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">What are you looking to sell?</div>
+                                    <select name="property_type" required>
+                                        <option value="">Select</option>
+                                        <option value="Villa">Villa</option>
+                                        <option value="Mansion">Mansion</option>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">What time should we contact you during the day?</div>
+                                    <select name="contact_time" required>
+                                        <option value="">Select</option>
+                                        <option value="Morning (8 AM - 12 PM)">Morning (8 AM - 12 PM)</option>
+                                        <option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
+                                        <option value="Evening (4 PM - 8 PM)">Evening (4 PM - 8 PM)</option>
+                                        <option value="Anytime">Anytime</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="button-submit">
+                            <button type="submit" class="tf-button-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script>
         document.querySelector("#luxury-property-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
     
@@ -594,7 +658,31 @@
             });
         });
     </script>
-
+    <script>
+        document.querySelector("#sell-property-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            let formData = new FormData(this); // Gather form data
+    
+            fetch("../email_script/send_sell_data.php", { // Replace with the correct path to your PHP script
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text()) // Parse the response as text
+            .then(data => {
+                if (data === "success") {
+                    alert("Your information has been submitted successfully!");
+                    window.location.href = "../thankyou.html"; // Redirect to the thank you page
+                } else {
+                    alert("There was an error. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("There was an error. Please try again.");
+            });
+        });
+    </script>
 
     
 

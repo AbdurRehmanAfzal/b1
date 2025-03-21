@@ -80,35 +80,6 @@
                         <div class="header-right">
                             <nav class="main-menu style-white">
                                 <ul class="navigation">
-                                    <li class="has-children"><a href="javascript:void(0);">Private Listings</a>
-                                        <ul class="main-dropdown">
-                                            <!-- Jumeirah Bay Island -->
-                                            <li class="has-children"><a href="javascript:void(0);">Jumeirah Bay Island</a>
-                                                <ul class="sub-dropdown">
-                                                    <li><a href="exclusive/Bvlgari.html">Bvlgari</a></li>
-                                                    <li><a href="exclusive/ocean mansion.html">Ocean Mansion</a></li>
-                                                </ul>
-                                            </li>
-                                    
-                                            <!-- Al Barari -->
-                                            <li class="has-children"><a href="javascript:void(0);">Al Barari</a>
-                                                <ul class="sub-dropdown">
-                                                    <li><a href="exclusive/mansion al barari.html">Mansion Al Barari</a></li>
-                                                </ul>
-                                            </li>
-                                    
-                                            <!-- Palm Jumeirah -->
-                                            <li class="has-children"><a href="javascript:void(0);">Palm Jumeirah</a>
-                                                <ul class="sub-dropdown">
-                                                    <li><a href="exclusive/Villa Frond A.html">Villa Frond A</a></li>
-                                                    <li><a href="exclusive/Villa Frond D.html">Villa Frond D</a></li>
-                                                    <li><a href="exclusive/Villa Frond L.html">Villa Frond L</a></li>
-                                                    <li><a href="exclusive/Villa Palm.html">Villa frond C</a></li>
-                                                    <li><a href="exclusive/Villa Valiente.html">Villa Valiente</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
                                     <li><a href="exclusive.html">Private Listings</a></li>
                                     <li><a href="offplan.html">New Opportunities</a></li>
                                      <li><a href="sold.html">Sold Properties</a></li>
@@ -838,42 +809,59 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="group-form">
-                                <div class="form-style-has-title">
-                                    <div class="title">OWN Property Status</div>
-                                    <select name="property_status" required>
-                                        <option value="None">None</option>
-                                        <option value="1-5">1-5</option>
-                                        <option value="10+">10+</option>
-                                    </select>
-                                </div>
-                            </div>
                     
                             <div class="group-form">
                                 <div class="form-style-has-title">
-                                    <div class="title">Invested in Dubai</div>
-                                    <select name="invested_in_dubai" required>
+                                    <div class="title">Have you owned or attempted to buy property in Dubai?</div>
+                                    <select name="property_ownership_status" required>
                                         <option value="">Select</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
+                                        <option value="Currently or previously owned">Currently or previously owned</option>
+                                        <option value="Attempted but unsuccessful">Attempted but unsuccessful</option>
+                                        <option value="Never owned or attempted">Never owned or attempted</option>
                                     </select>
                                 </div>
                             </div>
                     
                             <div class="group-form">
                                 <div class="form-style-has-title">
-                                    <div class="title">Your Interest</div>
-                                    <select name="interest" required>
-                                        <option value="All Type">All Type</option>
-                                        <option value="Office">Office</option>
-                                        <option value="Villa">Villa</option>
-                                        <option value="Shop">Shop</option>
-                                        <option value="Single Family">Single Family</option>
+                                    <div class="title">What is your current status?</div>
+                                    <select name="current_status" required>
+                                        <option value="">Select</option>
+                                        <option value="Actively looking to purchase/invest">Actively looking to purchase/invest</option>
+                                        <option value="Looking around">Looking around</option>
+                                        <option value="Property market conditions">Property market conditions</option>
+                                        <option value="Future potential investment options">Future potential investment options</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">How much are you looking to invest in a property?</div>
+                                    <select name="investment_amount" required>
+                                        <option value="">Select</option>
+                                        <option value="Up to 1 Million USD">Up to 1 Million USD</option>
+                                        <option value="1 to 5 Million USD">1 to 5 Million USD</option>
+                                        <option value="5 to 10 Million USD">5 to 10 Million USD</option>
+                                        <option value="10 Million USD and above">10 Million USD and above</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">How soon are you looking to buy?</div>
+                                    <select name="buy_timeline" required>
+                                        <option value="">Select</option>
+                                        <option value="Straight away">Straight away</option>
+                                        <option value="Within a month">Within a month</option>
+                                        <option value="In the next 3 months">In the next 3 months</option>
+                                        <option value="I haven't decided yet">I haven't decided yet</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-
+                    
                         <div class="button-submit">
                             <button type="submit" class="tf-button-primary">Submit</button>
                         </div>
@@ -911,42 +899,59 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="group-form">
-                                <div class="form-style-has-title">
-                                    <div class="title">OWN Property Status</div>
-                                    <select name="property_status" required>
-                                        <option value="None">None</option>
-                                        <option value="1-5">1-5</option>
-                                        <option value="10+">10+</option>
-                                    </select>
-                                </div>
-                            </div>
                     
                             <div class="group-form">
                                 <div class="form-style-has-title">
-                                    <div class="title">Invested in Dubai</div>
-                                    <select name="invested_in_dubai" required>
+                                    <div class="title">Have you owned or attempted to buy property in Dubai?</div>
+                                    <select name="property_ownership_status" required>
                                         <option value="">Select</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
+                                        <option value="Currently or previously owned">Currently or previously owned</option>
+                                        <option value="Attempted but unsuccessful">Attempted but unsuccessful</option>
+                                        <option value="Never owned or attempted">Never owned or attempted</option>
                                     </select>
                                 </div>
                             </div>
                     
                             <div class="group-form">
                                 <div class="form-style-has-title">
-                                    <div class="title">Your Interest</div>
-                                    <select name="interest" required>
-                                        <option value="All Type">All Type</option>
-                                        <option value="Office">Office</option>
-                                        <option value="Villa">Villa</option>
-                                        <option value="Shop">Shop</option>
-                                        <option value="Single Family">Single Family</option>
+                                    <div class="title">What is your current status?</div>
+                                    <select name="current_status" required>
+                                        <option value="">Select</option>
+                                        <option value="Actively looking to purchase/invest">Actively looking to purchase/invest</option>
+                                        <option value="Looking around">Looking around</option>
+                                        <option value="Property market conditions">Property market conditions</option>
+                                        <option value="Future potential investment options">Future potential investment options</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">How much are you looking to invest in a property?</div>
+                                    <select name="investment_amount" required>
+                                        <option value="">Select</option>
+                                        <option value="Up to 1 Million USD">Up to 1 Million USD</option>
+                                        <option value="1 to 5 Million USD">1 to 5 Million USD</option>
+                                        <option value="5 to 10 Million USD">5 to 10 Million USD</option>
+                                        <option value="10 Million USD and above">10 Million USD and above</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">How soon are you looking to buy?</div>
+                                    <select name="buy_timeline" required>
+                                        <option value="">Select</option>
+                                        <option value="Straight away">Straight away</option>
+                                        <option value="Within a month">Within a month</option>
+                                        <option value="In the next 3 months">In the next 3 months</option>
+                                        <option value="I haven't decided yet">I haven't decided yet</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-
+                    
                         <div class="button-submit">
                             <button type="submit" class="tf-button-primary">Submit</button>
                         </div>

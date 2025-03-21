@@ -41,6 +41,31 @@
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="../images/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .wg-blog {
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Ensure the parent div takes full height */
+        }
+        
+        .wg-blog .image {
+            height: 200px; /* Set a fixed height for the image container */
+            overflow: hidden; /* Ensure the image doesn't overflow */
+        }
+        
+        .wg-blog .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container without distortion */
+        }
+        
+        .wg-blog .content {
+            flex: 1; /* Allow the content to take up remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space out content evenly */
+        }
+    </style>
 
 
 </head>
@@ -161,7 +186,7 @@
                                     <div class="col-12">
                                         <div class="wrap-image">
                                             
-                                            <div class="swiper-container auto-swiper slider-property-single-6 arrow-style-1 relative slider-auto">
+                                            <div class="swiper-container slider-property-single-6 arrow-style-1 relative slider-auto">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <div class="swiper-item">
@@ -706,6 +731,198 @@
                             </div>
                         </div>
                 </div>
+                <section class="tf-section flat-news style-1">
+                    <div class="cl-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="heading-section text-center">
+                                    <h2 class="wow fadeInUp">Similar Projects</h2>
+                                    <div class="text wow fadeInUp"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="swiper-container auto-swiper slider-news slider-auto">
+                                    <div class="swiper-wrapper">
+                                        <!-- Exclusive Properties -->
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/bvlgari/0.png" alt="Bvlgari Ocean Mansion">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="Bvlgari.html">Bvlgari Ocean Mansion</a>
+                                                    </div>
+                                                    <a href="Bvlgari.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/j20/images/j20_day.webp" alt="Villa Frond J">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="Bvlgari.html">Villa Frond J</a>
+                                                    </div>
+                                                    <a href="Bvlgari.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/Ocean Mansion/images/EXTERIOR_3-2.webp" alt="Ocean Mansion">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="ocean mansion.html">Ocean Mansion</a>
+                                                    </div>
+                                                    <a href="ocean mansion.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/g11/images/home.png" alt="La solare">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="La solare.html">La solare</a>
+                                                    </div>
+                                                    <a href="La solare.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/Villa Frond A/images/exterior_night.webp" alt="Villa Frond A">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="Villa Frond A.html">Villa Frond A</a>
+                                                    </div>
+                                                    <a href="Villa Frond A.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/Villa Valiente/0000.png" alt="Villa Valiente">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="Villa Valiente.html">Villa Valiente</a>
+                                                    </div>
+                                                    <a href="Villa Valiente.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/Villa Palm/images/12.webp" alt="Villa Palm">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="Villa Palm.html">Villa Frond C</a>
+                                                    </div>
+                                                    <a href="Villa Palm.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/Mansion Al Barari/images/38.webp" alt="Mansion Al Barari">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="mansion al barari.html">Mansion Al Barari</a>
+                                                    </div>
+                                                    <a href="mansion al barari.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/Villa Frond L/images/0.png" alt="Villa Frond L">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="Villa Frond L.html">Villa Frond L</a>
+                                                    </div>
+                                                    <a href="Villa Frond L.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                                <div class="image">
+                                                    <img src="../images/exclusive/Villa Frond D/images/30.webp" alt="Villa Frond D">
+                                                </div>
+                                                <div class="content">
+                                                    <div class="sub-blog"></div>
+                                                    <div class="name">
+                                                        <a href="Villa Frond D.html">Villa Frond D</a>
+                                                    </div>
+                                                    <a href="Villa Frond D.html" class="tf-button-no-bg">
+                                                        More Detail 
+                                                        <i class="icon-arrow-right-add"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination auto-swiper-pagination discover-pagination" style="margin-top: 10px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
               <!-- /property-single-wrap -->
                 <section class="account-bar">
                     
@@ -716,7 +933,7 @@
                                     <div>
                                         <h3 class="wow fadeInUp">Buy Exclusive
                                             properties with B1</h3>
-                                        <div class="text wow fadeInUp">We only work with the best companies around the globe</div>
+                                        
                                     </div>
                                     <a href="../book_appointment.html" class="tf-button-primary wow fadeInUp">Book Appointment<i class="icon-arrow-right-add"></i></a>
                                 </div>
@@ -862,6 +1079,7 @@
      <script src="../js/bootstrap-select.min.js"></script>
      <script src="../js/swiper-bundle.min.js"></script>
      <script src="../js/swiper.js"></script>
+     <script src="../js/Auto-Swiper.js"></script>
      <script src="../js/countto.js"></script>
      <script src="../js/circletype.min.js"></script>
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFC3m2n0jBRFTMvUNZc0-6Y0Rzlcadzcw"></script>

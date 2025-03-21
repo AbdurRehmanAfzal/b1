@@ -9,12 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'] ?? '';
     $phone = $_POST['phone'] ?? '';
     $email = $_POST['email'] ?? '';
-    $property_status = $_POST['property_status'] ?? '';
-    $invested_in_dubai = $_POST['invested_in_dubai'] ?? '';
-    $interest = $_POST['interest'] ?? '';
+    $property_ownership_status = $_POST['property_ownership_status'] ?? '';
+    $current_status = $_POST['current_status'] ?? '';
+    $investment_amount = $_POST['investment_amount'] ?? '';
+    $buy_timeline = $_POST['buy_timeline'] ?? '';
 
     // Validate required fields
-    if (empty($name) || empty($phone) || empty($email) || empty($property_status) || empty($invested_in_dubai) || empty($interest)) {
+    if (empty($name) || empty($phone) || empty($email) || empty($property_ownership_status) || empty($current_status) || empty($investment_amount) || empty($interest)) {
         echo "error"; // Return error if any required field is empty
         exit;
     }
@@ -23,8 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($name);
     $phone = htmlspecialchars($phone);
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $property_status = htmlspecialchars($property_status);
-    $invested_in_dubai = htmlspecialchars($invested_in_dubai);
+    $property_ownership_status = htmlspecialchars($property_ownership_status);
+    $current_status = htmlspecialchars($current_status);
+    $investment_amount = htmlspecialchars($investment_amount);
     $interest = htmlspecialchars($interest);
 
     // Prepare email content (optional)
@@ -35,9 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Name:</strong> $name</p>
         <p><strong>Phone:</strong> $phone</p>
         <p><strong>Email:</strong> $email</p>
-        <p><strong>Property Status:</strong> $property_status</p>
-        <p><strong>Invested in Dubai:</strong> $invested_in_dubai</p>
-        <p><strong>Interest:</strong> $interest</p>
+        <p><strong>Property Ownership Status:</strong> $property_ownership_status</p>
+        <p><strong>Current Status:</strong> $current_status</p>
+        <p><strong>Investment Amount:</strong> $investment_amount</p>
+        <p><strong>Buy_timeline:</strong> $buy_timeline</p>
     ";
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";

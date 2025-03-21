@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'] ?? '';
     $phone = $_POST['phone'] ?? '';
     $email = $_POST['email'] ?? '';
-    $meeting_preference = $_POST['meeting_preference'] ?? '';
-    $budget = $_POST['budget'] ?? '';
+    $property_type = $_POST['property_type'] ?? '';
+    $contact_time = $_POST['contact_time'] ?? '';
 
     // Validate required fields
-    if (empty($name) || empty($phone) || empty($email) || empty($meeting_preference) || empty($budget)) {
+    if (empty($name) || empty($phone) || empty($email) || empty($property_type) || empty($contact_time)) {
         echo "error"; // Return error if any required field is empty
         exit;
     }
@@ -22,8 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($name);
     $phone = htmlspecialchars($phone);
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $meeting_preference = htmlspecialchars($meeting_preference);
-    $budget = htmlspecialchars($budget);
+    $property_type = htmlspecialchars($property_type);
+    $contact_time = htmlspecialchars($contact_time);
 
     // Get user's IP address
     $user_ip = $_SERVER['REMOTE_ADDR'];
@@ -33,14 +33,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare email content
     $to = "abdurrehmanafzal786@gmail.com"; // Replace with your email address
-    $subject = "New Luxury Property Inquiry";
+    $subject = "New Property Sell Inquiry";
     $message = "
-        <h2>New Inquiry Received</h2>
+        <h2>New Property Sell Inquiry Received</h2>
         <p><strong>Name:</strong> $name</p>
         <p><strong>Phone:</strong> $phone</p>
         <p><strong>Email:</strong> $email</p>
-        <p><strong>Meeting Preference:</strong> $meeting_preference</p>
-        <p><strong>Budget:</strong> $budget</p>
+        <p><strong>Property Type:</strong> $property_type</p>
+        <p><strong>Preferred Contact Time:</strong> $contact_time</p>
         <p><strong>User IP Address:</strong> $user_ip</p>
         <p><strong>Referring Page:</strong> $referring_page</p>
     ";
