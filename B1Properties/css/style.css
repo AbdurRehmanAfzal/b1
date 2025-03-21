@@ -952,10 +952,6 @@ h6, .h6 {
   height: 100%;
 }
 
-.capitalize {
-  text-transform: capitalize;
-}
-
 .italic {
   font-style: italic;
 }
@@ -15915,15 +15911,15 @@ a {
 }
 /* Make all text lowercase */
 body {
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 .lowercase {
   text-transform: lowercase !important;
 }
 /* Capitalize only the first letter of each element */
-body *::first-letter {
+/* body *::first-letter {
   text-transform: uppercase;
-}
+} */
 a {
   text-transform: capitalize;
 }
@@ -16040,12 +16036,24 @@ body.no-scroll {
 #moreDetailsLink:hover {
   background: #8F5F00;
 }
-.price,
+/* .price,
 .text-1.fade-item.fade-item-3 {
-    text-transform: uppercase !important;
+    text-transform: capitalize !important;
 }
 
 .fade-item.fade-item-2,
 .title, h3.fadeInUp, h2.fadeInUp {
   text-transform: capitalize !important;
+} */
+.lowercase-email {
+  text-transform: lowercase;
+}
+
+
+.capitalize-first-word {
+  text-transform: none; /* Resets the capitalize effect */
+}
+
+.capitalize-first-word::first-letter {
+  text-transform: uppercase; /* Capitalizes only the first letter */
 }

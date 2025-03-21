@@ -5,17 +5,17 @@ ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
-    $date = htmlspecialchars($_POST['date'] ?? '');
-    $time = htmlspecialchars($_POST['time'] ?? '');
-    $name = htmlspecialchars($_POST['name'] ?? '');
-    $phone = htmlspecialchars($_POST['phone'] ?? '');
-    $email = htmlspecialchars($_POST['email'] ?? '');
-    $message = htmlspecialchars($_POST['message'] ?? '');
-    $appointment_type = htmlspecialchars($_POST['appointment_type'] ?? ''); // Ensure this is passed from the form
+    $date = htmlspecialchars($_POST['date']);
+    $time = htmlspecialchars($_POST['time']);
+    $name = htmlspecialchars($_POST['name']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+    $appointment_type = htmlspecialchars($_POST['appointment_type']);
 
-    // Validate required fields
-    if (empty($date) || empty($time) || empty($name) || empty($phone) || empty($email) || empty($appointment_type)) {
-        echo "error"; // Return error if any required field is empty
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "error";
         exit;
     }
 
