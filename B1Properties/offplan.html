@@ -41,6 +41,7 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+
     <style>
                     
         @media (max-width: 768px) {
@@ -49,29 +50,36 @@
             }
             
         }
-        .box-dream {
-            display: flex;
-            flex-direction: column;
-            height: 100%; /* Ensure the parent div takes full height */
-        }
-        
+        /* Ensure the image container has a fixed height */
         .box-dream .image {
-            height: 250px; /* Set a fixed height for the image container */
-            overflow: hidden; /* Ensure the image doesn't overflow */
-        }
-        
-        .box-dream .image img {
+            height: 250px; /* Adjust this value as needed */
+            overflow: hidden; /* Hide any overflow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          /* Ensure the image fills the container and maintains aspect ratio */
+          .box-dream .image img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensure the image covers the container without distortion */
-        }
-        
-        .box-dream .content {
-            flex: 1; /* Allow the content to take up remaining space */
+            object-fit: cover; /* Ensures the image covers the container */
+          }
+          
+          /* Ensure all property cards have the same height */
+          .box-dream {
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Space out content evenly */
-        }
+            height: 100%; /* Ensure the card takes full height */
+          }
+          
+          .box-dream .content {
+            flex: 1; /* Allow the content to take remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute space evenly */
+          }
+          
     </style>
 
 
@@ -237,7 +245,7 @@
                                                 <div class="col-12">
                                                     <div class="slider-content">
                                                         
-                                                        <h1 class="wow fadeInUp capitalize-first-word"Launching New Villas at Palm Jebel Ali</h1>
+                                                        <h1 class="wow fadeInUp capitalize-first-word">Launching New Villas at Palm Jebel Ali</h1>
                                                         <div class="text wow fadeInUp">Wake up to the sea breeze in this luxury island living</div>
                                                         <a href="offplan/palm jebel ali.html" class="tf-button-primary m-auto fade-item fade-item-4">View Details<i class="icon-arrow-right-add"></i></a>
                                                     </div>
@@ -496,303 +504,77 @@
                         </div>
                     </div>
                 </section>
+
+             
                 
                 <!-- /work-with-us -->
                
-                <div class="flat-title page-property-grid-3">
-                    <div class="cl-container">
+              
+                <div class="flat-title">
+                    <div class="cl-container full">
                         <div class="row">
                             <div class="col-12">
                                 <div class="content">
-                                    
                                     <h2 class="wow fadeInUp capitalize-first-word"> Find investment opportunities in Dubai</h2>
                                     <ul class="breadcrumbs wow fadeInUp">
                                         <li><a href="index.html">home /</a></li>
                                         <li><a href="offplan.html">investment opportunities</a></li>
                                     </ul>
-                                    <!--<div class="form-filter wow fadeInUp">
-                                        <form class="form-search-home5">
-                                            <div class="list">
-                                                <div class="group-form form-search-content">
-                                                    <div class="form-style-has-title">
-                                                        <div class="title">Keyword</div>
-                                                        <div class="relative">
-                                                            <fieldset class="name">
-                                                                <input type="text" placeholder="Enter Keyyword" class="show-search style-default" name="name" tabindex="2" value="" aria-required="true" required="">
-                                                            </fieldset>
-                                                            <div class="style-absolute-right">
-                                                                <div class="style-icon-default"><i class="flaticon-magnifiying-glass"></i></div>
-                                                            </div>
-                                                            <div class="box-content-search style-1">
-                                                                <ul>
-                                                                    <li>
-                                                                        <div class="item1">
-                                                                            <div>
-                                                                                <div class="image">
-                                                                                    <img src="images/author/avatar-8.png" alt="">
-                                                                                </div>
-                                                                                <p>Arabic House</p>
-                                                                            </div>
-                                                                            <div class="text">For Sale</div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="item1">
-                                                                            <div>
-                                                                                <div class="image">
-                                                                                    <img src="images/author/avatar-7.png" alt="">
-                                                                                </div>
-                                                                                <p>Home Pitt Street</p>
-                                                                            </div>
-                                                                            <div class="text">For Rent</div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="item1">
-                                                                            <div>
-                                                                                <div class="image">
-                                                                                    <img src="images/author/avatar-9.png" alt="">
-                                                                                </div>
-                                                                                <p>Villa One Hyde Park</p>
-                                                                            </div>
-                                                                            <div class="text">For Rent</div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="item1">
-                                                                            <div>
-                                                                                <div class="image">
-                                                                                    <img src="images/author/avatar-10.png" alt="">
-                                                                                </div>
-                                                                                <p>House on the beverly hills</p>
-                                                                            </div>
-                                                                            <div class="text">For Sale</div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="divider-1"></div>
-                                                <div class="group-form">
-                                                    <div class="form-style-has-title">
-                                                        <div class="title">Status</div>
-                                                        <div class="nice-select" tabindex="0">
-                                                            <span class="current">All Status</span>
-                                                            <ul class="list style-radio">    
-                                                                <li data-value="For Sale" class="option selected">For Sale</li>
-                                                                <li data-value="For Ren" class="option">For Ren</li>
-                                                                <li data-value="Sold" class="option">Sold</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="divider-1"></div>
-                                                <div class="group-form">
-                                                    <div class="form-style-has-title">
-                                                        <div class="title">Type</div>
-                                                        <div class="nice-select" tabindex="0">
-                                                            <span class="current">All Type</span>
-                                                            <ul class="list">    
-                                                                <li data-value class="option selected">All Type</li>
-                                                                <li data-value="Office" class="option">Office</li>
-                                                                <li data-value="Villa" class="option">Villa</li>
-                                                                <li data-value="Shop" class="option">Shop</li>
-                                                                <li data-value="Single Family" class="option">Single Family</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex gap10">
-                                                <div class="group-form">
-                                                    <div class="wg-filter">
-                                                        <div class="tf-button-filter btn-filter"><i class="flaticon-filter"></i>Filter</div>
-                                                        <div class="open-filter filter-no-content" id="a1">
-                                                            <div>
-                                                                <div class="grid-3-cols mb-20">
-                                                                    <div class="nice-select" tabindex="0">
-                                                                        <span class="current">City</span>
-                                                                        <ul class="list">    
-                                                                            <li data-value class="option selected">City</li>
-                                                                            <li data-value="New York" class="option">New York</li>
-                                                                            <li data-value="Paris" class="option">Paris</li>
-                                                                            <li data-value="Ha Noi" class="option">Ha Noi</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="nice-select" tabindex="0">
-                                                                        <span class="current">Bedrooms</span>
-                                                                        <ul class="list">    
-                                                                            <li data-value class="option selected">Bedrooms</li>
-                                                                            <li data-value="1 Bed" class="option">1 Bed</li>
-                                                                            <li data-value="2 Bed" class="option">2 Bed</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="nice-select" tabindex="0">
-                                                                        <span class="current">Bathrooms</span>
-                                                                        <ul class="list">    
-                                                                            <li data-value class="option selected">Bathrooms</li>
-                                                                            <li data-value="1 Bath" class="option">1 Bath</li>
-                                                                            <li data-value="2 Bath" class="option">2 Bath</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="grid-4-cols">
-                                                                    <fieldset class="name">
-                                                                        <input type="text" placeholder="Min. Area" class="" name="name" tabindex="2" value="" aria-required="true" required="">
-                                                                    </fieldset>
-                                                                    <fieldset class="name">
-                                                                        <input type="text" placeholder="Max. Area" class="" name="name" tabindex="2" value="" aria-required="true" required="">
-                                                                    </fieldset>
-                                                                    <div class="nice-select" tabindex="0">
-                                                                        <span class="current">Min. Price</span>
-                                                                        <ul class="list">    
-                                                                            <li data-value class="option selected">Min. Price</li>
-                                                                            <li data-value="100 $" class="option">100 $</li>
-                                                                            <li data-value="150 $" class="option">150 $</li>                                                     
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="nice-select" tabindex="0">
-                                                                        <span class="current">Max. Price</span>
-                                                                        <ul class="list">    
-                                                                            <li data-value class="option selected">Max. Price</li>
-                                                                            <li data-value="1000 $" class="option">1000 $</li>                                                    
-                                                                            <li data-value="1500 $" class="option">1500 $</li>                                                        
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div>
-                                                                <div class="title">Amenities</div>  
-                                                                <ul class="grid-checkbox">
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Air Conditioning</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Barbeque</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Dryer</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Gym</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Lawn</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Microwave</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Refrigerator</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Sauna</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Swimming Pool</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>TV Cable</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>Washer</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="checkbox-item">
-                                                                        <label>
-                                                                            <p>WiFi</p>
-                                                                           <input type="checkbox" required>
-                                                                            <span class="btn-checkbox"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="group-form">
-                                                    <div class="button-submit">
-                                                        <button class="" type="submit">Search</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>-->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-               
-                
-
-                   
-                    
+                <section class="tf-section flat-experts style-1">
                     <!-- property-grid -->
-                    <div class="cl-container w1800">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="top">
-                                    <h3 class="wow fadeInUp text-center text-lg-left">Investment opportunities</h3>
-                                    <div class="sub"></div>
+                    <div class="property-grid-wrap-v2">
+                        <div class="cl-container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="top">
+                                        <!--<div class="sub wow fadeInUp">
+                                            <p>9,998 results</p>
+                                            <div class="sort-wrap">
+                                                <p>Sort by</p>
+                                                <div class="nice-select default" tabindex="0">
+                                                    <span class="current">Newest listings</span>
+                                                    <ul class="list">    
+                                                        <li data-value class="option selected">Newest</li>
+                                                        <li data-value="For Ren" class="option">Oldest</li>
+                                                        <li data-value="Sold" class="option">3 days</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                    </div>
                                 </div>
-                                <div class="property-grid-wrap type-2-cols">
-                                    <!-- Property 1 -->
+                            </div>
+                            <div class="row">
+                                <!-- Sorted Property Cards (High to Low) -->
+                              
+                            
+                                <!-- Embedded Cards from the Second Set -->
+                                <div class="col-xl-4 col-md-6">
                                     <div class="box-dream has-border wow fadeInUp">
                                         <div class="image">
                                             <div class="list-tags"></div>
-                                            <div class="button-heart"><i class="flaticon-heart-1"></i></div>
+                                            
                                             <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <div class="">
                                                             <img class="" src="images/offplan/crestlane1/2.webp" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="">
+                                                            <img class="" src="images/offplan/crestlane1/5.webp" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="">
+                                                            <img class="" src="images/offplan/crestlane1/35.webp" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -827,20 +609,35 @@
                                             </div>
                                         </div>
                                     </div>
-                    
-                                    <!-- Property 2 -->
+                                </div>
+                            
+                                <div class="col-xl-4 col-md-6">
                                     <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="image">
                                             <div class="list-tags"></div>
-                                            <div class="button-heart"><i class="flaticon-heart-1"></i></div>
-                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                            
+                                            <div class="swiper-container slider-box-dream arrow-style-1">
                                                 <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="">
+                                                            <img class="" src="images/offplan/palm-jebel-ali/13.webp" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="">
+                                                            <img class="" src="images/offplan/palm-jebel-ali/3.webp" alt="">
+                                                        </div>
+                                                    </div>
                                                     <div class="swiper-slide">
                                                         <div class="">
                                                             <img class="" src="images/offplan/palm-jebel-ali/5.webp" alt="">
                                                         </div>
                                                     </div>
+                                                   
                                                 </div>
+                                                <div class="swiper-pagination box-dream-pagination"></div>
+                                                <div class="box-dream-next swiper-button-next"></div>
+                                                <div class="box-dream-prev swiper-button-prev"></div>
                                             </div>
                                         </div>
                                         <div class="content">
@@ -869,17 +666,18 @@
                                             </div>
                                         </div>
                                     </div>
-                    
-                                    <!-- Property 3 -->
+                                </div>
+                            
+                                <div class="col-xl-4 col-md-6">
                                     <div class="box-dream has-border wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="image">
                                             <div class="list-tags"></div>
-                                            <div class="button-heart"><i class="flaticon-heart-1"></i></div>
+                                            
                                             <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <div class="">
-                                                            <img class="" src="images/offplan/dubai-hills/2.webp" alt="">
+                                                            <img class="" src="images/offplan/dubai-hills/1.webp" alt="">
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
@@ -893,6 +691,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="swiper-pagination box-dream-pagination"></div>
+                                                <div class="box-dream-next swiper-button-next"></div>
+                                                <div class="box-dream-prev swiper-button-prev"></div>
                                             </div>
                                         </div>
                                         <div class="content">
@@ -921,14 +722,20 @@
                                             </div>
                                         </div>
                                     </div>
-                    
-                                    <!-- Property 4 -->
+                                </div>
+                            
+                                <div class="col-xl-4 col-md-6">
                                     <div class="box-dream has-border wow fadeInUp">
                                         <div class="image">
                                             <div class="list-tags"></div>
-                                            <div class="button-heart"><i class="flaticon-heart-1"></i></div>
+                                            
                                             <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
                                                 <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="">
+                                                            <img class="" src="images/offplan/edenpark/12.webp" alt="">
+                                                        </div>
+                                                    </div>
                                                     <div class="swiper-slide">
                                                         <div class="">
                                                             <img class="" src="images/offplan/edenpark/8.webp" alt="">
@@ -939,6 +746,7 @@
                                                             <img class="" src="images/offplan/edenpark/2.webp" alt="">
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
                                                 <div class="swiper-pagination box-dream-pagination"></div>
                                                 <div class="box-dream-next swiper-button-next"></div>
@@ -972,26 +780,33 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="wg-pagination justify-center wow fadeInUp">
-                                    <li>
-                                        <a href="#"><i class="icon-keyboard_arrow_left"></i></a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="icon-keyboard_arrow_right"></i></a>
-                                    </li>
-                                </ul>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="wrap-map-v1">
-                                    <div id="map" class="row-height" data-map-zoom="16" data-map-scroll="true"></div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="wg-pagination justify-center wow fadeInUp">
+                                        <li>
+                                            <a href="#"><i class="icon-keyboard_arrow_left"></i></a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-keyboard_arrow_right"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- /property-grid -->
+                </section>
+
+               
+                
+
+                   
+                    
+                   
     
               
                   <!-- flat-brand -->
@@ -1449,7 +1264,7 @@
                                         <button class="tf-button-bg" type="submit">Send <i class="icon-arrow-right-add"></i></button>
                                     </div>
                                 </form>
-                                <div class="text">Subscribe to get early access to our new listings.</div>
+                                <div class="text capitalize-first-word">Subscribe to get early access to our new listings.</div>
                             </div>
                             <div class="footer-cl-3">
                                 <div class="ft-title">Quick Links</div>
@@ -1461,7 +1276,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;">info@b1properties.ae</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -1485,7 +1300,7 @@
                             </div>
                         </div>
                         <div class="bottom-footer">
-                            <div class="text">Copyright © 2025.. B1 Properties</div>
+                            <div class="text">Copyright © 2025. B1 Properties</div>
                         </div>
                     </div>
                 </div>

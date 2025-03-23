@@ -57,6 +57,9 @@
             );
             pointer-events: none;
         }
+        h1.wow.fadeInUp.capitalize-first-word {
+            font-size: 5rem; /* Responsive font size */
+        }
     </style>
 
 </head>
@@ -187,7 +190,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="slider-content m-5">
-                                            <h1 class="wow fadeInUp capitalize-first-word"Launching New Villas at Palm Jebel Ali</h1>
+                                            <h1 class="wow fadeInUp capitalize-first-word">Launching New Villas at Palm Jebel Ali</h1>
                                             <div class="text wow fadeInUp">Wake up to the sea breeze in this luxury island living</div>
                                             <a href="#register-interest-section" class="tf-button-primary wow fadeInUp">Register Interest<i class="icon-arrow-right-add"></i></a>
                                         </div>
@@ -225,9 +228,9 @@
                     <div class="cl-container">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="content-left">
-                                    <h2 class="wow fadeInUp capitalize-first-word">Get in touch now for  <br> more information.</h2>
-                                    <div class="text-content wow fadeInUp capitalize-first-word">Experience Dubai like never before at this luxurious tower branded <br> by Fairmont Hotels & Resorts</div>
+                                <div class="content-left pl-50">
+                                    <h2 class="wow fadeInUp capitalize-first-word">Get in touch now for <br> more information.</h2>
+                                    
                                     <div class="flex items-center gap50 wow fadeInUp">
                                         <a href="#register-interest-section" class="tf-button-primary">Register Interest<i class="icon-arrow-right-add"></i></a>
                                         
@@ -295,7 +298,7 @@
                             <div class="col-12">
                                 <div class="heading-section text-center">
                                     <h2 class=" wow fadeInUp" data-wow-delay="0.1s">Gallery</h2>
-                                    <div class="text wow fadeInUp capitalize-first-word" data-wow-delay="0.2s">Experience Dubai like never before at this luxurious tower</div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -428,7 +431,7 @@
                 <div class="cl-container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="content-wrap m-5">
+                            <div class="content-wrap">
                                 <div class="head-title wow fadeInUp">
                                     <div>
                                         <h3>Feature & Amenities</h3>
@@ -595,7 +598,7 @@
             <!-- /flat-pricing -->
 
               <!-- slider -->
-              <section id="register-interest-section" class="slider home9">
+              <section  id="register-interest-section" class="slider home9">
                 <div class="top">
                     <div class="cl-container">
                         <div class="row">
@@ -607,6 +610,7 @@
                             <div class="col-lg-4">
                                 <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary1 type-1 style-bg-white wow fadeInUp">Join Our Community For More Properties<i class="icon-arrow-right-add"></i></a>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -615,91 +619,99 @@
                         <div class="cl-container">
                             <div class="row">
                                 <div class="col-md-6">
-                                   
+                                    <div class="button-play-video wow fadeInUp">
+                                        <div class="video-wrap">
+                                            <a href="" class="popup-youtube">
+                                                
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/send_quiz_data.php">
-    <div class="list">
-        <div class="group-form">
-            <div class="widget-content-inner active">
-                <div class="cols">
-                    <fieldset class="name has-top-title">
-                        <input type="text" placeholder="Name" name="name" required>
-                        <label>Name</label>
-                    </fieldset>
-                    <fieldset class="phone has-top-title">
-                        <input type="number" placeholder="Phone" name="phone" required>
-                        <label>Phone</label>
-                    </fieldset>
-                    <fieldset class="email has-top-title">
-                        <input type="email" placeholder="Email" name="email" required>
-                        <label>Email</label>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
+                        <div class="list">
+                            <div class="group-form">
+                                <div class="widget-content-inner active">
+                                    <div class="cols">
+                                        <fieldset class="name has-top-title">
+                                            <input type="text" placeholder="Name" name="name" required>
+                                            <label>Name</label>
+                                        </fieldset>
+                                        <fieldset class="phone has-top-title">
+                                            <input type="number" placeholder="Phone" name="phone" required>
+                                            <label>Phone</label>
+                                        </fieldset>
+                                        <fieldset class="email has-top-title">
+                                            <input type="email" placeholder="Email" name="email" required>
+                                            <label>Email</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
 
-        <div class="group-form">
-            <div class="form-style-has-title">
-                <div class="title">Have you owned or attempted to buy property in Dubai?</div>
-                <select name="property_ownership_status" required>
-                    <option value="">Select</option>
-                    <option value="Currently or previously owned">Currently or previously owned</option>
-                    <option value="Attempted but unsuccessful">Attempted but unsuccessful</option>
-                    <option value="Never owned or attempted">Never owned or attempted</option>
-                </select>
-            </div>
-        </div>
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">Have you owned or attempted to buy property in Dubai?</div>
+                                    <select name="property_ownership_status" required>
+                                        <option value="">Select</option>
+                                        <option value="Currently or previously owned">Currently or previously owned</option>
+                                        <option value="Attempted but unsuccessful">Attempted but unsuccessful</option>
+                                        <option value="Never owned or attempted">Never owned or attempted</option>
+                                    </select>
+                                </div>
+                            </div>
 
-        <div class="group-form">
-            <div class="form-style-has-title">
-                <div class="title">What is your current status?</div>
-                <select name="current_status" required>
-                    <option value="">Select</option>
-                    <option value="Actively looking to purchase/invest">Actively looking to purchase/invest</option>
-                    <option value="Looking around">Looking around</option>
-                    <option value="Property market conditions">Property market conditions</option>
-                    <option value="Future potential investment options">Future potential investment options</option>
-                </select>
-            </div>
-        </div>
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">What is your current status?</div>
+                                    <select name="current_status" required>
+                                        <option value="">Select</option>
+                                        <option value="Actively looking to purchase/invest">Actively looking to purchase/invest</option>
+                                        <option value="Looking around">Looking around</option>
+                                        <option value="Property market conditions">Property market conditions</option>
+                                        <option value="Future potential investment options">Future potential investment options</option>
+                                    </select>
+                                </div>
+                            </div>
 
-        <div class="group-form">
-            <div class="form-style-has-title">
-                <div class="title">How much are you looking to invest in a property?</div>
-                <select name="investment_amount" required>
-                    <option value="">Select</option>
-                    <option value="Up to 1 Million USD">Up to 1 Million USD</option>
-                    <option value="1 to 5 Million USD">1 to 5 Million USD</option>
-                    <option value="5 to 10 Million USD">5 to 10 Million USD</option>
-                    <option value="10 Million USD and above">10 Million USD and above</option>
-                </select>
-            </div>
-        </div>
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">How much are you looking to invest in a property?</div>
+                                    <select name="investment_amount" required>
+                                        <option value="">Select</option>
+                                        <option value="Up to 1 Million USD">Up to 1 Million USD</option>
+                                        <option value="1 to 5 Million USD">1 to 5 Million USD</option>
+                                        <option value="5 to 10 Million USD">5 to 10 Million USD</option>
+                                        <option value="10 Million USD and above">10 Million USD and above</option>
+                                    </select>
+                                </div>
+                            </div>
 
-        <div class="group-form">
-            <div class="form-style-has-title">
-                <div class="title">How soon are you looking to buy?</div>
-                <select name="buy_timeline" required>
-                    <option value="">Select</option>
-                    <option value="Straight away">Straight away</option>
-                    <option value="Within a month">Within a month</option>
-                    <option value="In the next 3 months">In the next 3 months</option>
-                    <option value="I haven't decided yet">I haven't decided yet</option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <div class="button-submit">
-        <button type="submit" class="tf-button-primary">Submit</button>
-    </div>
-</form>
-                                    
+                            <div class="group-form">
+                                <div class="form-style-has-title">
+                                    <div class="title">How soon are you looking to buy?</div>
+                                    <select name="buy_timeline" required>
+                                        <option value="">Select</option>
+                                        <option value="Straight away">Straight away</option>
+                                        <option value="Within a month">Within a month</option>
+                                        <option value="In the next 3 months">In the next 3 months</option>
+                                        <option value="I haven't decided yet">I haven't decided yet</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+
+                        <div class="button-submit">
+                            <button type="submit" class="tf-button-primary">Submit</button>
+                        </div>
+                    </form>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
             </section>
             <!-- /slider -->
 
@@ -711,7 +723,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="heading-section text-center">
-                                <h2 class="wow fadeInUp capitalize-first-word">More Private Listings</h2>
+                                <h2 class="wow fadeInUp capitalize-first-word">More Investment Oppurtunities</h2>
                                 <div class="text wow fadeInUp"></div>
                             </div>
                         </div>
@@ -787,9 +799,9 @@
                                                 
                                                 </div>
                                                 <div class="name">
-                                                    <a href="#">Emaar the Oasis</a>
+                                                   <a href="emaar the oasis.html">Emaar the Oasis</a>
                                                 </div>
-                                                <a href="#" class="tf-button-no-bg">
+                                                <a href="emaar the oasis.html" class="tf-button-no-bg">
                                                     More Detail 
                                                     <i class="icon-arrow-right-add"></i>
                                                 </a>
@@ -830,7 +842,7 @@
                         <div class="col-12">
                             <div class="flex justify-between items-center flex-wrap gap15">
                                 <div>
-                                    <h3 class="wow fadeInUp capitalize-first-word">Buy Exclusive
+                                    <h3 class="wow fadeInUp capitalize-first-word">Buy exclusive
                                         properties with B1</h3>
                                     
                                 </div>
@@ -909,7 +921,7 @@
                                         <button class="tf-button-bg" type="submit">Send <i class="icon-arrow-right-add"></i></button>
                                     </div>
                                 </form>
-                                <div class="text">Subscribe to get early access to our new listings.</div>
+                                <div class="text capitalize-first-word">Subscribe to get early access to our new listings.</div>
                             </div>
                             <div class="footer-cl-3">
                                 <div class="ft-title">Quick Links</div>
@@ -921,7 +933,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;">info@b1properties.ae</div></li>
+                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
