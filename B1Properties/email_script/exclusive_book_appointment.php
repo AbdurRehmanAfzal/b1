@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $referring_page = $_SERVER['HTTP_REFERER'] ?? 'Direct access or unknown';
 
     // Prepare email content
-    $to = "abdurrehmanafzal786@gmail.com"; // Change this to the recipient email
+    $to = "info@b1properties.ae"; // Change this to the recipient email
     $subject = "New Book Appointment Request";
     $headers = "From: no-reply@example.com\r\n"; // Replace with a valid sender email
     $headers .= "Reply-To: $email\r\n"; // Add user's email as the reply-to address

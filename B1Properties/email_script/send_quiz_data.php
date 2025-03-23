@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_ip = $_SERVER['REMOTE_ADDR'];
     $referring_page = $_SERVER['HTTP_REFERER'];
 
-    $to = "abdurrehmanafzal786@gmail.com"; // Change this to your email
+    $to = "info@b1properties.ae"; // Change this to your email
     $subject = "New Property Inquiry";
     $headers = "From: " . $email . "\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";

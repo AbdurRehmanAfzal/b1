@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $referring_page = $_SERVER['HTTP_REFERER'];
 
     // Prepare email content
-    $to = "abdurrehmanafzal786@gmail.com"; // Change this to the recipient email
+    $to = "info@b1properties.ae"; // Change this to the recipient email
     $subject = "New Appointment Booking";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";

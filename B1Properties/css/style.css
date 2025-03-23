@@ -1045,7 +1045,7 @@ a:hover, a:focus {
   margin-bottom: 46px;
 }
 .heading-section h2 {
-  margin-top: 30px;
+  margin-top: 70px;
   margin-bottom: 16px;
 }
 .heading-section .text {
@@ -14082,17 +14082,17 @@ a {
     padding: 9px 0 9px 9px;
   }
   #header_main .header-inner {
-    padding: 15px 15px 0 15px;
+    padding: 15px 0 0 0;
   }
   #header_main .header-inner .header-inner-wrap {
     padding-right: 15px;
     padding-left: 15px;
   }
   #header_main .header-inner .header-inner-wrap .main-menu ul.navigation {
-    gap: 20px !important;
+    gap: 10px !important;
   }
   #header_main .header-inner .header-inner-wrap .header-right {
-    gap: 15px;
+    gap: 10px;
   }
   #header_main.style-bg-white .header-inner .header-inner-wrap .main-menu ul.navigation > li::before {
     width: calc(100% + 20px);
