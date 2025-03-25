@@ -58,9 +58,19 @@
             pointer-events: none;
         }
         h1.wow.fadeInUp.capitalize-first-word {
-            font-size: 5rem; /* Responsive font size */
+            font-size: 4rem; /* Responsive font size */
         }
-        
+        /* For mobile devices (768px and below) */
+        @media (max-width: 768px) {
+            .content-left .flex.items-center {
+                justify-content: center !important;
+            }
+        }
+        @media (max-width: 550px) {
+            .slider .wrap-slider .slider-content {
+                padding: 130px 0 50px !important;
+            }
+        }
     </style>
     
 
@@ -133,15 +143,15 @@
                         </div>
             
                         <!-- Mobile Menu Toggler -->
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                         <!-- Private Listings Mobile Dropdown -->
                          <li><a href="../exclusive.html">Private Listings</a></li>
@@ -227,17 +237,16 @@
                  <div class="tf-section estate-agent">
                     <div class="cl-container">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="content-left pl-50">
-                                    <h2 class="wow fadeInUp capitalize-first-word">Get in touch now for <br> more information.</h2>
+                            <div class="col-lg-8">
+                                <div class="content-left">
+                                    <h2 class="wow fadeInUp capitalize-first-word">Get in touch now for more information.</h2>
                                     
                                     <div class="flex items-center gap50 wow fadeInUp">
                                         <a href="#register-interest-section" class="tf-button-primary">Register Interest<i class="icon-arrow-right-add"></i></a>
-                                        
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <div class="content-left">
                                   <div class="image1 wow fadeInLeft" style="filter: grayscale(100%);">
                                         <img class="img-1" src="../images/agents/sales/withoutbackground/Adelina.png" alt="" style="border-radius: 10px;">
@@ -254,15 +263,16 @@
                 
                 <section class="tf-section flat-counter">
                     <div class="cl-container">
+                        
                         <div class="row">
                             <div class="col-12">
                                 <div class="heading-section text-center">
                                     <h2 class="wow fadeInUp capitalize-first-word">Payment Plan</h2>
-                                    <div class="text wow fadeInUp text wow fadeInUp capitalize-first-word">Citywalk Crest Lane offers a hassle-free payment plan designed to suit your lifestyle.</div>
+                                    <div class="text wow fadeInUp text wow fadeInUp capitalize-first-word">Citywalk Crestlane offers a hassle-free payment plan designed to suit your lifestyle.</div>
                                 </div>
                             </div>
                         </div>
-                        <!<div class="row">
+                        <div class="row">
                             <div class="col-12">
                                 <div class="counter1">
                                     <div class="number-counter1">
@@ -364,9 +374,13 @@
                     <div class="cl-container">
                         <div class="row">
                             <div class="col-12">
-                                <div class="desc">
+                                <div class="desc" style="text-align: justify;">
                                     <h4 class="wow fadeInUp capitalize-first-word">Description</h4>
-                                    <p class="wow fadeInUp capitalize-first-word"> Citywalk Crestlane is an exceptional waterside latest revolutionary development that redefines urban living in the heart of Dubai. Nestled within the iconic Citywalk, this masterfully designed development offers 1 to 4-bedroom apartments and duplexes surrounded by tranquil water features, lush green spaces, and state-of-the-art amenities. With its unbeatable location, seamless connectivity, and innovative architecture, Crest Lane is the perfect blend of luxury, comfort, and modern city vibes—crafted for those who embrace life’s rhythm and vibrancy. </p> <p> Enjoy an unrivaled lifestyle at <strong>Citywalk Crest Lane</strong>, where stylishly modern elegance meets nature's tranquility. At the very hub of Dubai, this <strong>iconic waterside residence</strong> offers a seamless blend of <strong>modern architecture, lush green spaces, and panoramic waterfront views</strong>. </p> <p> For the sophisticated, <strong>Crest Lane</strong> offers a collection of <strong>1 to 4-bedroom luxury apartments and duplexes</strong>, each with <strong>spacious open layouts, floor-to-ceiling windows, and premium finishes</strong>. Choose between select residences, each one taking it up a notch with <strong>private terraces, double-height living areas, and exclusive lift access</strong>, offering an unmatched feeling of spaciousness and exclusivity. </p>
+                                    <p class="wow fadeInUp capitalize-first-word">Citywalk Crestlane is an exceptional waterside revolutionary development that redefines urban living in the heart of Dubai. Nestled within the iconic Citywalk, this masterfully designed development offers 1 to 4-bedroom apartments and duplexes surrounded by tranquil water features, lush green spaces, and state-of-the-art amenities. With its unbeatable location, seamless connectivity, and innovative architecture, Crestlane is the perfect blend of luxury, comfort, and modern city vibes—crafted for those who embrace life’s rhythm and vibrancy.</p>  
+
+                                    <p class="wow fadeInUp capitalize-first-word">Enjoy an unrivaled lifestyle at <strong>Citywalk Crestlane</strong>, where stylish modern elegance meets nature's tranquility. At the very hub of Dubai, this <strong>iconic waterside residence</strong> offers a seamless blend of <strong>modern architecture, lush green spaces, and panoramic waterfront views</strong>.</p>  
+                                    
+                                    <p class="wow fadeInUp capitalize-first-word">For the sophisticated, <strong>Crestlane</strong> offers a collection of <strong>1 to 4-bedroom luxury apartments and duplexes</strong>, each with <strong>spacious open layouts, floor-to-ceiling windows, and premium finishes</strong>. Choose between select residences, each one taking it up a notch with <strong>private terraces, double-height living areas, and exclusive lift access</strong>, offering an unmatched feeling of spaciousness and exclusivity.</p>
                                     <div class="qr-container" style="">
                                         <img src="../images/offplan/crestlane1/qr-crestlane.png" alt="QR Code">
                                         <div class="verified-text">Verified</div>
@@ -389,8 +403,31 @@
                             </div>
                             <div class="col-xl-5 col-md-6 order-1 order-md-2">
                                 <div class="content">
-                                    <h2 class="wow fadeInUp capitalize-first-word">About Citywalk Crest Lane by Meraas</h2>
-                                    <div class="text-content wow fadeInUp capitalize-first-word">Citywalk Crest Lane is more than just a residence—it's a vibrant lifestyle destination where every detail is thoughtfully designed to enhance daily living. From panoramic water views to expansive green spaces, the community seamlessly combines modern architecture with nature's tranquility. The integration of world-class amenities such as water cinemas, yoga lawns, and themed kids’ play areas ensures there’s something for every age and lifestyle preference. Residents are immersed in a dynamic environment where relaxation and recreation come together effortlessly.</div>
+                                    <h2 class="wow fadeInUp capitalize-first-word">About Citywalk Crestlane by Meraas</h2>
+                                    <div class="text-content wow fadeInUp">
+                                        <p class="capitalize-first-word">
+                                            <strong>Citywalk Crestlane</strong> is more than just a residence—it's a vibrant lifestyle destination where every detail is thoughtfully designed to enhance daily living.
+                                        </p>
+                                        
+                                        <p class="capitalize-first-word">
+                                            From <strong>panoramic water views</strong> to <strong>expansive green spaces</strong>, the community seamlessly combines modern architecture with nature's tranquility.
+                                        </p>
+                                        
+                                        <p class="capitalize-first-word">
+                                            The integration of world-class amenities including:
+                                            
+                                                <strong>Water cinemas, 
+                                                </strong>
+                                                <strong>Yoga lawns and </strong>
+                                                <strong>Themed kids' play areas </strong>
+
+                                            ensures there's something for every age and lifestyle preference.
+                                        </p>
+                                        
+                                        <p class="capitalize-first-word">
+                                            Residents are immersed in a dynamic environment where <strong>relaxation</strong> and <strong>recreation</strong> come together effortlessly.
+                                        </p>
+                                    </div>
                                     <a href="#register-interest-section" class="tf-button-primary style-black wow fadeInUp">Register Interest <i class="icon-arrow-right-add"></i></a>
                                 </div>
                             </div>
@@ -404,8 +441,19 @@
                             <div class="col-xl-5 col-md-6">
                                 <div class="content">
                                     <h2 class="wow fadeInUp capitalize-first-word">Citywalk Crestlane by Meraas Location</h2>
-                                    <div class="text-content wow fadeInUp capitalize-first-word">
-                                        Citywalk Crest Lane enjoys a strategic location in the heart of Dubai, offering seamless connectivity to the city’s iconic destinations. Just minutes away from Jumeirah Beach, Downtown Dubai, and Sheikh Zayed Road, it provides residents with effortless access to world-class shopping, dining, and entertainment options. With Dubai International Airport and major business hubs like DIFC nearby, Crest Lane perfectly blends urban convenience with serene waterside living.</div>
+                                    <div class="text-content wow fadeInUp">
+                                        <p class="capitalize-first-word">
+                                            <strong>Citywalk Crestlane</strong> enjoys a strategic location in the heart of Dubai, offering seamless connectivity to the city's most iconic destinations.
+                                        </p>
+                                        
+                                        <p class="capitalize-first-word">
+                                            Situated just minutes from <strong>Jumeirah Beach</strong>, <strong>Downtown Dubai</strong>, and <strong>Sheikh Zayed Road</strong>, residents enjoy effortless access to <strong>world-class shopping</strong>, <strong>fine dining</strong>, and <strong>premier entertainment</strong> options.
+                                        </p>
+                                        
+                                        <p class="capitalize-first-word">
+                                            With <strong>Dubai International Airport</strong> and major business hubs like <strong>DIFC</strong> nearby, Crestlane perfectly blends <strong>urban convenience</strong> with <strong>serene waterside living</strong>.
+                                        </p>
+                                    </div>
                                     <a href="#register-interest-section" class="tf-button-primary style-black wow fadeInUp">Register Interest <i class="icon-arrow-right-add"></i></a>
                                 </div>
                             </div>
@@ -433,7 +481,7 @@
                                             <div class="icon">
                                                 <i class=""></i>
                                             </div>
-                                            <div class="text-content capitalize-first-word">Citywalk Crest Lane offers luxury living with serene water features, infinity pools, yoga lawns, and themed kids’ play areas. Enjoy jogging tracks, sports courts, lush green spaces, and unique highlights like a water cinema, creating a vibrant and connected lifestyle for all residents.</div>
+                                            <div class="text-content capitalize-first-word">Citywalk Crestlane offers luxury living with serene water features, infinity pools, yoga lawns, and themed kids’ play areas. Enjoy jogging tracks, sports courts, lush green spaces, and unique highlights like a water cinema, creating a vibrant and connected lifestyle for all residents.</div>
                                         </div>
                                     </div>
                                    
@@ -516,7 +564,7 @@
                                
 
                                
-                                <div class="nearby">
+                                <div class="nearby m-1">
                                     <h4 class="wow fadeInUp capitalize-first-word">Proximity Highlight</h4>
                                     <div class="wrap-file-item wow fadeInUp">
                                         <div class="file-item">
@@ -609,7 +657,7 @@
         </div>
 
         <div class="group-form">
-            <div class="form-style-has-title">
+            <div class="form-style-has-title capitalize-first-word">
                 <div class="title">Have you owned or attempted to buy property in Dubai?</div>
                 <select name="property_ownership_status" required>
                     <option value="">Select</option>
@@ -621,7 +669,7 @@
         </div>
 
         <div class="group-form">
-            <div class="form-style-has-title">
+            <div class="form-style-has-title capitalize-first-word">
                 <div class="title">What is your current status?</div>
                 <select name="current_status" required>
                     <option value="">Select</option>
@@ -634,7 +682,7 @@
         </div>
 
         <div class="group-form">
-            <div class="form-style-has-title">
+            <div class="form-style-has-title capitalize-first-word">
                 <div class="title">How much are you looking to invest in a property?</div>
                 <select name="investment_amount" required>
                     <option value="">Select</option>
@@ -647,7 +695,7 @@
         </div>
 
         <div class="group-form">
-            <div class="form-style-has-title">
+            <div class="form-style-has-title capitalize-first-word">
                 <div class="title">How soon are you looking to buy?</div>
                 <select name="buy_timeline" required>
                     <option value="">Select</option>
@@ -719,7 +767,7 @@
                                                 
                                                 </div>
                                                 <div class="name">
-                                                    <a href="edenpark.html">Eden House Park</a>
+                                                    <a href="edenpark.html">Eden house - the Park</a>
                                                 </div>
                                                 <a href="edenpark.html" class="tf-button-no-bg">
                                                     More Detail 
@@ -872,7 +920,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -969,6 +1017,25 @@
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
             });
+        });
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
         });
     </script>
 

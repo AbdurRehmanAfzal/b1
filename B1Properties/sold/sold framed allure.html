@@ -112,15 +112,15 @@
                             </a>
                             </div>
                         </div>
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                          <li><a href="../exclusive.html">Private Listings</a></li>
                         <li><a href="../offplan.html">New Opportunities</a></li>
@@ -230,26 +230,21 @@
                             <div class="col-xl-5 col-md-6">
                                 <div class="content">
                                     <h2 class="wow fadeInUp capitalize-first-word">Framed allure: a fusion of timeless elegance & local essence</h2>
-                                    <div class="text-content wow fadeInUp capitalize-first-word">Designed by renowned Emre Arolat Architecture and
-                                        CK Architecture Interiors, Framed Allure is a stunning
-                                        three-storey villa that perfectly blends contemporary
-                                        design with local cultural heritage. The villa's sleek,
-                                        bespoke architecture creates a sophisticated
-                                        atmosphere, while honoring the surrounding
-                                        environment.
-                                        <br>
-                                        <br>
-                                        With meticulous attention to detail, Framed Allure
-                                        offers a luxurious lifestyle through spacious, carefully
-                                        crafted interiors that combine style and functionality.
-                                        Every corner of the home reﬂects a commitment to
-                                        quality and elegance, making it an extraordinary living
-                                        experience for those seeking both modern comfort
-                                        and cultural connection.
-                                        <br>
-                                        A true symbol of exclusivity, Framed Allure redeﬁnes
-                                        what it means to live in harmony with design and
-                                        heritage.</div>
+                                    <div class="text-content wow fadeInUp capitalize-first-word">
+                                        <div class="description" style="text-align: justify;">
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Designed by renowned <strong>Emre Arolat Architecture</strong> and <strong>CK Architecture Interiors</strong>, <strong>Framed Allure</strong> is a stunning three-storey villa that perfectly blends contemporary design with local cultural heritage. The villa's sleek, bespoke architecture creates a sophisticated atmosphere while honoring the surrounding environment.
+                                            </p>
+                                            
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                With meticulous attention to detail, <strong>Framed Allure</strong> offers a luxurious lifestyle through spacious, carefully crafted interiors that combine style and functionality. Every corner reflects an uncompromising commitment to quality and elegance, creating an extraordinary living experience that balances modern comfort with cultural connection.
+                                            </p>
+                                            
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                A true symbol of exclusivity, <strong>Framed Allure</strong> redefines harmonious living through its masterful integration of cutting-edge design and timeless heritage elements.
+                                            </p>
+                                        </div>   
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -321,13 +316,13 @@
                                             <div class="icon">
                                                 <i class="flaticon-minus-front"></i>
                                             </div>
-                                            <div class="text-content capitalize-first-word">BUA 18700 sq.ft</div>
+                                            <div class="text-content capitalize-first-word">BUA 18,700 sq.ft</div>
                                         </div>
                                         <div class="item wow fadeInUp" data-wow-delay="0.1s">
                                             <div class="icon">
                                                 <i class="flaticon-minus-front"></i>
                                             </div>
-                                            <div class="text-content capitalize-first-word">Plot Size 15200 sq.ft</div>
+                                            <div class="text-content capitalize-first-word">Plot Size 15,200 sq.ft</div>
                                         </div>
                                         <div class="item wow fadeInUp" data-wow-delay="0.15s">
                                             <div class="icon">
@@ -468,7 +463,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -533,7 +528,7 @@
                             </div>
                              <!-- Budget -->
                              <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">How much are you willing to spend on this property?</div>
                                     <select name="budget" required>
                                         <option value="">Select</option>
@@ -547,7 +542,7 @@
     
                             <!-- Meeting Preference -->
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">When is a good time for a meeting?</div>
                                     <select name="meeting_preference" required>
                                         <option value="">Select</option>
@@ -561,8 +556,14 @@
                         </div>
     
                         <!-- Submit Button -->
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -599,7 +600,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What are you looking to sell?</div>
                                     <select name="property_type" required>
                                         <option value="">Select</option>
@@ -612,7 +613,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What time should we contact you during the day?</div>
                                     <select name="contact_time" required>
                                         <option value="">Select</option>
@@ -625,8 +626,14 @@
                             </div>
                         </div>
                     
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -725,6 +732,19 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('modelsell').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

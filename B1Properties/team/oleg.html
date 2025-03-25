@@ -110,15 +110,15 @@
                         </div>
             
                         <!-- Mobile Menu Toggler -->
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                         <!-- Private Listings Mobile Dropdown -->
                          <li><a href="../exclusive.html">Private Listings</a></li>
@@ -232,10 +232,14 @@
                             </div>
                             <div class="col-xl-8">
                                 <div class="content-wrap">
-                                    <div class="desc">
+                                    <div class="desc" style="text-align: justify;">
                                          <h4 class="wow fadeInUp capitalize-first-word">Description</h4>
-                                        <p class="wow fadeInUp capitalize capitalize-first-word">
-                                            Oleg has extensive experience and deep expertise in the Dubai real estate market, specializing in prime locations such as Palm Jumeirah, beachfront properties, and Bluewaters. Over the years, he has consistently delivered outstanding results with leading brokerage firms, maintaining an excellent track record in both off-plan and secondary property sales.
+                                         <p class="wow fadeInUp capitalize-first-word">
+                                            <strong>Oleg</strong> brings unparalleled expertise in Dubai's luxury real estate market, with specialized knowledge of <strong>Palm Jumeirah</strong>, <strong>premium beachfront residences</strong>, and <strong>Bluewaters Island</strong>. His distinguished career with Dubai's leading brokerages has established him as a top performer in both <strong>off-plan investments</strong> and <strong>secondary market transactions</strong>.
+                                        </p>
+                                        
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            Recognized for consistently delivering exceptional results, Oleg combines market intelligence with transactional excellence to provide clients with a competitive edge in Dubai's most exclusive property segments. His proven track record reflects deep understanding of value appreciation and lifestyle priorities in prime locations.
                                         </p>
                                     </div>
                                     <div class="overview">
@@ -457,7 +461,7 @@
                                           </fieldset>
                                             <div class="checkbox-item wow fadeInUp">
                                                 <label>
-                                                    <p>I consent to having this website store my submitted information</p>
+                                                    <p class="capitalize-first-word">I consent to have this website store my information.</p>
                                                    <input type="checkbox" required>
                                                     <span class="btn-checkbox"></span>
                                                 </label>
@@ -557,7 +561,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -661,6 +665,25 @@
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
             });
+        });
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
         });
     </script>
 

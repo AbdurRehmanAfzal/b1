@@ -109,15 +109,15 @@
                         </div>
             
                         <!-- Mobile Menu Toggler -->
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                         <!-- Private Listings Mobile Dropdown -->
                         <li><a href="exclusive.html">Private Listings</a></li>
@@ -179,15 +179,13 @@
                     <div class="cl-container">
                         <div class="row">
                             <div class="content-wrap">
-                                <div class="desc">
-                                    
+                                <div style="text-align: justify;">
                                     <p class="wow fadeInUp capitalize-first-word">
-                                        We are a boutique real estate brokerage ﬁrm dedicated exclusively to luxury properties, with a clear mission: to become Dubai’s premier luxury real estate agency. As the exclusive partner of Alpago Properties, we pride ourselves on bringing only the most distinguished properties to market, including landmark achievements such as Dubai’s record-breaking penthouse sale on Bluewaters Island, another penthouse at the Atlantis – The Royal Residence, and the most expensive villa on The Palm, to name just a few.
-
-                                        <br>
+                                        We are a boutique real estate brokerage firm dedicated exclusively to luxury properties, with a clear mission: to become Dubai’s premier luxury real estate agency. As the exclusive partner of <strong>Alpago Properties</strong>, we pride ourselves on bringing only the most distinguished properties to market, including landmark achievements such as Dubai’s record-breaking penthouse sale on <strong>Bluewaters Island</strong>, another penthouse at the <strong>Atlantis – The Royal Residence</strong>, and the most expensive villa on <strong>The Palm</strong>, to name just a few.
                                     </p>
+                                
                                     <p class="wow fadeInUp capitalize-first-word">
-                                        Unlike traditional agencies, we take an elite, highly personalized approach. Currently, we have only a select team of agents, each one chosen for their unparalleled expertise in the luxury market. as we expand, we plan to keep our team highly exclusive, capping at around 16 top-tier agents to ensure that our clients receive nothing but the ﬁnest, most dedicated service. At B1 Properties, our commitment to quality and exclusivity extends from our listings to the expertise of every agent on our team.
+                                        Unlike traditional agencies, we take an elite, highly personalized approach. Currently, we have only a select team of agents, each one chosen for their unparalleled expertise in the luxury market. As we expand, we plan to keep our team highly exclusive, capping at around <strong>16 top-tier agents</strong> to ensure that our clients receive nothing but the finest, most dedicated service. At <strong>B1 Properties</strong>, our commitment to quality and exclusivity extends from our listings to the expertise of every agent on our team.
                                     </p>
                                 </div>
                             </div>
@@ -350,41 +348,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide" style="margin-right: 5px;">
-                                            <div class="experts-item wow fadeInUp">
-                                                <div class="sidebar">
-                                                    <div class="sidebar-item sidebar-info">
-                                                     
-                                                            <div class="experts-item wow fadeInUp">
-                                                                <div class="image agent-image">
-                                                                    <img src="images/agents/sales/roshan.webp" alt="">
-                                                                </div>
-                                                            </div>
-                                                      
-                                                        <ul>
-                                                            <li>
-                                                                <h4><a href="team/roshan.html">Rozhan</a></h4>
-                                                            </li>
-                                                            <li>
-                                                                <div class="title">Languages</div>
-                                                                <p>English | Kurdish | Farsi</p>
-                                                            </li>
-                                                            <li>
-                                                                <div class="title">Focus Area</div>
-                                                                <p>Dubai Hills Villas</p>
-                                                            </li>
-                                                          
-                                                            <li>
-                                                            </li>
-                                                        </ul>
-                                                       <div class="flex gap20">
-                                                <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary w-full wow fadeInUp">Call<i class="flaticon-phone"></i></a>
-                                                <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary w-full wow fadeInUp">WhatsApp<i class="flaticon-whatsapp"></i></a>
-                                            </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      
                                         <div class="swiper-slide" style="margin-right: 5px;">
                                             <div class="experts-item wow fadeInUp">
                                                 <div class="sidebar">
@@ -440,8 +404,8 @@
                                                                 <p>English | Ukrainian | Russian</p>
                                                             </li>
                                                             <li>
-                                                                <div class="title">Focus Area</div>
-                                                                <p>Palm Jumeirah | Bluewaters island</p>
+                                                                <div class="title no-wrap">Focus Area</div>
+                                                                <p class="no-wrap focus-area">Palm Jumeirah | Bluewaters</p>
                                                             </li>
                                                           
                                                             <li>
@@ -960,7 +924,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -1036,6 +1000,25 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

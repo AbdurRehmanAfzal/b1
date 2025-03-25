@@ -136,7 +136,7 @@
                         </a>
                         </div>
                     </div>
-                    <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                    <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                 </div>
             </div>
         
@@ -227,6 +227,27 @@
                                                     <div class="slider-content">
                                                         <h1 class="fade-item fade-item-2">Eden House the Park</h1>
                                                         <a href="offplan/edenpark.html" class="tf-button-primary m-auto fade-item fade-item-4">View Details<i class="icon-arrow-right-add"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="wrap-slider" style="height:100vh;">
+                                    <div class="image">
+                                        <img src="images/offplan/emaar the oasis/1.webp" alt="">
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="cl-container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="slider-content">
+                                                        
+                                                        <h1 class="wow fadeInUp capitalize-first-word">Emaar the Oasis</h1>
+                                                        <div class="text wow fadeInUp">4-6 Bedroom Villas at The Oasis by Emaar</div>
+                                                        <a href="offplan/emaar the oasis.html" class="tf-button-primary m-auto fade-item fade-item-4">View Details<i class="icon-arrow-right-add"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -780,6 +801,62 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="box-dream has-border wow fadeInUp">
+                                        <div class="image">
+                                            <div class="list-tags"></div>
+                                            
+                                            <div class="swiper-container slider-box-dream arrow-style-1 pagination-style-1">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="">
+                                                            <img class="" src="images/offplan/emaar the oasis/1.webp" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="">
+                                                            <img class="" src="images/offplan/emaar the oasis/3.webp" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="">
+                                                            <img class="" src="images/offplan/emaar the oasis/2.webp" alt="">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="swiper-pagination box-dream-pagination"></div>
+                                                <div class="box-dream-next swiper-button-next"></div>
+                                                <div class="box-dream-prev swiper-button-prev"></div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="head">
+                                                <div class="title">
+                                                    <a href="offplan/emaar the oasis.html">Emaar The Oasis</a>
+                                                </div>
+                                                <div class="price">AED 13.14M</div>
+                                            </div>
+                                            <div class="location">
+                                                <div class="icon">
+                                                    <i class="flaticon-location"></i>
+                                                </div>
+                                                <p>The Oasis</p>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="item">
+                                                    <i class="flaticon-minus-front"></i>
+                                                    <p>Handover Q2 2029</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="flex gap20">
+                                                <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary w-full wow fadeInUp">Call<i class="flaticon-phone"></i></a>
+                                                <a href="https://wa.me/971564338399" target="_blank" class="tf-button-primary w-full wow fadeInUp">WhatsApp<i class="flaticon-whatsapp"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
@@ -930,7 +1007,7 @@
                                   </fieldset>
                                     <div class="checkbox-item wow fadeInUp">
                                         <label>
-                                            <p>I consent to having this website store my submitted information</p>
+                                            <p class="capitalize-first-word">I consent to have this website store my information.</p>
                                            <input type="checkbox" required>
                                             <span class="btn-checkbox"></span>
                                         </label>
@@ -1276,7 +1353,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -1351,6 +1428,25 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

@@ -112,15 +112,15 @@
                             </a>
                             </div>
                         </div>
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                          <li><a href="../exclusive.html">Private Listings</a></li>
                         <li><a href="../offplan.html">New Opportunities</a></li>
@@ -231,7 +231,11 @@
                                 <div class="content">
                                     <h2 class="wow fadeInUp capitalize-first-word">Where Modern Living Meets Unrivaled Luxury By The Sea</h2>
                                     <div class="text-content wow fadeInUp capitalize-first-word">
-                                        A Shimmering Living Tower Created To Deliver The Highest Level Of Luxury Lifestyle Features Luxury Contemporary Apartments With Elegant Design, Top-Class Service, And Uninterrupted Views Of The Arabian Gulf, The Jumeirah Beach Residence (JBR), And Ain Dubai.
+                                        <div class="description" style="text-align: justify;">
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                A shimmering architectural masterpiece, this living tower redefines luxury with its <strong>ultra-premium contemporary residences</strong>. Each residence showcases <strong>bespoke elegant design</strong>, <strong>white-glove concierge services</strong>, and <strong>uninterrupted panoramic vistas</strong> spanning the Arabian Gulf, Jumeirah Beach Residence (JBR), and the iconic Ain Dubai.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -311,7 +315,7 @@
                                             <div class="icon">
                                                 <i class="flaticon-minus-front"></i>
                                             </div>
-                                            <div class="text-content capitalize-first-word">Plot Size 3783 sq.ft</div>
+                                            <div class="text-content capitalize-first-word">Plot Size 3,783 sq.ft</div>
                                         </div>
                                         <div class="item wow fadeInUp" data-wow-delay="0.15s">
                                             <div class="icon">
@@ -452,7 +456,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -517,7 +521,7 @@
                             </div>
                              <!-- Budget -->
                              <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">How much are you willing to spend on this property?</div>
                                     <select name="budget" required>
                                         <option value="">Select</option>
@@ -531,7 +535,7 @@
     
                             <!-- Meeting Preference -->
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">When is a good time for a meeting?</div>
                                     <select name="meeting_preference" required>
                                         <option value="">Select</option>
@@ -544,10 +548,15 @@
                            
                         </div>
     
-                        <!-- Submit Button -->
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
-                        </div>
+                       <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                        <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                            Submit
+                        </button>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -583,7 +592,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What are you looking to sell?</div>
                                     <select name="property_type" required>
                                         <option value="">Select</option>
@@ -596,7 +605,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What time should we contact you during the day?</div>
                                     <select name="contact_time" required>
                                         <option value="">Select</option>
@@ -609,8 +618,14 @@
                             </div>
                         </div>
                     
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -710,6 +725,19 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('modelsell').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

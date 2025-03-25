@@ -113,15 +113,15 @@
                             </a>
                             </div>
                         </div>
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                          <li><a href="../exclusive.html">Private Listings</a></li>
                         <li><a href="../offplan.html">New Opportunities</a></li>
@@ -231,26 +231,21 @@
                             <div class="col-xl-5 col-md-6">
                                 <div class="content">
                                     <h2 class="wow fadeInUp capitalize-first-word">Riva Del Lusso: The Beachfront Haven of Luxury</h2>
-                                    <div class="text-content wow fadeInUp capitalize-first-word">Nestled in a stunning landscape, Riva del Lusso is
-                                        more than just a villa—it’s a masterpiece of design.
-                                        Created by CK Architecture Interiors, with the exterior
-                                        crafted by Saota and developed By Alpago Properties,
-                                        every detail has been carefully thought out to blend
-                                        luxury and beauty in perfect harmony.
-                                        <br>
-                                        <br>
-                                        From the outside, the sleek, modern lines of the villa
-                                        seamlessly connect with the natural surroundings,
-                                        making it a true work of art. Inside, open spaces and
-                                        luxurious ﬁnishes create a feeling of calm and
-                                        elegance, with every room designed to offer both
-                                        comfort and style.
-                                        <br>
-                                        Riva del Lusso isn’t just a place to live; it’s a lifestyle—a
-                                        space where beauty, craftsmanship, and
-                                        sophistication come together to elevate everyday life.
-                                        It's not just a home, but a story of elegance that
-                                        continues to unfold.</div>
+                                    <div class="text-content wow fadeInUp capitalize-first-word">
+                                        <div class="description" style="text-align: justify;">
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                <strong>Riva del Lusso</strong> emerges as a breathtaking architectural symphony, nestled within its pristine landscape. This visionary collaboration between <strong>CK Architecture Interiors</strong> (interiors), <strong>SAOTA</strong> (exterior architecture), and <strong>Alpago Properties</strong> (development) has meticulously crafted every element to achieve perfect harmony between avant-garde luxury and natural beauty.
+                                            </p>
+                                        
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                The villa's sculptural modern silhouette dissolves boundaries between architecture and nature, creating a living work of art. Within its walls, soaring volumes and hand-selected luxury finishes cultivate an atmosphere of serene sophistication, where each curated space balances impeccable design with sublime comfort.
+                                            </p>
+                                        
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                <strong>Riva del Lusso</strong> transcends conventional luxury living - it's a perpetual celebration of craftsmanship where every detail tells a story. This is not merely a residence, but an ever-evolving narrative of elegance that elevates daily life into an extraordinary experience.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -322,13 +317,13 @@
                                             <div class="icon">
                                                 <i class="flaticon-minus-front"></i>
                                             </div>
-                                            <div class="text-content capitalize-first-word">BUA 15000 sq.ft</div>
+                                            <div class="text-content capitalize-first-word">BUA 15,000 sq.ft</div>
                                         </div>
                                         <div class="item wow fadeInUp" data-wow-delay="0.1s">
                                             <div class="icon">
                                                 <i class="flaticon-minus-front"></i>
                                             </div>
-                                            <div class="text-content capitalize-first-word">Plot Size 13500+ sq.ft</div>
+                                            <div class="text-content capitalize-first-word">Plot Size 13,500+ sq.ft</div>
                                         </div>
                                         <div class="item wow fadeInUp" data-wow-delay="0.15s">
                                             <div class="icon">
@@ -469,7 +464,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -534,7 +529,7 @@
                             </div>
                              <!-- Budget -->
                              <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">How much are you willing to spend on this property?</div>
                                     <select name="budget" required>
                                         <option value="">Select</option>
@@ -548,7 +543,7 @@
     
                             <!-- Meeting Preference -->
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">When is a good time for a meeting?</div>
                                     <select name="meeting_preference" required>
                                         <option value="">Select</option>
@@ -561,10 +556,15 @@
                            
                         </div>
     
-                        <!-- Submit Button -->
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
-                        </div>
+                       <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                        <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                            Submit
+                        </button>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -600,7 +600,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What are you looking to sell?</div>
                                     <select name="property_type" required>
                                         <option value="">Select</option>
@@ -613,7 +613,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What time should we contact you during the day?</div>
                                     <select name="contact_time" required>
                                         <option value="">Select</option>
@@ -626,8 +626,14 @@
                             </div>
                         </div>
                     
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        < <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -723,6 +729,19 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('modelsell').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

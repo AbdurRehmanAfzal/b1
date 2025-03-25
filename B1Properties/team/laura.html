@@ -109,15 +109,15 @@
                         </div>
             
                         <!-- Mobile Menu Toggler -->
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                         <!-- Private Listings Mobile Dropdown -->
                          <li><a href="../exclusive.html">Private Listings</a></li>
@@ -231,11 +231,21 @@
                             </div>
                             <div class="col-xl-8">
                                 <div class="content-wrap">
-                                    <div class="desc">
+                                    <div class="desc" style="text-align: justify;">
                                         <h4 class="wow fadeInUp capitalize-first-word">Description</h4>
-                                        <p class="wow fadeInUp capitalize capitalize-first-word">
-                                            laura has been involved in Real Estate for over 6 years now and previously worked with one of the most prestigious boutique developers in Dubai, offering luxury properties to his clients both locally and from the International community. With a degree in Civil Engineering, laura has a very keen eye for genuine high end quality and can advise his clients from experience as to what is true luxury!
-                                        </p>
+                                       
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                <strong>Laura</strong> specializes in Dubai's premium property segments, with particular expertise in the <strong>luxury off-plan market</strong> and the exclusive <strong>Tilal Al Ghaf</strong> community. With a decade of experience in Dubai's dynamic real estate landscape, she has cultivated an exceptional track record of high-value transactions.
+                                            </p>
+                                        
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Renowned for her white-glove service and market insight, Laura's notable achievements include the sale of a <strong>AED 45 million golf villa in Jumeirah Golf Estates</strong> and an entire floor at the prestigious <strong>W Residences, Downtown Dubai</strong>. Her client-centric approach combines in-depth local knowledge with international standards of luxury real estate service.
+                                            </p>
+                                        
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Laura's portfolio focuses on ultra-high-net-worth clients seeking exceptional properties in Dubai's most coveted locations, delivering discreet, tailored solutions that exceed expectations in this competitive market.
+                                            </p>
+                                        
                                     </div>
                                     <div class="overview">
                                         <h4 class="wow fadeInUp capitalize-first-word">Area Specialisation</h4>
@@ -457,7 +467,7 @@
                                           </fieldset>
                                             <div class="checkbox-item wow fadeInUp">
                                                 <label>
-                                                    <p>I consent to having this website store my submitted information</p>
+                                                    <p class="capitalize-first-word">I consent to have this website store my information.</p>
                                                    <input type="checkbox" required>
                                                     <span class="btn-checkbox"></span>
                                                 </label>
@@ -557,7 +567,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                     <li>
                                         <div class="text" style="text-transform: lowercase;">
                                             <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -661,6 +671,25 @@
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
             });
+        });
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
         });
     </script>
 

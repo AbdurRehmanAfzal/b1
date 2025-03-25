@@ -110,15 +110,15 @@
                         </div>
             
                         <!-- Mobile Menu Toggler -->
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                         <!-- Private Listings Mobile Dropdown -->
                          <li><a href="../exclusive.html">Private Listings</a></li>
@@ -232,10 +232,14 @@
                             </div>
                             <div class="col-xl-8">
                                 <div class="content-wrap">
-                                    <div class="desc">
+                                    <div class="desc" style="text-align: justify;">
                                          <h4 class="wow fadeInUp capitalize-first-word">Description</h4>
-                                        <p class="wow fadeInUp capitalize capitalize-first-word">
-                                            Professional, ethical and knowledgeable are just a few words to describe Kamol. Having worked in Dubai Real estate for many years, Kamol has proven time and time again to be one of the best and ensures that all of his clients are given the best service and advice available. Focusing on prime luxury areas such as Bluewaters and the Palm Jumeirah, Kamol is committed to his own success and that of his clients.
+                                         <p class="wow fadeInUp capitalize-first-word">
+                                            <strong>Kamol</strong> embodies professionalism, integrity, and market expertise - qualities that have established him as one of Dubai's most trusted real estate advisors. With extensive experience in Dubai's luxury property sector, he consistently delivers exceptional service and strategic guidance to his discerning clientele.
+                                        </p>
+                                        
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            Specializing in Dubai's most exclusive neighborhoods including <strong>Bluewaters Island</strong> and <strong>Palm Jumeirah</strong>, Kamol combines deep local knowledge with a client-first philosophy. His commitment to excellence ensures every transaction achieves outstanding results for both buyers and sellers in these premium markets.
                                         </p>
                                     </div>
                                     <div class="overview">
@@ -395,7 +399,7 @@
                                           </fieldset>
                                             <div class="checkbox-item wow fadeInUp">
                                                 <label>
-                                                    <p>I consent to having this website store my submitted information</p>
+                                                    <p class="capitalize-first-word">I consent to have this website store my information.</p>
                                                    <input type="checkbox" required>
                                                     <span class="btn-checkbox"></span>
                                                 </label>
@@ -495,7 +499,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                     <li>
                                         <div class="text" style="text-transform: lowercase;">
                                             <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -599,6 +603,25 @@
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
             });
+        });
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
         });
     </script>
 

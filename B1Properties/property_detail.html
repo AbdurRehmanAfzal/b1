@@ -74,7 +74,7 @@
                                   <li class="has-children"><a href="javascript:void(0);">Jumeirah Bay Island</a>
                                       <ul class="sub-dropdown">
                                           <li><a href="exclusive/Bvlgari.html">Bvlgari</a></li>
-                                          <li><a href="exclusive/ocean mansion.html">Ocean Mansion</a></li>
+                                          <li><a href="exclusive/ocean mansion.html">Bvlgari Ocean Mansion</a></li>
                                       </ul>
                                   </li>
       
@@ -141,7 +141,7 @@
                   </div>
       
                   <!-- Mobile Menu Toggler -->
-                  <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                  <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
               </div>
           </div>
       
@@ -160,7 +160,7 @@
                               <span>Jumeirah Bay Island</span>
                               <ul>
                                   <li><a href="exclusive/Bvlgari.html">Bvlgari</a></li>
-                                  <li><a href="exclusive/ocean mansion.html">Ocean Mansion</a></li>
+                                  <li><a href="exclusive/ocean mansion.html">Bvlgari Ocean Mansion</a></li>
                               </ul>
                           </li>
       
@@ -370,7 +370,7 @@
               <div class="row">
                 <div class="col-xl-6">
                   <div class="content-wrap">
-                    <div class="desc">
+                    <div class="desc" style="text-align: justify;">
                       <h4 class="wow fadeInUp capitalize-first-word">Description</h4>
                       <p class="wow fadeInUp capitalize-first-word">
                         Enchanting three bedroom, three bath home with spacious
@@ -613,7 +613,7 @@
                       </p>
                       <ul>
                         <li>
-                          <h5 class="wow fadeInUp capitalize-first-word"Interior Details</h5>
+                          <h5 class="wow fadeInUp capitalize-first-word">Interior Details</h5>
                           <div
                             class="wrap-check-ellipse wow fadeInUp"
                             data-wow-delay="0.1s"
@@ -645,7 +645,7 @@
                           </div>
                         </li>
                         <li>
-                          <h5 class="wow fadeInUp capitalize-first-word"Outdoor Details</h5>
+                          <h5 class="wow fadeInUp capitalize-first-word">Outdoor Details</h5>
                           <div
                             class="wrap-check-ellipse wow fadeInUp"
                             data-wow-delay="0.1s"
@@ -689,7 +689,7 @@
                           </div>
                         </li>
                         <li>
-                          <h5 class="wow fadeInUp capitalize-first-word"Utilities Central</h5>
+                          <h5 class="wow fadeInUp capitalize-first-word">Utilities Central</h5>
                           <div
                             class="wrap-check-ellipse wow fadeInUp"
                             data-wow-delay="0.1s"
@@ -733,7 +733,7 @@
                           </div>
                         </li>
                         <li>
-                          <h5 class="wow fadeInUp capitalize-first-word"Other Features</h5>
+                          <h5 class="wow fadeInUp capitalize-first-word">Other Features</h5>
                           <div
                             class="wrap-check-ellipse wow fadeInUp"
                             data-wow-delay="0.1s"
@@ -787,7 +787,7 @@
                       <form class="form-schedule">
                         <div class="cols">
                           <fieldset class="message">
-                            <input type="date" name="date" value="2023-11-20" />
+                            <input type="date" name="date" value="2025" />
                           </fieldset>
                           <div class="nice-select" tabindex="0">
                             <span class="current">Please Select Time</span>
@@ -1052,7 +1052,7 @@ Hello, I am interested in [Renovated apartment at last floor]</textarea
                       </form>
                     </div>
 
-                    <div class="nearby">
+                    <div class="nearby m-1">
                       <h4 class="wow fadeInUp capitalize-first-word">What's Nearby?</h4>
                       <div class="widget-tabs style-2 type-small">
                         <ul class="widget-menu-tab wow fadeInUp">
@@ -1615,5 +1615,24 @@ Hello, I am interested in [Renovated apartment at last floor]</textarea
     <script>
       new Mmenu(document.querySelector("#menu"));
     </script>
-  </body>
+  <script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
+    </script>
+
+</body>
 </html>

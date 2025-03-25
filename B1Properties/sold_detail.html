@@ -73,7 +73,7 @@
                                         <ul>
                                             <li><a href="exclusive/Bvlgari.html">Bvlgari</a></li>
                                             <li><a href="exclusive/mansion al barari.html">Mansion Al Barari</a></li>
-                                            <li><a href="exclusive/ocean mansion.html">Ocean Mansion</a></li>
+                                            <li><a href="exclusive/ocean mansion.html">Bvlgari Ocean Mansion</a></li>
                                             <li><a href="exclusive/Villa Frond A.html">Villa Frond A</a></li>
                                             <li><a href="exclusive/Villa Frond D.html">Villa Frond D</a></li>
                                             <li><a href="exclusive/Villa Frond L.html">Villa Frond L</a></li>
@@ -99,22 +99,22 @@
                                 <a href="https://wa.me/971564338399" target="_blank" class="whatsapp-button">WhatsApp<i class="flaticon-whatsapp"></i></a>
                             </div>
                         </div>
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                         <li>
                             <span>Private Listings</span>
                             <ul>
                                 <li><a href="exclusive/Bvlgari.html">Bvlgari</a></li>
                                 <li><a href="exclusive/mansion al barari.html">Mansion Al Barari</a></li>
-                                <li><a href="exclusive/ocean mansion.html">Ocean Mansion</a></li>
+                                <li><a href="exclusive/ocean mansion.html">Bvlgari Ocean Mansion</a></li>
                                 <li><a href="exclusive/Villa Frond A.html">Villa Frond A</a></li>
                                 <li><a href="exclusive/Villa Frond D.html">Villa Frond D</a></li>
                                 <li><a href="exclusive/Villa Frond L.html">Villa Frond L</a></li>
@@ -449,7 +449,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -625,6 +625,25 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

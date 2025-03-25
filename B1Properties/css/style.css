@@ -841,7 +841,9 @@ h6, .h6 {
 .mt-21 {
   margin-top: 21px !important;
 }
-
+.mt-50 {
+  margin-top: 50px !important;
+}
 .mb-1 {
   margin-bottom: 1px !important;
 }
@@ -7491,6 +7493,34 @@ ul.grid-tags li a:hover {
 #menu > a.close i {
   font-size: 10px;
   color: var(--Secondary);
+}#menu {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: var(--Secondary) !important;
+  background-color: var(--White) !important;
+}
+#menu > a.close {
+  position: absolute;
+  top: 10px;
+  left: unset;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #F9F9F9;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+#menu > a.close i {
+  font-size: 10px;
+  color: var(--Secondary);
 }
 #menu .mm-panels {
   background-color: var(--White) !important;
@@ -13211,7 +13241,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
 }
 .thumbs-slider-column .slider-thumbs-gallery-1 .swiper-wrapper .swiper-slide {
-  width: 158px;
+  width: 170px;
   height: 121px !important;
 }
 
@@ -16062,4 +16092,66 @@ body.no-scroll {
 .no-wrap {
   white-space: nowrap; /* Prevents text from wrapping */
   display: inline-block; /* Ensures the text stays on the same line */
+}
+
+.focus-area {
+  display: flex;
+  gap: 10px; /* Adjust the gap size as needed */
+}
+
+/* Ensure the pipe (|) separator has space around it */
+.focus-area::before {
+  content: " ";
+  margin: 0 5px; /* Adjust the spacing around the pipe */
+}
+/* Align the content to the right */
+/* Flexbox layout for the row */
+.tf-section.estate-agent .row {
+  display: flex;
+}
+
+/* Align content to the right */
+.content-left.pl-50 {
+  text-align: right;
+  margin-left: auto;
+}
+
+/* For mobile devices (768px and below) */
+@media (max-width: 768px) {
+  .slider.home10 .wrap-slider .counter {
+    position: relative; /* Change from absolute to relative */
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 30px 20px; /* Reduced padding for mobile */
+    margin-top: -60px; /* Add some space above */
+    height: auto; /* Let height adjust to content */
+  }
+  
+  .slider.home10 .wrap-slider {
+    padding-bottom: 0; /* Remove any extra padding */
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.tf-button-secondary {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tf-button-secondary:hover {
+  background: #e0e0e0;
 }

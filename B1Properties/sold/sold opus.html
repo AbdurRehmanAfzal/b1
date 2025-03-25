@@ -112,15 +112,15 @@
                             </a>
                             </div>
                         </div>
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                          <li><a href="../exclusive.html">Private Listings</a></li>
                         <li><a href="../offplan.html">New Opportunities</a></li>
@@ -271,13 +271,23 @@
                                 <div class="content">
                                     <h2 class="wow fadeInUp capitalize-first-word">A Sculptural And Emblematic Landmark, Imagined By An Icon</h2>
                                     <div class="text-content wow fadeInUp capitalize-first-word">
-                                        <strong>The Opus: A Beacon Of The Future In Architecture</strong>
-                                        <br><br>
-                                        <strong>The Opus</strong> Is A Powerful Testament To The Dream Of One Of The Architectural Legends, <strong>Dame Zaha Hadid</strong>, Who Envisioned Every Minute Detail Of This Iconic Building With Her Typical Flair And Pathbreaking Style. From Its Outer Shell To The Innermost Design, Everything Carries The Signature Style Of The Genius, An Art-Technology Wonder.
-                                        <br><br>
-                                        Rising As A 21-Storey Mixed-Use Building In The Heart Of <strong>Business Bay</strong>, The <strong>Opus Tower</strong> Fashions Innovative Design With An Unmistakable Silhouetted Profile. Resembling Something Fluid Inside Of A Cube, This Structure Defines A Cube's Center As Surely An Architectural Marvel. The Blue-Tinted Glass At Its Center Makes An Eye-Catching Juxtaposition With Outer Black Glass That Makes A Strong Statement To Reform The Skyline.
-                                        <br><br>
-                                        The Mastery Of The Opus Combines Artistry And Engineering In A Way No Other Building Does; It's A Vision.
+                                        <div class="description" style="text-align: justify;">
+                                            <p class="wow fadeInUp">
+                                                <strong>The Opus: A Beacon of Architectural Innovation</strong>
+                                            </p>
+                                            
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                <strong>The Opus</strong> stands as a powerful testament to the visionary genius of architectural legend <strong>Dame Zaha Hadid</strong>. Every meticulously crafted detail of this iconic masterpiece bears her unmistakable signature - a harmonious fusion of groundbreaking design and artistic flair that transforms structural engineering into pure art.
+                                            </p>
+                                            
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Rising majestically as a 21-storey mixed-use landmark in <strong>Business Bay</strong>, <strong>The Opus Tower</strong> redefines architectural boundaries with its striking fluid-form silhouette contained within a cuboid frame. The dramatic interplay of blue-tinted glass at its core against the bold black exterior creates a breathtaking visual statement that reimagines Dubai's skyline.
+                                            </p>
+                                            
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                More than a building, <strong>The Opus</strong> represents an unprecedented synthesis of artistry and engineering - a visionary landmark where architectural boundaries dissolve to create something truly extraordinary.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -366,6 +376,12 @@
                                                 <i class="flaticon-minus-front"></i>
                                             </div>
                                             <div class="text-content capitalize-first-word">BUA 2,842 sq.ft</div>
+                                        </div>
+                                        <div class="item wow fadeInUp" data-wow-delay="0.25s">
+                                            <div class="icon">
+                                                <i class="flaticon-garage"></i>
+                                            </div>
+                                            <div class="text-content capitalize-first-word">3 Car Parking</div>
                                         </div>
                                     </div>
                                 <div>
@@ -488,7 +504,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -553,7 +569,7 @@
                             </div>
                              <!-- Budget -->
                              <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">How much are you willing to spend on this property?</div>
                                     <select name="budget" required>
                                         <option value="">Select</option>
@@ -567,7 +583,7 @@
     
                             <!-- Meeting Preference -->
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">When is a good time for a meeting?</div>
                                     <select name="meeting_preference" required>
                                         <option value="">Select</option>
@@ -580,10 +596,15 @@
                            
                         </div>
     
-                        <!-- Submit Button -->
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
-                        </div>
+                       <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                        <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                            Submit
+                        </button>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -619,7 +640,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What are you looking to sell?</div>
                                     <select name="property_type" required>
                                         <option value="">Select</option>
@@ -632,7 +653,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What time should we contact you during the day?</div>
                                     <select name="contact_time" required>
                                         <option value="">Select</option>
@@ -645,8 +666,14 @@
                             </div>
                         </div>
                     
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        < <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -745,6 +772,19 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('modelsell').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

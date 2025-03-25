@@ -112,15 +112,15 @@
                             </a>
                             </div>
                         </div>
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                          <li><a href="../exclusive.html">Private Listings</a></li>
                         <li><a href="../offplan.html">New Opportunities</a></li>
@@ -271,9 +271,15 @@
                                 <div class="content">
                                     <h2 class="wow fadeInUp capitalize-first-word">Casa Del Sole By Alpago Properties</h2>
                                     <div class="text-content wow fadeInUp capitalize-first-word">
-                                        Located At The Top Of The Prestigious Frond G Of Palm Jumeirah, Fittingly Referred To As The Palm's Billionaires' Row, This Ultraluxury Villa Is A Masterpiece Of Sophistication. With Eight Sumptuous Bedrooms, A Home Theater For Exclusive Viewing, And An In-Ground Garage That Accommodates 15 Vehicles, This Mansion Is Reserved For The Crème Of Society.
-                                        <br><br>
-                                        Every Aspect Of This Villa Oozes Luxury, With Painstakingly Chosen Materials And Finishes That Blend Beautifully The Finest Of Local Craftsmanship With International Design Influences.
+                                        <div class="description" style="text-align: justify;">
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Located at the top of the prestigious Frond G of <strong>Palm Jumeirah</strong>, fittingly referred to as the Palm's <strong>Billionaires' Row</strong>, this ultraluxury villa is a masterpiece of sophistication. With <strong>eight sumptuous bedrooms</strong>, a <strong>home theater</strong> for exclusive viewing, and an <strong>in-ground garage</strong> that accommodates <strong>15 vehicles</strong>, this mansion is reserved for the crème de la crème of society.
+                                            </p>
+                                            
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Every aspect of this villa exudes luxury, with painstakingly chosen materials and finishes that beautifully blend the finest of <strong>local craftsmanship</strong> with <strong>international design influences</strong>. The residence showcases unparalleled attention to detail, from hand-selected marble finishes to custom-designed lighting fixtures, creating a harmonious balance between opulence and timeless elegance.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -496,7 +502,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -561,7 +567,7 @@
                             </div>
                              <!-- Budget -->
                              <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">How much are you willing to spend on this property?</div>
                                     <select name="budget" required>
                                         <option value="">Select</option>
@@ -575,7 +581,7 @@
     
                             <!-- Meeting Preference -->
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">When is a good time for a meeting?</div>
                                     <select name="meeting_preference" required>
                                         <option value="">Select</option>
@@ -589,8 +595,14 @@
                         </div>
     
                         <!-- Submit Button -->
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -627,7 +639,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What are you looking to sell?</div>
                                     <select name="property_type" required>
                                         <option value="">Select</option>
@@ -640,7 +652,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What time should we contact you during the day?</div>
                                     <select name="contact_time" required>
                                         <option value="">Select</option>
@@ -653,8 +665,14 @@
                             </div>
                         </div>
                     
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -753,6 +771,19 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('modelsell').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

@@ -112,15 +112,15 @@
                             </a>
                             </div>
                         </div>
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                          <li><a href="../exclusive.html">Private Listings</a></li>
                         <li><a href="../offplan.html">New Opportunities</a></li>
@@ -231,9 +231,15 @@
                                 <div class="content">
                                     <h2 class="wow fadeInUp capitalize-first-word">Royal Atlantis Penthouse By Kerzner International Resorts</h2>
                                     <div class="text-content wow fadeInUp capitalize-first-word">
-                                        The  Atlantis Is Luxury Elevated—It's The Personification Of It, Brought To Life In An Architectural Masterpiece.
-                                        <br><br>
-                                        Located In Upscale Palm Jumeirah, This Breathtaking 5-Bedroom Penthouse Is More Than A House—More Like A Proposition To Embrace The Ultimate In Luxury Waterfront Living. The Globe's Largest Artificial Island, Palm Jumeirah, Is A Haven Of Secrecy Where Luxury Malls, Global Eateries, And Ultimate Relaxation Blend Harmoniously With Each Other.
+                                        <div class="description" style="text-align: justify;">
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                <strong>Atlantis The Royal</strong> represents the absolute pinnacle of luxury—an architectural tour de force where opulence becomes tangible. This is not merely a residence, but the very embodiment of elevated living, manifested through breathtaking design and uncompromising excellence.
+                                            </p>
+                                        
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Commanding an exclusive position on <strong>Palm Jumeirah</strong>, this magnificent 5-bedroom penthouse transcends conventional luxury homes—it's an invitation to experience waterfront living at its most sublime. The world's most prestigious artificial island offers a private sanctuary where <strong>Michelin-starred dining</strong>, <strong>high-fashion boutiques</strong>, and <strong>bespoke wellness experiences</strong> converge in perfect harmony.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -420,7 +426,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -485,7 +491,7 @@
                             </div>
                              <!-- Budget -->
                              <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">How much are you willing to spend on this property?</div>
                                     <select name="budget" required>
                                         <option value="">Select</option>
@@ -499,7 +505,7 @@
     
                             <!-- Meeting Preference -->
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">When is a good time for a meeting?</div>
                                     <select name="meeting_preference" required>
                                         <option value="">Select</option>
@@ -512,10 +518,15 @@
                            
                         </div>
     
-                        <!-- Submit Button -->
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
-                        </div>
+                       <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                        <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                            Submit
+                        </button>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -551,7 +562,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What are you looking to sell?</div>
                                     <select name="property_type" required>
                                         <option value="">Select</option>
@@ -564,7 +575,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What time should we contact you during the day?</div>
                                     <select name="contact_time" required>
                                         <option value="">Select</option>
@@ -577,8 +588,14 @@
                             </div>
                         </div>
                     
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        < <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -677,6 +694,19 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('modelsell').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
     </script>
 
 </body>

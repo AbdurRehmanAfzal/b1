@@ -29,7 +29,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Budget:</strong> $budget</p>
         <p><strong>User IP Address:</strong> $user_ip</p>
         <p><strong>Referring Page:</strong> $referring_page</p>
-    </body>
+    <script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
+        });
+    </script>
+
+</body>
     </html>
     ";
 

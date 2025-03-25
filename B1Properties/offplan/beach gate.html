@@ -129,15 +129,15 @@
                         </div>
             
                         <!-- Mobile Menu Toggler -->
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                         <!-- Private Listings Mobile Dropdown -->
                          <li><a href="../exclusive.html">Private Listings</a></li>
@@ -359,7 +359,7 @@
                     <div class="cl-container">
                         <div class="row">
                             <div class="col-12">
-                                <div class="desc">
+                                <div class="desc" style="text-align: justify;">
                                     <h4 class="wow fadeInUp capitalize-first-word">Description</h4>
                                     <p class="wow fadeInUp capitalize-first-word">
                                         Citywalk Crestlane is an exceptional waterside latest revolutionary development that redefines urban living in the heart of Dubai. Nestled within the iconic Citywalk, this masterfully designed development offers 1 to 4-bedroom apartments and duplexes surrounded by tranquil water features, lush green spaces, and state-of-the-art amenities. With its unbeatable location, seamless connectivity, and innovative architecture, Crest Lane is the perfect blend of luxury, comfort, and modern city vibes—crafted for those who embrace life’s rhythm and vibrancy.
@@ -513,7 +513,7 @@
                                         <div class="text-content capitalize-first-word">Community Park</div>
                                     </div>
                                 </div>
-                                <div class="nearby">
+                                <div class="nearby m-1">
                                     <h4 class="wow fadeInUp capitalize-first-word">PROXIMITY HIGHLIGHT</h4>
                                     <div class="wrap-file-item wow fadeInUp">
                                         <div class="file-item">
@@ -606,7 +606,7 @@
                                             </div>
 
                                             <div class="group-form">
-                                                <div class="form-style-has-title">
+                                                <div class="form-style-has-title capitalize-first-word">
                                                     <div class="title">Have you owned or attempted to buy property in Dubai?</div>
                                                     <select name="property_ownership_status" required>
                                                         <option value="">Select</option>
@@ -618,7 +618,7 @@
                                             </div>
 
                                             <div class="group-form">
-                                                <div class="form-style-has-title">
+                                                <div class="form-style-has-title capitalize-first-word">
                                                     <div class="title">What is your current status?</div>
                                                     <select name="current_status" required>
                                                         <option value="">Select</option>
@@ -631,7 +631,7 @@
                                             </div>
 
                                             <div class="group-form">
-                                                <div class="form-style-has-title">
+                                                <div class="form-style-has-title capitalize-first-word">
                                                     <div class="title">How much are you looking to invest in a property?</div>
                                                     <select name="investment_amount" required>
                                                         <option value="">Select</option>
@@ -644,7 +644,7 @@
                                             </div>
 
                                             <div class="group-form">
-                                                <div class="form-style-has-title">
+                                                <div class="form-style-has-title capitalize-first-word">
                                                     <div class="title">How soon are you looking to buy?</div>
                                                     <select name="buy_timeline" required>
                                                         <option value="">Select</option>
@@ -657,8 +657,13 @@
                                             </div>
                                         </div>
 
-                                        <div class="button-submit">
-                                            <button type="submit" class="tf-button-primary">Submit</button>
+                                        <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                                            <button type="button" class="tf-button-primary" id="close-form-btn" style="padding: 10px 25px;">
+                                                Close
+                                            </button>
+                                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                                Submit
+                                            </button>
                                         </div>
                                     </form>
                                     
@@ -735,7 +740,7 @@
                                                 
                                                 </div>
                                                 <div class="name">
-                                                    <a href="edenpark.html">Eden House Park</a>
+                                                    <a href="edenpark.html">Eden house - the Park</a>
                                                 </div>
                                                 <a href="edenpark.html" class="tf-button-no-bg">
                                                     More Detail 
@@ -888,7 +893,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -985,6 +990,25 @@
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
             });
+        });
+    </script>
+
+<script>
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            // Option 1: Reset form and close (if in modal)
+            document.getElementById('property-form').reset();
+            
+            // Option 2: Redirect to homepage
+            // window.location.href = 'index.html';
+            
+            // Option 3: Hide the form (if on same page)
+            document.getElementById('modallogin').style.display = 'none';
+            
+            // Option 4: Close modal (if using one)
+            // document.getElementById('form-modal').close();
+            
+            // Choose one option above based on your needs
+            // For most cases, Option 1 + Option 4 (if modal) works best
         });
     </script>
 

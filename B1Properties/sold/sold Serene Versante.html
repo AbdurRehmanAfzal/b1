@@ -111,15 +111,15 @@
                             </a>
                             </div>
                         </div>
-                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu" style="margin-right: 15px;"></a>
                     </div>
                 </div>
             
                 <!-- Mobile Menu -->
                 <nav id="menu">
-                    <a class="close" aria-label="Close menu" href="#mm-22">
+                     <!--<a class="close" aria-label="Close menu" href="#">
                         <i class="icon-close"></i>
-                    </a>
+                    </a>-->
                     <ul>
                          <li><a href="../exclusive.html">Private Listings</a></li>
                         <li><a href="../offplan.html">New Opportunities</a></li>
@@ -229,25 +229,19 @@
                             <div class="col-xl-5 col-md-6">
                                 <div class="content">
                                     <h2 class="wow fadeInUp capitalize-first-word">Serene versante: a rare jewel of refined luxury & serene beauty.</h2>
-                                    <div class="text-content wow fadeInUp capitalize-first-word">Serene Versante, stands as a breathtaking testament
-                                        to reﬁned luxury and architectural brilliance.
-                                        Designed by the visionary minds at CK Architecture
-                                        Interiors and LW Design Studio, this villa is a
-                                        harmonious fusion of form and function. The
-                                        open-plan living spaces invite the natural world
-                                        inside, with uninterrupted vistas of the sea that
-                                        stretch beyond the horizon, infusing the home with
-                                        an ethereal light. Every detail, carefully curated, is a
-                                        tribute to both contemporary elegance and
-                                        imaginative design, creating a space where the soul
-                                        ﬁnds peace in its perfect balance of beauty and
-                                        purpose.
-                                        A sanctuary where architecture and nature merge,
-                                        offering a reﬁned living experience that transcends
-                                        the ordinary. With seamless ﬂow of space, light, and
-                                        design. It is a rare jewel, where life unfolds in its
-                                        highest, most reﬁned form, and every moment is an
-                                        invitation to revel in the quiet joy of serene beauty.</div>
+                                    <div class="text-content wow fadeInUp capitalize-first-word"><div class="description" style="text-align: justify;">
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            <strong>Serene Versante</strong> stands as an architectural masterpiece, embodying the pinnacle of refined luxury and design excellence. Conceived by the visionary collaboration between <strong>CK Architecture Interiors</strong> and <strong>LW Design Studio</strong>, this extraordinary villa represents a perfect synthesis of aesthetic brilliance and functional sophistication.
+                                        </p>
+                                    
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            The villa's fluid open-plan spaces masterfully blur boundaries between interior and exterior, framing breathtaking panoramic sea views that stretch to infinity. Bathed in ethereal natural light, each meticulously curated detail celebrates contemporary elegance through imaginative design - creating a sanctuary where beauty and purpose exist in perfect equilibrium.
+                                        </p>
+                                    
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            More than a residence, <strong>Serene Versante</strong> offers a transcendent living experience where architecture and nature exist in harmonious dialogue. This rare jewel of design features a seamless interplay of space, light, and form - inviting residents to savor life's most refined moments amidst an atmosphere of tranquil sophistication.
+                                        </p>
+                                    </div></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -319,13 +313,13 @@
                                             <div class="icon">
                                                 <i class="flaticon-minus-front"></i>
                                             </div>
-                                            <div class="text-content capitalize-first-word">BUA 11296.50 sq.ft</div>
+                                            <div class="text-content capitalize-first-word">BUA 11,296.50 sq.ft</div>
                                         </div>
                                         <div class="item wow fadeInUp" data-wow-delay="0.1s">
                                             <div class="icon">
                                                 <i class="flaticon-minus-front"></i>
                                             </div>
-                                            <div class="text-content capitalize-first-word">Plot Size 15836.96 sq.ft</div>
+                                            <div class="text-content capitalize-first-word">Plot Size 15,836.96 sq.ft</div>
                                         </div>
                                         <div class="item wow fadeInUp" data-wow-delay="0.15s">
                                             <div class="icon">
@@ -466,7 +460,7 @@
                              <div class="footer-cl-4">
                                 <div class="ft-title">Contact Us</div>
                                 <ul class="navigation-menu-footer">
-                                    <li><div class="text" style="text-transform: lowercase;"><a href="mailto:info@b1properties.ae">info@b1properties.ae</a></div></li>
+                                    <li><div class="text"><a href="mailto:info@b1properties.ae" style="text-transform: lowercase;">info@b1properties.ae</a></div></li>
                                    <li>
     <div class="text" style="text-transform: lowercase;">
         <a href="https://wa.me/97143938155" target="_blank">+971 4 39 38 155</a>
@@ -531,7 +525,7 @@
                             </div>
                              <!-- Budget -->
                              <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">How much are you willing to spend on this property?</div>
                                     <select name="budget" required>
                                         <option value="">Select</option>
@@ -545,7 +539,7 @@
     
                             <!-- Meeting Preference -->
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">When is a good time for a meeting?</div>
                                     <select name="meeting_preference" required>
                                         <option value="">Select</option>
@@ -558,10 +552,15 @@
                            
                         </div>
     
-                        <!-- Submit Button -->
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
-                        </div>
+                       <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                        <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                            Submit
+                        </button>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -597,7 +596,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What are you looking to sell?</div>
                                     <select name="property_type" required>
                                         <option value="">Select</option>
@@ -610,7 +609,7 @@
                             </div>
                     
                             <div class="group-form">
-                                <div class="form-style-has-title">
+                                <div class="form-style-has-title capitalize-first-word">
                                     <div class="title">What time should we contact you during the day?</div>
                                     <select name="contact_time" required>
                                         <option value="">Select</option>
@@ -623,8 +622,14 @@
                             </div>
                         </div>
                     
-                        <div class="button-submit">
-                            <button type="submit" class="tf-button-primary">Submit</button>
+                        < <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+    Close
+</button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -720,6 +725,21 @@
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+
+    <script>
+        // For the close button in the header
+        document.querySelector('.btn-hide-modal').addEventListener('click', function(e) {
+            e.preventDefault();
+            var modal = bootstrap.Modal.getInstance(document.getElementById('modelsell'));
+            modal.hide();
+        });
+    
+        // For your custom close button
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            var modal = bootstrap.Modal.getInstance(document.getElementById('modelsell'));
+            modal.hide();
+        });
     </script>
 
 </body>
