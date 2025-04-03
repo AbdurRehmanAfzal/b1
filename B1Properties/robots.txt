@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /email_script/
+Disallow: /sold/
+Disallow: /team/
+
+Sitemap: https://b1properties.ae/sitemap.xml
