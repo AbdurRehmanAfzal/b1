@@ -1,4 +1,8 @@
 <?php
+// Only set cookie if user hasn't rejected cookies
+if (!isset($_COOKIE['cookie_consent']) || $_COOKIE['cookie_consent'] !== 'false') {
+    setcookie('formSubmitted', time(), time() + 5, '/'); // 5-second cookie
+}
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
