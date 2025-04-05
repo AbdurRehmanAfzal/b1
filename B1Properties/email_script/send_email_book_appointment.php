@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send email
     if (mail($to, $subject, $body, $headers)) {
         // Redirect to thankyou.html after successful form submission
-        header("Location: ../thankyou.html"); // Adjust the path if needed
+        header("Location: ../book appointment thankyou.html"); // Adjust the path if needed
         exit(); // Ensure no further code is executed after the redirect
     } else {
         echo "<script>alert('Error sending email. Please try again.'); window.history.back();</script>";
