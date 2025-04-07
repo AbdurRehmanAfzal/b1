@@ -1020,6 +1020,100 @@
         </svg>
     </div>-->
     <!-- /go top button -->
+    <div class="modal fade modalCenter" id="modallogin">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-sm">
+                <a href="" class="btn-hide-modal" data-bs-dismiss="modal"><i class="icon-close"></i></a>
+                
+                <div class="content-right capitalize-first-word">
+                    <h4>Find out if the luxury real estate in <span>Dubai</span> is the right choice for you.</h4>
+                    <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="email_script/send_quiz_data.php">
+                        <div class="list">
+                            <div class="group-form">
+                                <div class="widget-content-inner active">
+                                    <div class="cols">
+                                        <fieldset class="name has-top-title">
+                                            <input type="text" placeholder="Name" name="name" required>
+                                            <label>Name</label>
+                                        </fieldset>
+                                        <fieldset class="phone has-top-title">
+                                            <input type="number" placeholder="Phone" name="phone" required>
+                                            <label>Phone</label>
+                                        </fieldset>
+                                        <fieldset class="email has-top-title">
+                                            <input type="email" placeholder="Email" name="email" required>
+                                            <label>Email</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title capitalize-first-word">
+                                    <div class="title">Have you owned or attempted to buy property in Dubai?</div>
+                                    <select name="property_ownership_status" required>
+                                        <option value="">Select</option>
+                                        <option value="Currently or previously owned">Currently or previously owned</option>
+                                        <option value="Attempted but unsuccessful">Attempted but unsuccessful</option>
+                                        <option value="Never owned or attempted">Never owned or attempted</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title capitalize-first-word">
+                                    <div class="title">What is your current status?</div>
+                                    <select name="current_status" required>
+                                        <option value="">Select</option>
+                                        <option value="Actively looking to purchase/invest">Actively looking to purchase/invest</option>
+                                        <option value="Looking around">Looking around</option>
+                                        <option value="Property market conditions">Property market conditions</option>
+                                        <option value="Future potential investment options">Future potential investment options</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title capitalize-first-word">
+                                    <div class="title">How much are you looking to invest in a property?</div>
+                                    <select name="investment_amount" required>
+                                        <option value="">Select</option>
+                                        <option value="Up to 1 Million USD">Up to 1 Million USD</option>
+                                        <option value="1 to 5 Million USD">1 to 5 Million USD</option>
+                                        <option value="5 to 10 Million USD">5 to 10 Million USD</option>
+                                        <option value="10 Million USD and above">10 Million USD and above</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="group-form">
+                                <div class="form-style-has-title capitalize-first-word">
+                                    <div class="title">How soon are you looking to buy?</div>
+                                    <select name="buy_timeline" required>
+                                        <option value="">Select</option>
+                                        <option value="Straight away">Straight away</option>
+                                        <option value="Within a month">Within a month</option>
+                                        <option value="In the next 3 months">In the next 3 months</option>
+                                        <option value="I haven't decided yet">I haven't decided yet</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
+                            <!-- Change your close button to this -->
+                        <button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+                            Close
+                        </button>
+                            <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
   
 
