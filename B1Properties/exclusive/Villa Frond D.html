@@ -761,7 +761,7 @@
                                                 <a href="../exclusive.html" class="tf-button-default">More Villas</a>
                                             </div>
                                             <div class="person wow fadeInUp">
-                                               <div class="image1">
+                                                <div class="image1">
                                                     <img src="../images/agents/sales/avatar/laura.png" alt="" style="height: 150px; width: 150px;">
                                                 </div>
                                                 <div class="content">
@@ -772,71 +772,10 @@
                                                     <p><a href="https://wa.me/971542479949" target="_blank">+971 5 42 47 9949</a></p>
                                                 </div>
                                             </div>
-                                            <form class="form-schedule" id="exclusive-property-form" action="../email_script/exclusive_book_appointment.php" method="post">
-                                                <div class="cols">
-                                                    <fieldset class="message">
-                                                        <input type="date" name="date" value="2025">
-                                                    </fieldset>
-                                                    <fieldset class="message">
-                                                        <select name="time" required>
-                                                            <option value="10 AM">10 AM</option>
-                                                            <option value="11 AM">11 AM</option>
-                                                            <option value="12 PM">12 PM</option>
-                                                            <option value="1 PM">1 PM</option>
-                                                            <option value="2 PM">2 PM</option>
-                                                            <option value="3 PM">3 PM</option>
-                                                            <option value="4 PM">4 PM</option>
-                                                            <option value="5 PM">5 PM</option>
-                                                            <option value="6 PM">6 PM</option>
-                                                            <option value="7 PM">7 PM</option>
-                                                        </select>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="widget-tabs style-4">
-                                                    <ul class="widget-menu-tab" style="justify-content: center;">
-                                                        <li class="item-title active" onclick="setAppointmentType('In Person')">
-                                                            <span class="inner">In Person</span>
-                                                        </li>
-                                                        <li class="item-title" onclick="setAppointmentType('Video Chat')">
-                                                            <span class="inner">Video Chat</span>
-                                                        </li>
-                                                    </ul>
-                                                    <input type="hidden" name="appointment_type" id="appointment_type" value="In Person">
-                                                    <div class="widget-content-tab">
-                                                        <div class="widget-content-inner active">
-                                                            <div class="cols">
-                                                                <fieldset class="name has-top-title">
-                                                                    <input type="text" placeholder="Name" class="" name="name" tabindex="2" value="" aria-required="true" required="">
-                                                                    <label for="">Name</label>
-                                                                </fieldset>
-                                                                <fieldset class="phone has-top-title">
-                                                                    <input type="number" placeholder="Phone" class="" name="phone" tabindex="2" value="" aria-required="true" required="">
-                                                                    <label for="">Phone</label>
-                                                                </fieldset>
-                                                                <fieldset class="email has-top-title">
-                                                                    <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
-                                                                    <label for="">Email</label>
-                                                                </fieldset>
-                                                            </div>
-                                                            <fieldset class="message has-top-title">
-                                                                <textarea name="message" rows="4" placeholder="Your Comment" class="" tabindex="2" aria-required="true" required=""></textarea>
-                                                                <label for="">Your Comment</label>
-                                                            </fieldset>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkbox-item wow fadeInUp">
-                                                    <label>
-                                                                                                                <p class="capitalize-first-word" >By submitting this form I agree to<a href="../terms&conditions.html"><span> Terms & Conditions</span></a></p>
-                                                        <input type="checkbox" required>
-                                                        <span class="btn-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <div class="button-submit">
-                                                    <button class="tf-button-primary w-full" type="submit">Submit a Tour Request<i class="icon-arrow-right-add"></i></button>
-                                                </div>
-                                                <input type="hidden" name="appointment_type" id="appointment_type" value="In Person">
-                                            </form>
+                                            <div class="button-submit">
+                                                <button class="tf-button-primary w-full" data-bs-toggle="modal" data-bs-target="#modallogin">Register Your Interest<i class="icon-arrow-right-add"></i></button>
+                                            </div>
+                                          
                                         </div>
                                         
                                         
@@ -921,7 +860,7 @@
                                                 <div class="content">
                                                     <div class="sub-blog"></div>
                                                     <div class="name">
-                                                        <a href="La solare.html">La solare</a>
+                                                        <a href="La solare.html">La Solaro</a>
                                                     </div>
                                                     <a href="La solare.html" class="tf-button-no-bg">
                                                         More Detail 
@@ -1211,24 +1150,20 @@
      <script>
          new Mmenu(document.querySelector("#menu"));
      </script>
-     <script>
-        function setAppointmentType(type) {
-            document.getElementById('appointment_type').value = type;
-        }
-        
-        document.querySelector("#exclusive-property-form").addEventListener("submit", function(event) {
+      <script>
+        document.querySelector("#property-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
-        
+    
             let formData = new FormData(this); // Gather form data
-        
-            fetch("../email_script/exclusive_book_appointment.php", { // Replace with the correct path to your PHP script
+    
+            fetch("../email_script/send_quiz_data.php", { // Replace with the correct path to your PHP script
                 method: "POST",
                 body: formData
             })
             .then(response => response.text()) // Parse the response as text
             .then(data => {
                 if (data === "success") {
-                    alert("Appointment successfully booked!");
+                    alert("Your information has been submitted successfully!");
                     window.location.href = "../detail thankyou.html"; // Redirect to the thank you page
                 } else {
                     alert("There was an error. Please try again.");
@@ -1239,6 +1174,7 @@
                 alert("There was an error. Please try again.");
             });
         });
+        
     </script>
 
 <script>
