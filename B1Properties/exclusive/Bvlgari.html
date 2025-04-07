@@ -1050,8 +1050,8 @@
                 <a href="" class="btn-hide-modal" data-bs-dismiss="modal"><i class="icon-close"></i></a>
                 
                 <div class="content-right capitalize-first-word">
-                    <h4>Find out if the luxury real estate in <span>Dubai</span> is the right choice for you.</h4>
-                    <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="email_script/send_quiz_data.php">
+                    <h4>Register your interest and one of our luxury consultants will be in touch with you.</h4>
+                    <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/send_quiz_data.php">
                         <div class="list">
                             <div class="group-form">
                                 <div class="widget-content-inner active">
@@ -1172,29 +1172,49 @@
      </script>
      <script>
         document.querySelector("#property-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
+            
+            let formData = new FormData(this);
+            let submitButton = this.querySelector('button[type="submit"]');
+            
+            // Disable submit button to prevent multiple submissions
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
     
-            let formData = new FormData(this); // Gather form data
-    
-            fetch("../email_script/send_quiz_data.php", { // Replace with the correct path to your PHP script
+            fetch("../email_script/send_quiz_data.php", {
                 method: "POST",
                 body: formData
             })
-            .then(response => response.text()) // Parse the response as text
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.text();
+            })
             .then(data => {
-                if (data === "success") {
-                    alert("Your information has been submitted successfully!");
-                    window.location.href = "../detail thankyou.html"; // Redirect to the thank you page
+                // Trim response and compare
+                if (data.trim() === "success") {
+                    // Close modal if using Bootstrap
+                    var modal = bootstrap.Modal.getInstance(document.getElementById('modallogin'));
+                    if (modal) {
+                        modal.hide();
+                    }
+                    
+                    // Redirect to thank you page
+                    window.location.href = "../detail thankyou.html";
                 } else {
-                    alert("There was an error. Please try again.");
+                    throw new Error("Server returned: " + data);
                 }
             })
             .catch(error => {
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit";
             });
         });
-        
     </script>
 
 <script>

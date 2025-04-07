@@ -59,10 +59,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ";
 
     if (mail($to, $subject, $message, $headers)) {
-        echo "success"; // Return success if email is sent
+        header('Content-Type: text/plain'); // Set content type
+        die("success"); // Use die() to ensure no extra output
     } else {
-        echo "error"; // Return error if email fails
+        header('Content-Type: text/plain');
+        die("error");
     }
+
 } else {
     echo "error"; // Return error if the request method is not POST
 }
