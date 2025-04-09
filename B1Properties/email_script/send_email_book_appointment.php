@@ -1,10 +1,20 @@
 <?php
-// Only set cookie if user hasn't rejected cookies
-if (!isset($_COOKIE['cookie_consent']) || $_COOKIE['cookie_consent'] !== 'false') {
-    setcookie('formSubmitted', time(), time() + 5, '/'); // 5-second cookie
-}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
+    // Honeypot trap
+    if (!empty($_POST["website"])) {
+        header('Content-Type: text/plain');
+        die("bot_detected");
+    }
+
+    // Timing trap
+    $form_load_time = isset($_POST["form_load_time"]) ? (int)$_POST["form_load_time"] : 0;
+    $current_time = round(microtime(true) * 1000);
+    if ($form_load_time === 0 || ($current_time - $form_load_time) < 3000) {
+        header('Content-Type: text/plain');
+        die("bot_detected");
+    }
+
+    // Sanitize inputs
     $date = htmlspecialchars($_POST['date']);
     $time = htmlspecialchars($_POST['time']);
     $name = htmlspecialchars($_POST['name']);
@@ -12,15 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
     $appointment_type = htmlspecialchars($_POST['appointment_type']);
-
-    // Get user's IP address
     $user_ip = $_SERVER['REMOTE_ADDR'];
+    $referring_page = $_SERVER['HTTP_REFERER'] ?? 'Direct access';
 
-    // Get the referring page (page from which the form was submitted)
-    $referring_page = $_SERVER['HTTP_REFERER'];
-
-    // Prepare email content
-    $to = "info@b1properties.ae"; // Change this to the recipient email
+    // Prepare email
+    $to = "info@b1properties.ae";
     $subject = "New Appointment Booking";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
@@ -39,15 +45,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Submitted From:</strong> $referring_page</p>
     ";
 
-    // Send email
     if (mail($to, $subject, $body, $headers)) {
-        // Redirect to thankyou.html after successful form submission
-        header("Location: ../book appointment thankyou.html"); // Adjust the path if needed
-        exit(); // Ensure no further code is executed after the redirect
+        header('Content-Type: text/plain');
+        echo "success";
     } else {
-        echo "<script>alert('Error sending email. Please try again.'); window.history.back();</script>";
+        header('Content-Type: text/plain');
+        echo "error";
     }
 } else {
-    echo "<script>alert('Invalid request.'); window.history.back();</script>";
+    header('Content-Type: text/plain');
+    echo "error";
 }
 ?>
