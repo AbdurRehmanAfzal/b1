@@ -661,82 +661,86 @@
                                 </div>
                                 <div class="col-md-6 capitalize-first-word">
                                     <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/send_quiz_data.php">
-    <div class="list">
-        <div class="group-form">
-            <div class="widget-content-inner active">
-                <div class="cols">
-                    <fieldset class="name has-top-title">
-                        <input type="text" placeholder="Name" name="name" required>
-                        <label>Name</label>
-                    </fieldset>
-                    <fieldset class="phone has-top-title">
-                        <input type="number" placeholder="Phone" name="phone" required>
-                        <label>Phone</label>
-                    </fieldset>
-                    <fieldset class="email has-top-title">
-                        <input type="email" placeholder="Email" name="email" required>
-                        <label>Email</label>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
+                                        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                                        <input type="hidden" name="form_load_time" id="form_load_time" value="">
+                                        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                                        <input type="hidden" name="form_load_time" id="form_load_time" value="">
+                                        <div class="list">
+                                            <div class="group-form">
+                                                <div class="widget-content-inner active">
+                                                    <div class="cols">
+                                                        <fieldset class="name has-top-title">
+                                                            <input type="text" placeholder="Name" name="name" required>
+                                                            <label>Name</label>
+                                                        </fieldset>
+                                                        <fieldset class="phone has-top-title">
+                                                            <input type="number" placeholder="Phone" name="phone" required>
+                                                            <label>Phone</label>
+                                                        </fieldset>
+                                                        <fieldset class="email has-top-title">
+                                                            <input type="email" placeholder="Email" name="email" required>
+                                                            <label>Email</label>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-        <div class="group-form">
-            <div class="form-style-has-title capitalize-first-word">
-                <div class="title">Have you owned or attempted to buy property in Dubai?</div>
-                <select name="property_ownership_status" required>
-                    <option value="">Select</option>
-                    <option value="Currently or previously owned">Currently or previously owned</option>
-                    <option value="Attempted but unsuccessful">Attempted but unsuccessful</option>
-                    <option value="Never owned or attempted">Never owned or attempted</option>
-                </select>
-            </div>
-        </div>
+                                            <div class="group-form">
+                                                <div class="form-style-has-title capitalize-first-word">
+                                                    <div class="title">Have you owned or attempted to buy property in Dubai?</div>
+                                                    <select name="property_ownership_status" required>
+                                                        <option value="">Select</option>
+                                                        <option value="Currently or previously owned">Currently or previously owned</option>
+                                                        <option value="Attempted but unsuccessful">Attempted but unsuccessful</option>
+                                                        <option value="Never owned or attempted">Never owned or attempted</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
-        <div class="group-form">
-            <div class="form-style-has-title capitalize-first-word">
-                <div class="title">What is your current status?</div>
-                <select name="current_status" required>
-                    <option value="">Select</option>
-                    <option value="Actively looking to purchase/invest">Actively looking to purchase/invest</option>
-                    <option value="Looking around">Looking around</option>
-                    <option value="Property market conditions">Property market conditions</option>
-                    <option value="Future potential investment options">Future potential investment options</option>
-                </select>
-            </div>
-        </div>
+                                            <div class="group-form">
+                                                <div class="form-style-has-title capitalize-first-word">
+                                                    <div class="title">What is your current status?</div>
+                                                    <select name="current_status" required>
+                                                        <option value="">Select</option>
+                                                        <option value="Actively looking to purchase/invest">Actively looking to purchase/invest</option>
+                                                        <option value="Looking around">Looking around</option>
+                                                        <option value="Property market conditions">Property market conditions</option>
+                                                        <option value="Future potential investment options">Future potential investment options</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
-        <div class="group-form">
-            <div class="form-style-has-title capitalize-first-word">
-                <div class="title">How much are you looking to invest in a property?</div>
-                <select name="investment_amount" required>
-                    <option value="">Select</option>
-                    <option value="Up to 1 Million USD">Up to 1 Million USD</option>
-                    <option value="1 to 5 Million USD">1 to 5 Million USD</option>
-                    <option value="5 to 10 Million USD">5 to 10 Million USD</option>
-                    <option value="10 Million USD and above">10 Million USD and above</option>
-                </select>
-            </div>
-        </div>
+                                            <div class="group-form">
+                                                <div class="form-style-has-title capitalize-first-word">
+                                                    <div class="title">How much are you looking to invest in a property?</div>
+                                                    <select name="investment_amount" required>
+                                                        <option value="">Select</option>
+                                                        <option value="Up to 1 Million USD">Up to 1 Million USD</option>
+                                                        <option value="1 to 5 Million USD">1 to 5 Million USD</option>
+                                                        <option value="5 to 10 Million USD">5 to 10 Million USD</option>
+                                                        <option value="10 Million USD and above">10 Million USD and above</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
-        <div class="group-form">
-            <div class="form-style-has-title capitalize-first-word">
-                <div class="title">How soon are you looking to buy?</div>
-                <select name="buy_timeline" required>
-                    <option value="">Select</option>
-                    <option value="Straight away">Straight away</option>
-                    <option value="Within a month">Within a month</option>
-                    <option value="In the next 3 months">In the next 3 months</option>
-                    <option value="I haven't decided yet">I haven't decided yet</option>
-                </select>
-            </div>
-        </div>
-    </div>
+                                            <div class="group-form">
+                                                <div class="form-style-has-title capitalize-first-word">
+                                                    <div class="title">How soon are you looking to buy?</div>
+                                                    <select name="buy_timeline" required>
+                                                        <option value="">Select</option>
+                                                        <option value="Straight away">Straight away</option>
+                                                        <option value="Within a month">Within a month</option>
+                                                        <option value="In the next 3 months">In the next 3 months</option>
+                                                        <option value="I haven't decided yet">I haven't decided yet</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
 
-    <div class="button-submit">
-        <button type="submit" class="tf-button-primary">Submit</button>
-    </div>
-</form>
+                                        <div class="button-submit">
+                                            <button type="submit" class="tf-button-primary">Submit</button>
+                                        </div>
+                                    </form>
                                     
                                 </div>
                             </div>
@@ -1022,27 +1026,48 @@
         new Mmenu(document.querySelector("#menu"));
     </script>
     <script>
-        document.querySelector("#property-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
-    
-            let formData = new FormData(this); // Gather form data
-    
-            fetch("../email_script/send_quiz_data.php", { // Replace with the correct path to your PHP script
+        // Set timestamp when the form is loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("form_load_time").value = Date.now();
+        });
+        document.querySelector("#property-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const formLoadTime = parseInt(document.getElementById("form_load_time").value);
+            const currentTime = Date.now();
+            // Check if submitted in under 3 seconds
+            if ((currentTime - formLoadTime) < 3000) {
+                alert("Form submitted too quickly. Please wait a moment before submitting.");
+                return;
+            }
+            let formData = new FormData(this);
+            let submitButton = this.querySelector('button[type="submit"]');
+            // Disable submit button to prevent multiple submissions
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+            fetch("../email_script/send_quiz_data.php", {
                 method: "POST",
                 body: formData
             })
-            .then(response => response.text()) // Parse the response as text
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.text();
+            })
             .then(data => {
-                if (data === "success") {
-                    alert("Your information has been submitted successfully!");
-                    window.location.href = "../detail thankyou.html"; // Redirect to the thank you page
+                if (data.trim() === "success") {
+                    window.location.href = "../detail thankyou.html";
                 } else {
-                    alert("There was an error. Please try again.");
+                    throw new Error("Server returned: " + data);
                 }
             })
             .catch(error => {
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit";
             });
         });
     </script>

@@ -681,6 +681,8 @@
                                 </div>
                                 <div class="col-md-6 capitalize-first-word">
                                     <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/send_quiz_data.php">
+                                        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                                        <input type="hidden" name="form_load_time" id="form_load_time" value="">
     <div class="list">
         <div class="group-form">
             <div class="widget-content-inner active">
@@ -1042,27 +1044,48 @@
         new Mmenu(document.querySelector("#menu"));
     </script>
     <script>
-        document.querySelector("#property-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
-    
-            let formData = new FormData(this); // Gather form data
-    
-            fetch("../email_script/send_quiz_data.php", { // Replace with the correct path to your PHP script
+        // Set timestamp when the form is loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("form_load_time").value = Date.now();
+        });
+        document.querySelector("#property-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const formLoadTime = parseInt(document.getElementById("form_load_time").value);
+            const currentTime = Date.now();
+            // Check if submitted in under 3 seconds
+            if ((currentTime - formLoadTime) < 3000) {
+                alert("Form submitted too quickly. Please wait a moment before submitting.");
+                return;
+            }
+            let formData = new FormData(this);
+            let submitButton = this.querySelector('button[type="submit"]');
+            // Disable submit button to prevent multiple submissions
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+            fetch("../email_script/send_quiz_data.php", {
                 method: "POST",
                 body: formData
             })
-            .then(response => response.text()) // Parse the response as text
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.text();
+            })
             .then(data => {
-                if (data === "success") {
-                    alert("Your information has been submitted successfully!");
-                    window.location.href = "../detail thankyou.html"; // Redirect to the thank you page
+                if (data.trim() === "success") {
+                    window.location.href = "../detail thankyou.html";
                 } else {
-                    alert("There was an error. Please try again.");
+                    throw new Error("Server returned: " + data);
                 }
             })
             .catch(error => {
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit";
             });
         });
     </script>
