@@ -261,6 +261,8 @@
                                         <div class="sidebar-title">Contact Me</div>
                                         <div class="contact-info mb-0">
                                             <form class="form-comment" action="../email_script/send_email.php" method="post">
+                                                <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+                                                <input type="hidden" name="form_load_time" id="form_load_time" value="">
                                                 <fieldset class="name has-top-title">
                                                     <input type="text" placeholder="Name" class="" name="name" tabindex="2" value="" aria-required="true" required="">
                                                     <label for="">Name</label>
@@ -653,7 +655,9 @@
                                     </div>
                                     <div class="schedule">
                                         <h4 class="wow fadeInUp capitalize-first-word">Schedule your appointment</h4>
-                                        <form class="form-schedule" action="../email_script/send_email_book_appointment.php" method="post">
+                                        <form class="form-schedule" id="appointment-form" action="../email_script/send_email_book_appointment.php" method="post">
+                                            <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                                            <input type="hidden" name="form_load_time" id="form_load_time" value="">
                                             <div class="cols">
                                                 <fieldset class="message">
                                                     <input type="date" name="date" value="2025-1-1">
@@ -888,20 +892,39 @@
         }
     </script>
     <script>
-        document.querySelector(".form-schedule").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
+        // Set the form load time
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("form_load_time").value = Date.now();
+        });
     
-            let formData = new FormData(this); // Gather form data
+        // Handle form submission
+        document.querySelector("#appointment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
     
-            fetch("../email_script/send_email_book_appointment.php", { // Replace with the correct path to your PHP script
+            const formLoadTime = parseInt(document.getElementById("form_load_time").value);
+            const currentTime = Date.now();
+    
+            // Simple anti-bot timing check
+            if ((currentTime - formLoadTime) < 3000) {
+                alert("Form submitted too quickly. Please wait a moment before submitting.");
+                return;
+            }
+    
+            let formData = new FormData(this);
+            let submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = "Sending...";
+    
+            fetch("email_script/send_email_book_appointment.php", {
                 method: "POST",
                 body: formData
             })
-            .then(response => response.text()) // Parse the response as text
+            .then(response => response.text())
             .then(data => {
-                if (data.trim() === "success") { // Use .trim() to remove any extra whitespace
-                    alert("Appointment successfully booked!");
-                    window.location.href = "../thankyou.html"; // Redirect to the thank you page
+                if (data.trim() === "success") {
+                    window.location.href = "book appointment thankyou.html";
+                } else if (data.trim() === "bot_detected") {
+                    window.location.href = "email_script/bot-detected.html";
                 } else {
                     alert("There was an error. Please try again.");
                 }
@@ -909,8 +932,16 @@
             .catch(error => {
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = "Book Appointment <i class='icon-arrow-right-add'></i>";
             });
         });
+    
+        function setAppointmentType(value) {
+            document.getElementById("appointment_type").value = value;
+        }
     </script>
 
 <script>
@@ -929,6 +960,13 @@
             
             // Choose one option above based on your needs
             // For most cases, Option 1 + Option 4 (if modal) works best
+        });
+    </script>
+    <script>
+        // Set form load timestamp in milliseconds
+        document.addEventListener("DOMContentLoaded", function () {
+            const formLoadTime = Date.now();
+            document.getElementById("form_load_time").value = formLoadTime;
         });
     </script>
 
