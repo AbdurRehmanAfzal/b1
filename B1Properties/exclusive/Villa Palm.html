@@ -1057,6 +1057,8 @@
                 <div class="content-right capitalize-first-word">
                     <h4>Register your interest and one of our luxury consultants will be in touch with you.</h4>
                     <form id="property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/send_quiz_data.php">
+                        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                        <input type="hidden" name="form_load_time" id="form_load_time" value="">
                         <div class="list">
                             <div class="group-form">
                                 <div class="widget-content-inner active">
@@ -1177,16 +1179,24 @@
          new Mmenu(document.querySelector("#menu"));
      </script>
      <script>
-        document.querySelector("#property-form").addEventListener("submit", function(event) {
+        // Set timestamp when the form is loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("form_load_time").value = Date.now();
+        });
+        document.querySelector("#property-form").addEventListener("submit", function (event) {
             event.preventDefault();
-            
+            const formLoadTime = parseInt(document.getElementById("form_load_time").value);
+            const currentTime = Date.now();
+            // Check if submitted in under 3 seconds
+            if ((currentTime - formLoadTime) < 3000) {
+                alert("Form submitted too quickly. Please wait a moment before submitting.");
+                return;
+            }
             let formData = new FormData(this);
             let submitButton = this.querySelector('button[type="submit"]');
-            
             // Disable submit button to prevent multiple submissions
             submitButton.disabled = true;
             submitButton.textContent = "Sending...";
-    
             fetch("../email_script/send_quiz_data.php", {
                 method: "POST",
                 body: formData
@@ -1198,15 +1208,9 @@
                 return response.text();
             })
             .then(data => {
-                // Trim response and compare
                 if (data.trim() === "success") {
-                    // Close modal if using Bootstrap
                     var modal = bootstrap.Modal.getInstance(document.getElementById('modallogin'));
-                    if (modal) {
-                        modal.hide();
-                    }
-                    
-                    // Redirect to thank you page
+                    if (modal) modal.hide();
                     window.location.href = "../detail thankyou.html";
                 } else {
                     throw new Error("Server returned: " + data);
