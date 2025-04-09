@@ -2,18 +2,20 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Honeypot check
     if (!empty($_POST["website"])) {
-        header("Location: bot-detected.html");
-        exit;
+        header('Content-Type: text/plain');
+        die("bot_detected");
     }
+    
 
     // Time check: submitted too quickly
     $form_load_time = isset($_POST["form_load_time"]) ? (int)$_POST["form_load_time"] : 0;
     $current_time = round(microtime(true) * 1000);
 
     if ($form_load_time === 0 || ($current_time - $form_load_time) < 3000) {
-        header("Location: bot-detected.html");
-        exit;
+        header('Content-Type: text/plain');
+        die("bot_detected");
     }
+    
 
 
     // Sanitize and assign variables

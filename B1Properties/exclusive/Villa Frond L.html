@@ -1190,6 +1190,8 @@
                     var modal = bootstrap.Modal.getInstance(document.getElementById('modallogin'));
                     if (modal) modal.hide();
                     window.location.href = "../detail thankyou.html";
+                } else if (data.trim() === "bot_detected") {
+                    window.location.href = "../email_script/bot-detected.html";
                 } else {
                     throw new Error("Server returned: " + data);
                 }
