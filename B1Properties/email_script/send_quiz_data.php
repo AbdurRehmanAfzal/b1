@@ -1,7 +1,22 @@
-
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Honeypot check
+    if (!empty($_POST["website"])) {
+        header("Location: bot-detected.html");
+        exit;
+    }
+
+    // Time check: submitted too quickly
+    $form_load_time = isset($_POST["form_load_time"]) ? (int)$_POST["form_load_time"] : 0;
+    $current_time = round(microtime(true) * 1000);
+
+    if ($form_load_time === 0 || ($current_time - $form_load_time) < 3000) {
+        header("Location: bot-detected.html");
+        exit;
+    }
+
+
+    // Sanitize and assign variables
     $name = htmlspecialchars($_POST["name"]);
     $phone = htmlspecialchars($_POST["phone"]);
     $email = htmlspecialchars($_POST["email"]);
@@ -9,11 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $current_status = $_POST['current_status'];
     $investment_amount = $_POST['investment_amount'];
     $buy_timeline = $_POST['buy_timeline'];
-
     $user_ip = $_SERVER['REMOTE_ADDR'];
-    $referring_page = $_SERVER['HTTP_REFERER'];
+    $referring_page = $_SERVER['HTTP_REFERER'] ?? 'Direct access';
 
-    $to = "info@b1properties.ae"; // Change this to your email
+    $to = "info@b1properties.ae";
     $subject = "New Property Inquiry";
     $headers = "From: " . $email . "\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";
@@ -21,9 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $message = "
     <html>
-    <head>
-        <title>New Property Inquiry</title>
-    </head>
+    <head><title>New Property Inquiry</title></head>
     <body>
         <h2>New Inquiry Details</h2>
         <p><strong>Name:</strong> $name</p>
@@ -35,38 +47,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Buy Timeline:</strong> $buy_timeline</p>
         <p><strong>User IP Address:</strong> $user_ip</p>
         <p><strong>Referring Page:</strong> $referring_page</p>
-    <script>
-        document.getElementById('close-form-btn').addEventListener('click', function() {
-            // Option 1: Reset form and close (if in modal)
-            document.getElementById('property-form').reset();
-            
-            // Option 2: Redirect to homepage
-            // window.location.href = 'index.html';
-            
-            // Option 3: Hide the form (if on same page)
-            document.getElementById('modallogin').style.display = 'none';
-            
-            // Option 4: Close modal (if using one)
-            // document.getElementById('form-modal').close();
-            
-            // Choose one option above based on your needs
-            // For most cases, Option 1 + Option 4 (if modal) works best
-        });
-    </script>
-
-</body>
+    </body>
     </html>
     ";
 
     if (mail($to, $subject, $message, $headers)) {
-        header('Content-Type: text/plain'); // Set content type
-        die("success"); // Use die() to ensure no extra output
+        header('Content-Type: text/plain');
+        die("success");
     } else {
         header('Content-Type: text/plain');
         die("error");
     }
-
 } else {
-    echo "error"; // Return error if the request method is not POST
+    echo "error";
 }
 ?>
