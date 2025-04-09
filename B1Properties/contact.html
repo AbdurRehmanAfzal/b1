@@ -257,6 +257,12 @@
                         <div class="row justify-center">
                             <div class="col-xxl-8">
                                 <form class="form-send-message" action="email_script/send_email.php" method="post">
+                                    <!-- Honeypot Field (hidden) -->
+                                    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+                                
+                                    <!-- Form Load Time (in milliseconds) -->
+                                    <input type="hidden" name="form_load_time" id="form_load_time" value="">
+                                
                                     <div class="cols">
                                         <fieldset class="name wow fadeInUp has-top-title">
                                             <input type="text" placeholder="Name" name="name" required>
@@ -286,6 +292,7 @@
                                         <button class="tf-button-primary w-full" type="submit">Send Message</button>
                                     </div>
                                 </form>
+                                
                                 
                             </div>
                         </div>
@@ -462,6 +469,14 @@
     <script>
         new Mmenu(document.querySelector("#menu"));
     </script>
+    <script>
+        // Set form load timestamp in milliseconds
+        document.addEventListener("DOMContentLoaded", function () {
+            const formLoadTime = Date.now();
+            document.getElementById("form_load_time").value = formLoadTime;
+        });
+    </script>
+    
 
 <script>
         document.getElementById('close-form-btn').addEventListener('click', function() {
