@@ -740,7 +740,7 @@
             submitButton.disabled = true;
             submitButton.innerHTML = "Sending...";
     
-            fetch("email_script/send_email_book_appointment.php", {
+            fetch("../email_script/send_email_book_appointment.php", {
                 method: "POST",
                 body: formData
             })
