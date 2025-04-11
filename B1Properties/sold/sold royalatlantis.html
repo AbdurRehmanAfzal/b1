@@ -496,6 +496,8 @@
                 <div class="content-right capitalize-first-word">
                     <h4>Make your offer, and we will negotiate with the owner.</h4>
                     <form id="luxury-property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/sold_quiz.php">
+                        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                        <input type="hidden" name="form_load_time" id="form_load_time" value="">
                         <div class="list">
                             <!-- Contact Info -->
                             <div class="group-form">
@@ -568,6 +570,8 @@
                 <div class="content-right capitalize-first-word">
                     <h4>Sell with us</h4>
                     <form id="sell-property-form" class="form-search-home9 wow fadeInUp" method="POST" action="../email_script/send_sell_data.php">
+                        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                        <input type="hidden" name="form_load_time" id="form_load_time" value="">
                         <div class="list">
                             <div class="group-form">
                                 <div class="widget-content-inner active">
@@ -629,53 +633,109 @@
             </div>
         </div>
     </div>
-   <script>
-        document.querySelector("#luxury-property-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
+    <script>
+        // Set timestamp when modal is opened
+        const sellModal = document.getElementById('modallogin');
+        sellModal.addEventListener('shown.bs.modal', () => {
+            document.getElementById("form_load_time").value = Date.now();
+        });
     
-            let formData = new FormData(this); // Gather form data
+        // Handle form submission
+        document.querySelector("#luxury-property-form").addEventListener("submit", function (event) {
+            event.preventDefault();
     
-            fetch("../email_script/sold_quiz.php", { // Replace with the correct path to your PHP script
+            const formLoadTime = parseInt(document.getElementById("form_load_time").value);
+            const currentTime = Date.now();
+    
+            if ((currentTime - formLoadTime) < 3000) {
+                alert("Form submitted too quickly. Please wait a moment before submitting.");
+                return;
+            }
+    
+            let formData = new FormData(this);
+            let submitButton = this.querySelector('button[type="submit"]');
+    
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+    
+            fetch("../email_script/sold_quiz.php", {
                 method: "POST",
                 body: formData
             })
-            .then(response => response.text()) // Parse the response as text
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.text();
+            })
             .then(data => {
-                if (data === "success") {
-                    alert("Your information has been submitted successfully!");
-                    window.location.href = "../thankyou.html"; // Redirect to the thank you page
+                const trimmed = data.trim();
+                if (trimmed === "success") {
+                    window.location.href = "../detail thankyou.html";
+                } else if (trimmed === "bot_detected") {
+                    window.location.href = "../email_script/bot-detected.html";
                 } else {
-                    alert("There was an error. Please try again.");
+                    throw new Error("Server returned: " + data);
                 }
             })
             .catch(error => {
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit";
             });
         });
     </script>
-    <script>
-        document.querySelector("#sell-property-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
+     <script>
+        // Set timestamp when modal is opened
+        const sellModal = document.getElementById('modelsell');
+        sellModal.addEventListener('shown.bs.modal', () => {
+            document.getElementById("form_load_time").value = Date.now();
+        });
     
-            let formData = new FormData(this); // Gather form data
+        // Handle form submission
+        document.querySelector("#sell-property-form").addEventListener("submit", function (event) {
+            event.preventDefault();
     
-            fetch("../email_script/send_sell_data.php", { // Replace with the correct path to your PHP script
+            const formLoadTime = parseInt(document.getElementById("form_load_time").value);
+            const currentTime = Date.now();
+    
+            if ((currentTime - formLoadTime) < 3000) {
+                alert("Form submitted too quickly. Please wait a moment before submitting.");
+                return;
+            }
+    
+            let formData = new FormData(this);
+            let submitButton = this.querySelector('button[type="submit"]');
+    
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+    
+            fetch("../email_script/send_sell_data.php", {
                 method: "POST",
                 body: formData
             })
-            .then(response => response.text()) // Parse the response as text
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.text();
+            })
             .then(data => {
-                if (data === "success") {
-                    alert("Your information has been submitted successfully!");
-                    window.location.href = "../thankyou.html"; // Redirect to the thank you page
+                const trimmed = data.trim();
+                if (trimmed === "success") {
+                    window.location.href = "../detail thankyou.html";
+                } else if (trimmed === "bot_detected") {
+                    window.location.href = "../email_script/bot-detected.html";
                 } else {
-                    alert("There was an error. Please try again.");
+                    throw new Error("Server returned: " + data);
                 }
             })
             .catch(error => {
                 console.error("Error:", error);
                 alert("There was an error. Please try again.");
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit";
             });
         });
     </script>
