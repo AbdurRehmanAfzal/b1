@@ -8665,7 +8665,7 @@ form.background-secondary .wg-filter > .tf-button-filter {
 }
 .form-search-home9 > .list .group-form {
   width: 100%;
-  padding: 18px 30px 11px;
+  padding: 18px 8px 11px;
   border: 1px solid var(--Border);
   border-radius: 12px;
 }
@@ -12339,7 +12339,7 @@ body::-webkit-scrollbar {
   display: flex;
   gap: 15px;
   flex-direction: column;
-  margin-bottom: 22px;
+  margin-bottom: 120px;
 }
 .modal .modal-dialog .modal-content .content-right form > .flex {
   margin-top: -3px;
@@ -16262,4 +16262,18 @@ body.no-scroll {
     flex-direction: column;
     gap: 8px;
   }
+}
+/* Style for intl-tel-input */
+.intl-tel-input {
+  display: block;
+  width: 100%;
+}
+
+.intl-tel-input .flag-container {
+  padding: 0 10px;
+}
+
+.intl-tel-input input {
+  width: 100% !important;
+  padding-left: 60px !important;
 }
