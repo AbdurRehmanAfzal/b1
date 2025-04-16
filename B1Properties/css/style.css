@@ -16263,17 +16263,3 @@ body.no-scroll {
     gap: 8px;
   }
 }
-/* Style for intl-tel-input */
-.intl-tel-input {
-  display: block;
-  width: 100%;
-}
-
-.intl-tel-input .flag-container {
-  padding: 0 10px;
-}
-
-.intl-tel-input input {
-  width: 100% !important;
-  padding-left: 60px !important;
-}

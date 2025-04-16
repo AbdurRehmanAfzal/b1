@@ -46,6 +46,7 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/css/intlTelInput.min.css" />
     <style>
                     
         @media (max-width: 768px) {
@@ -828,9 +829,11 @@
                                             <label>Name</label>
                                         </fieldset>
                                         <fieldset class="phone has-top-title">
-                                            <input type="number" placeholder="Phone" name="phone" required>
-                                            <label>Phone</label>
+                                            <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+                                            <input type="hidden" id="country_code" name="country_code">
+                                            <input type="hidden" id="full_phone" name="full_phone">
                                         </fieldset>
+                                       
                                         <fieldset class="email has-top-title">
                                             <input type="email" placeholder="Email" name="email" required>
                                             <label>Email</label>
@@ -893,9 +896,9 @@
                     
                         <div class="button-group" style="display: flex; justify-content: space-between; margin-top: 20px;">
                             <!-- Change your close button to this -->
-<button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
-    Close
-</button>
+                            <button type="button" class="tf-button-primary" data-bs-dismiss="modal" style="padding: 10px 25px;">
+                                Close
+                            </button>
                             <button type="submit" class="tf-button-primary" style="padding: 10px 25px;">
                                 Submit
                             </button>
@@ -925,9 +928,13 @@
                                             <input type="text" placeholder="Name" name="name" required>
                                             <label>Name</label>
                                         </fieldset>
+                                       
                                         <fieldset class="phone has-top-title">
-                                            <input type="number" placeholder="Phone" name="phone" required>
-                                            <label>Phone</label>
+                                            <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+                                            <input type="hidden" id="country_code" name="country_code">
+                                            <input type="hidden" id="full_phone" name="full_phone">
+                                        </fieldset>
+                                            
                                         </fieldset>
                                         <fieldset class="email has-top-title">
                                             <input type="email" placeholder="Email" name="email" required>
@@ -1031,35 +1038,103 @@
     <script src="js/wow.min.js"></script>
     <script src="js/scrollmagic.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/cookies.js"></script>
+    <!-- intl-tel-input JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/utils.js"></script>
 
     <script>
         new Mmenu(document.querySelector("#menu"));
     </script>
+
     <script>
-        document.getElementById("property-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
-    
-            let formData = new FormData(this); // Gather form data
-    
-            fetch("email_script/send_quiz_data.php", { // Replace with the correct path to your PHP script
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text()) // Parse the response as text
-            .then(data => {
-                if (data === "success") {
-                    alert("Form submitted successfully!");
-                    window.location.href = "thankyou.html"; // Redirect to the thank you page
-                } else {
-                    alert("There was an error. Please try again.");
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("There was an error. Please try again.");
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize all form behaviors
+            document.querySelectorAll("form[id='property-form']").forEach(function (form) {
+                const phoneInput = form.querySelector("input[type='tel']");
+                const countryCodeInput = form.querySelector("input[name='country_code']");
+                const fullPhoneInput = form.querySelector("input[name='full_phone']");
+                const formLoadTime = form.querySelector("input[name='form_load_time']");
+        
+                formLoadTime.value = Date.now();
+        
+                const iti = window.intlTelInput(phoneInput, {
+                    initialCountry: "auto",
+                    geoIpLookup: function (callback) {
+                        fetch("https://ipapi.co/json/")
+                            .then(res => res.json())
+                            .then(data => callback(data.country_code || "AE"))
+                            .catch(() => callback("AE"));
+                    },
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+                    separateDialCode: true,
+                    preferredCountries: ['AE', 'SA', 'US', 'GB', 'IN', 'PK'],
+                    hiddenInput: "full_phone"
+                });
+        
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+        
+                    const now = Date.now();
+                    if ((now - parseInt(formLoadTime.value)) < 2000) {
+                        alert("Form submitted too quickly. Please wait a moment.");
+                        return;
+                    }
+        
+                    if (!iti.isValidNumber()) {
+                        alert("Please enter a valid phone number.");
+                        return;
+                    }
+        
+                    // Set formatted phone values
+                    countryCodeInput.value = "+" + iti.getSelectedCountryData().dialCode;
+                    fullPhoneInput.value = iti.getNumber();
+        
+                    const formData = new FormData(form);
+                    const submitButton = form.querySelector("button[type='submit']");
+                    submitButton.disabled = true;
+                    submitButton.textContent = "Sending...";
+        
+                    fetch("email_script/send_quiz_data.php", {
+                        method: "POST",
+                        body: formData
+                    })
+                        .then(response => {
+                            if (!response.ok) throw new Error("Network issue");
+                            return response.text();
+                        })
+                        .then(result => {
+                            result = result.trim();
+                            if (result === "success") {
+                                // Check which modal we're in
+                                const modalId = form.closest(".modal").id;
+                                if (modalId === "profile") {
+                                    window.open("images/profile.pdf", "_blank");
+                                } else if (modalId === "Portfolio") {
+                                    window.open("images/portfolio.pdf", "_blank");
+                                }
+                                // Optional: close modal after submission
+                                bootstrap.Modal.getInstance(form.closest(".modal")).hide();
+                            } else if (result === "bot_detected") {
+                                alert("Bot submission detected.");
+                            } else {
+                                throw new Error("Unexpected server response: " + result);
+                            }
+                        })
+                        .catch(error => {
+                            console.error(error);
+                            alert("There was an error submitting the form. Please try again.");
+                        })
+                        .finally(() => {
+                            submitButton.disabled = false;
+                            submitButton.textContent = "Submit";
+                        });
+                });
             });
         });
-    </script>
+        </script>
+        
+        
 
 <script>
         document.getElementById('close-form-btn1').addEventListener('click', function() {
@@ -1097,7 +1172,7 @@
             // For most cases, Option 1 + Option 4 (if modal) works best
         });
     </script>
-<script src="js/cookies.js"></script>
+   
 </body>
 
 </html>

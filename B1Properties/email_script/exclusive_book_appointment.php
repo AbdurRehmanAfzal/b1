@@ -12,7 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = htmlspecialchars($_POST['date']);
     $time = htmlspecialchars($_POST['time']);
     $name = htmlspecialchars($_POST['name']);
-    $phone = htmlspecialchars($_POST['phone']);
+    $phone = htmlspecialchars($_POST["phone"]);
+    $country_code = htmlspecialchars($_POST["country_code"]);
+    $full_phone = htmlspecialchars($_POST["full_phone"]);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
     $appointment_type = htmlspecialchars($_POST['appointment_type']);
@@ -23,8 +25,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Get user's IP address
-    $user_ip = $_SERVER['REMOTE_ADDR'];
+   // Enhanced IP detection
+   function getClientIP() {
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP']))
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    else if(isset($_SERVER['REMOTE_ADDR']))
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    else
+        $ipaddress = 'UNKNOWN';
+    
+    // Handle multiple IPs in X_FORWARDED_FOR
+    if (strpos($ipaddress, ',') !== false) {
+        $ips = explode(',', $ipaddress);
+        $ipaddress = trim($ips[0]);
+    }
+    
+    return $ipaddress;
+}
+
+$user_ip = getClientIP();
 
     // Get the referring page (page from which the form was submitted)
     $referring_page = $_SERVER['HTTP_REFERER'] ?? 'Direct access or unknown';
@@ -39,7 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body = "
         <h2>New Tour Request</h2>
         <p><strong>Name:</strong> $name</p>
-        <p><strong>Phone:</strong> $phone</p>
+        <p><strong>Phone:</strong> $full_phone</p>
+        <p><strong>Country Code:</strong> $country_code</p>
         <p><strong>Email:</strong> $email</p>
         <p><strong>Date:</strong> $date</p>
         <p><strong>Time:</strong> $time</p>

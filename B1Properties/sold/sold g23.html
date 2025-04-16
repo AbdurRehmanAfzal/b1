@@ -46,6 +46,7 @@
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="../images/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/css/intlTelInput.min.css" />
     <style>
         @media (max-width: 768px) {
             .wrap-slider {
@@ -596,7 +597,9 @@
                                             <label>Name</label>
                                         </fieldset>
                                         <fieldset class="phone has-top-title">
-                                            <input type="number" placeholder="Phone" name="phone" required>
+                                            <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+                                            <input type="hidden" id="country_code" name="country_code">
+                                            <input type="hidden" id="full_phone" name="full_phone">
                                             <label>Phone</label>
                                         </fieldset>
                                         <fieldset class="email has-top-title">
@@ -669,7 +672,9 @@
                                             <label>Name</label>
                                         </fieldset>
                                         <fieldset class="phone has-top-title">
-                                            <input type="number" placeholder="Phone" name="phone" required>
+                                            <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+                                            <input type="hidden" id="country_code" name="country_code">
+                                            <input type="hidden" id="full_phone" name="full_phone">
                                             <label>Phone</label>
                                         </fieldset>
                                         <fieldset class="email has-top-title">
@@ -866,9 +871,129 @@
     <script src="../js/wow.min.js"></script>
     <script src="../js/scrollmagic.js"></script>
     <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/utils.js"></script>
 
     <script>
         new Mmenu(document.querySelector("#menu"));
+    </script>
+    <script>
+        // Initialize phone inputs and form handlers for all forms
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize phone inputs for all forms
+            function initPhoneInputs() {
+                const forms = [
+                    { id: "luxury-property-form", phoneId: "phone" },
+                    { id: "sell-property-form", phoneId: "phone" }
+                ];
+
+                forms.forEach(form => {
+                    const phoneInput = document.querySelector(`#${form.id} #${form.phoneId}`);
+                    if (!phoneInput) return;
+
+                    const countryCodeInput = document.querySelector(`#${form.id} #country_code`);
+                    const fullPhoneInput = document.querySelector(`#${form.id} #full_phone`);
+
+                    const iti = window.intlTelInput(phoneInput, {
+                        initialCountry: "auto",
+                        geoIpLookup: function(callback) {
+                            fetch("https://ipapi.co/json/")
+                                .then(res => res.json())
+                                .then(data => callback(data.country_code || "AE"))
+                                .catch(() => callback("AE"));
+                        },
+                        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/utils.js",
+                        separateDialCode: true,
+                        preferredCountries: ['AE', 'SA', 'US', 'GB', 'IN', 'PK'],
+                        hiddenInput: "full_phone"
+                    });
+
+                    phoneInput.addEventListener("input", function() {
+                        if (iti.isValidNumber()) {
+                            countryCodeInput.value = "+" + iti.getSelectedCountryData().dialCode;
+                            fullPhoneInput.value = iti.getNumber();
+                        }
+                    });
+                });
+            }
+
+            // Common form submission handler
+            function setupForm(formId, successUrl) {
+                const form = document.querySelector(`#${formId}`);
+                if (!form) return;
+
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    
+                    const formLoadTime = parseInt(document.getElementById("form_load_time").value);
+                    const currentTime = Date.now();
+                    
+                    // Reduced timing check from 3000ms to 2000ms to prevent false bot detection
+                    if ((currentTime - formLoadTime) < 2000) {
+                        alert("Please wait a moment before submitting.");
+                        return;
+                    }
+                    
+                    let formData = new FormData(this);
+                    let submitButton = this.querySelector('button[type="submit"]');
+                    
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = "Sending...";
+                    
+                    fetch(this.action, {
+                        method: this.method,
+                        body: formData
+                    })
+                    .then(response => {
+                        if (!response.ok) throw new Error("Network error");
+                        return response.text();
+                    })
+                    .then(data => {
+                        const trimmed = data.trim();
+                        if (trimmed === "success") {
+                            window.location.href = successUrl;
+                        } else if (trimmed === "bot_detected") {
+                            window.location.href = "../email_script/bot-detected.html";
+                        } else {
+                            throw new Error("Server response: " + data);
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("There was an error submitting the form. Please try again.");
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = "Submit";
+                    });
+                });
+            }
+
+            // Modal show handlers
+            function setupModalTriggers() {
+                const modals = {
+                    'modallogin': 'luxury-property-form',
+                    'modelsell': 'sell-property-form'
+                };
+
+                Object.entries(modals).forEach(([modalId, formId]) => {
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.addEventListener('shown.bs.modal', () => {
+                            document.getElementById("form_load_time").value = Date.now();
+                            // Reinitialize phone input for this form
+                            initPhoneInputs();
+                        });
+                    }
+                });
+            }
+
+            // Initialize everything
+            initPhoneInputs();
+            setupForm("luxury-property-form", "../detail thankyou.html");
+            setupForm("sell-property-form", "../detail thankyou.html");
+            setupModalTriggers();
+        });
     </script>
 
 <script>
@@ -884,6 +1009,7 @@
         });
     </script>
 
-<script src="../js/cookies.js"></script>
+    <script src="../js/cookies.js"></script>
+   
 </body>
 </html>

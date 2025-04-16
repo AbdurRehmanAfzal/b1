@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $form_load_time = isset($_POST["form_load_time"]) ? (int)$_POST["form_load_time"] : 0;
     $current_time = round(microtime(true) * 1000);
 
-    if ($form_load_time === 0 || ($current_time - $form_load_time) < 3000) {
+    if ($form_load_time === 0 || ($current_time - $form_load_time) < 1500) {
         header('Content-Type: text/plain');
         die("bot_detected");
     }

@@ -46,6 +46,7 @@
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="../images/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/css/intlTelInput.min.css" />
     <style>
         .wg-blog {
             display: flex;
@@ -1021,7 +1022,9 @@
                                             <label>Name</label>
                                         </fieldset>
                                         <fieldset class="phone has-top-title">
-                                            <input type="number" placeholder="Phone" name="phone" required>
+                                            <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+                                            <input type="hidden" id="country_code" name="country_code">
+                                            <input type="hidden" id="full_phone" name="full_phone">
                                             <label>Phone</label>
                                         </fieldset>
                                         <fieldset class="email has-top-title">
@@ -1127,6 +1130,8 @@
      <script src="../js/wow.min.js"></script>
      <script src="../js/scrollmagic.js"></script>
      <script src="../js/main.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/utils.js"></script>
  
      <script>
          new Mmenu(document.querySelector("#menu"));
@@ -1134,50 +1139,97 @@
      <script>
         // Set timestamp when the form is loaded
         document.addEventListener("DOMContentLoaded", function () {
+            // Set form load time
             document.getElementById("form_load_time").value = Date.now();
-        });
-        document.querySelector("#property-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-            const formLoadTime = parseInt(document.getElementById("form_load_time").value);
-            const currentTime = Date.now();
-            // Check if submitted in under 3 seconds
-            if ((currentTime - formLoadTime) < 3000) {
-                alert("Form submitted too quickly. Please wait a moment before submitting.");
-                return;
-            }
-            let formData = new FormData(this);
-            let submitButton = this.querySelector('button[type="submit"]');
-            // Disable submit button to prevent multiple submissions
-            submitButton.disabled = true;
-            submitButton.textContent = "Sending...";
-            fetch("../email_script/send_quiz_data.php", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
+            
+            // Initialize intl-tel-input
+            const phoneInput = document.querySelector("#phone");
+            const countryCodeInput = document.querySelector("#country_code");
+            const fullPhoneInput = document.querySelector("#full_phone");
+            
+            const iti = window.intlTelInput(phoneInput, {
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    fetch("https://ipapi.co/json/")
+                        .then(res => res.json())
+                        .then(data => {
+                            callback(data.country_code || "AE"); // Default to UAE if detection fails
+                        })
+                        .catch(() => callback("AE")); // Default to UAE if API fails
+                },
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/utils.js",
+                separateDialCode: true,
+                preferredCountries: ['AE', 'SA', 'US', 'GB', 'IN', 'PK'],
+                hiddenInput: "full_phone"
+            });
+            
+            // Update hidden inputs when phone number changes
+            phoneInput.addEventListener("input", function() {
+                if (iti.isValidNumber()) {
+                    countryCodeInput.value = "+" + iti.getSelectedCountryData().dialCode;
+                    fullPhoneInput.value = iti.getNumber();
                 }
-                return response.text();
-            })
-            .then(data => {
-                if (data.trim() === "success") {
-                    var modal = bootstrap.Modal.getInstance(document.getElementById('modallogin'));
-                    if (modal) modal.hide();
-                    window.location.href = "../detail thankyou.html";
-                } else if (data.trim() === "bot_detected") {
-                    window.location.href = "../email_script/bot-detected.html";
-                } else {
-                    throw new Error("Server returned: " + data);
+            });
+            
+            // Form submission handler
+            document.querySelector("#property-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                
+                // Validate phone number
+                if (!iti.isValidNumber()) {
+                    alert("Please enter a valid phone number");
+                    return;
                 }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("There was an error. Please try again.");
-            })
-            .finally(() => {
-                submitButton.disabled = false;
-                submitButton.textContent = "Submit";
+                
+                // Update hidden inputs with final values
+                countryCodeInput.value = "+" + iti.getSelectedCountryData().dialCode;
+                fullPhoneInput.value = iti.getNumber();
+                
+                const formLoadTime = parseInt(document.getElementById("form_load_time").value);
+                const currentTime = Date.now();
+                
+                // Check if submitted in under 3 seconds
+                if ((currentTime - formLoadTime) < 3000) {
+                    alert("Form submitted too quickly. Please wait a moment before submitting.");
+                    return;
+                }
+                
+                let formData = new FormData(this);
+                let submitButton = this.querySelector('button[type="submit"]');
+                
+                // Disable submit button to prevent multiple submissions
+                submitButton.disabled = true;
+                submitButton.textContent = "Sending...";
+                
+                fetch("../email_script/send_quiz_data.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    if (data.trim() === "success") {
+                        var modal = bootstrap.Modal.getInstance(document.getElementById('modallogin'));
+                        if (modal) modal.hide();
+                        window.location.href = "../detail thankyou.html";
+                    } else if (data.trim() === "bot_detected") {
+                        window.location.href = "../email_script/bot-detected.html";
+                    } else {
+                        throw new Error("Server returned: " + data);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("There was an error. Please try again.");
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Submit";
+                });
             });
         });
     </script>
@@ -1201,7 +1253,8 @@
         });
     </script>
 
-<script src="../js/cookies.js"></script>
+    <script src="../js/cookies.js"></script>
+   
 </body>
 
 </html>

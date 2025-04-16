@@ -46,6 +46,7 @@
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="../images/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/css/intlTelInput.min.css" />
 
     <style>
         /* Image container */
@@ -260,7 +261,7 @@
                                     <div class="sidebar-item sidebar-contact-info-1">
                                         <div class="sidebar-title">Contact Me</div>
                                         <div class="contact-info mb-0">
-                                            <form class="form-comment" action="../email_script/send_email.php" method="post">
+                                            <form class="form-send-message" id="contact_us" action="../email_script/send_email.php" method="post">
                                                 <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
                                                 <input type="hidden" name="form_load_time" id="form_load_time" value="">
                                                 <fieldset class="name has-top-title">
@@ -268,8 +269,9 @@
                                                     <label for="">Name</label>
                                                 </fieldset>
                                                 <fieldset class="phone has-top-title">
-                                                    <input type="number" placeholder="Phone" class="" name="number" tabindex="2" value="" aria-required="true" required="">
-                                                    <label for="">Phone</label>
+                                                    <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+                                                    <input type="hidden" id="country_code" name="country_code">
+                                                    <input type="hidden" id="full_phone" name="full_phone">
                                                 </fieldset>
                                                 <fieldset class="email has-top-title">
                                                     <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
@@ -662,71 +664,73 @@
                                     </div>
                                     <div class="schedule">
                                         <h4 class="wow fadeInUp capitalize-first-word">Schedule your appointment</h4>
-                                        <form class="form-schedule" id="appointment-form" action="../email_script/send_email_book_appointment.php" method="post">
-                                            <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
-                                            <input type="hidden" name="form_load_time" id="form_load_time" value="">
-                                            <div class="cols">
-                                                <fieldset class="message">
-                                                    <input type="date" name="date" value="2025-1-1">
-                                                </fieldset>
-                                                <fieldset class="message">
-                                                    <select name="time" required>
-                                                        <option value="10 AM">10 AM</option>
-                                                        <option value="11 AM">11 AM</option>
-                                                        <option value="12 PM">12 PM</option>
-                                                        <option value="1 PM">1 PM</option>
-                                                        <option value="2 PM">2 PM</option>
-                                                        <option value="3 PM">3 PM</option>
-                                                        <option value="4 PM">4 PM</option>
-                                                        <option value="5 PM">5 PM</option>
-                                                        <option value="6 PM">6 PM</option>
-                                                        <option value="7 PM">7 PM</option>
-                                                    </select>
-                                                    
-                                                </fieldset>                                        
-                                            </div>
-                                            <div class="cols">
-                                                <div class="widget-tabs style-4">
-                                                    <ul class="widget-menu-tab" style="justify-content: center;">
-                                                        <li class="item-title active" onclick="setAppointmentType('In Person')">
-                                                            <span class="inner">In Person</span>
-                                                        </li>
-                                                        <li class="item-title" onclick="setAppointmentType('Video Chat')">
-                                                            <span class="inner">Video Chat</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <input type="hidden" name="appointment_type" id="appointment_type" value="In Person">
-                                            </div>
-                                            <div class="cols">
-                                                <fieldset class="name wow fadeInUp has-top-title">
-                                                    <input type="text" placeholder="Name" class="" name="name" tabindex="2" value="" aria-required="true" required="">
-                                                </fieldset>
-                                                <fieldset class="phone wow fadeInUp has-top-title">
-                                                    <input type="number" placeholder="Phone" class="" name="phone" tabindex="2" value="" aria-required="true" required="">
-                                                    <label for="">Phone</label>
-                                                </fieldset>
-                                            </div>
-                                            <fieldset class="email wow fadeInUp has-top-title">
-                                                <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
-                                                <label for="">Email</label>
-                                            </fieldset>
-                                            <fieldset class="message wow fadeInUp has-top-title">
-                                                <textarea name="message" rows="4" placeholder="Your Message" value="" class="" tabindex="2" aria-required="true" required=""></textarea>
-                                                <label for="">Your Message</label>
-                                          </fieldset>
-                                            <div class="checkbox-item wow fadeInUp">
-                                                <label>
-                                                    <p class="capitalize-first-word">I consent to have this website store my information.</p>
-                                                   <input type="checkbox" required>
-                                                    <span class="btn-checkbox"></span>
-                                                </label>
-                                            </div>
-                                            <div class="button-submit wow fadeInUp">
-                                                <button class="tf-button-primary w-full" type="submit">Book Appointment<i class="icon-arrow-right-add"></i></button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                         <form class="form-schedule" id="appointment-form" action="../email_script/send_email_book_appointment.php" method="post">
+                                             <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                                             <input type="hidden" name="form_load_time" id="form_load_time" value="">
+                                             <div class="cols">
+                                                 <fieldset class="message">
+                                                     <input type="date" name="date" value="2024-1-20">
+                                                 </fieldset>
+                                                 <fieldset class="message">
+                                                     <select name="time" required>
+                                                         <option value="10 AM">10 AM</option>
+                                                         <option value="11 AM">11 AM</option>
+                                                         <option value="12 PM">12 PM</option>
+                                                         <option value="1 PM">1 PM</option>
+                                                         <option value="2 PM">2 PM</option>
+                                                         <option value="3 PM">3 PM</option>
+                                                         <option value="4 PM">4 PM</option>
+                                                         <option value="5 PM">5 PM</option>
+                                                         <option value="6 PM">6 PM</option>
+                                                         <option value="7 PM">7 PM</option>
+                                                     </select>
+                                                     
+                                                 </fieldset>                                        
+                                             </div>
+                                             <div class="cols">
+                                                 <div class="widget-tabs style-4">
+                                                     <ul class="widget-menu-tab" style="justify-content: center;">
+                                                         <li class="item-title active" onclick="setAppointmentType('In Person')">
+                                                             <span class="inner">In Person</span>
+                                                         </li>
+                                                         <li class="item-title" onclick="setAppointmentType('Video Chat')">
+                                                             <span class="inner">Video Chat</span>
+                                                         </li>
+                                                     </ul>
+                                                 </div>
+                                                 <input type="hidden" name="appointment_type" id="appointment_type" value="In Person">
+                                             </div>
+                                             <div class="cols">
+                                                 <fieldset class="name wow fadeInUp has-top-title">
+                                                     <input type="text" placeholder="Name" class="" name="name" tabindex="2" value="" aria-required="true" required="">
+                                                     <label for="">Name</label>
+                                                 </fieldset>
+                                                 <fieldset class="phone has-top-title">
+                                                     <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+                                                     <input type="hidden" id="country_code" name="country_code">
+                                                     <input type="hidden" id="full_phone" name="full_phone">
+                                                 </fieldset>
+                                             </div>
+                                             <fieldset class="email wow fadeInUp has-top-title">
+                                                 <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
+                                                 <label for="">Email</label>
+                                             </fieldset>
+                                             <fieldset class="message wow fadeInUp has-top-title">
+                                                 <textarea name="message" rows="4" placeholder="Your Message" value="" class="" tabindex="2" aria-required="true" required=""></textarea>
+                                                 <label for="">Your Message</label>
+                                           </fieldset>
+                                             <div class="checkbox-item wow fadeInUp">
+                                                 <label>
+                                                     <p class="capitalize-first-word">I consent to have this website store my information.</p>
+                                                    <input type="checkbox" required>
+                                                     <span class="btn-checkbox"></span>
+                                                 </label>
+                                             </div>
+                                             <div class="button-submit wow fadeInUp">
+                                                 <button class="tf-button-primary w-full" type="submit">Book Appointment<i class="icon-arrow-right-add"></i></button>
+                                             </div>
+                                         </form>
+                                     </div>
                                    
                                 </div>
                             </div>
@@ -889,7 +893,9 @@
     <script src="../js/wow.min.js"></script>
     <script src="../js/scrollmagic.js"></script>
     <script src="../js/main.js"></script>
-
+    <script src="../js/cookies.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/utils.js"></script>
     <script>
         new Mmenu(document.querySelector("#menu"));
     </script>
@@ -899,74 +905,102 @@
         }
     </script>
     <script>
-        // Set the form load time
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set form load time once for all forms
             document.getElementById("form_load_time").value = Date.now();
-        });
-    
-        // Handle form submission
-        document.querySelector("#appointment-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-    
-            const formLoadTime = parseInt(document.getElementById("form_load_time").value);
-            const currentTime = Date.now();
-    
-            // Simple anti-bot timing check
-            if ((currentTime - formLoadTime) < 3000) {
-                alert("Form submitted too quickly. Please wait a moment before submitting.");
-                return;
+            
+            // Initialize intl-tel-input for both forms
+            function initPhoneInput(formId) {
+                const phoneInput = document.querySelector(`#${formId} #phone`);
+                const countryCodeInput = document.querySelector(`#${formId} #country_code`);
+                const fullPhoneInput = document.querySelector(`#${formId} #full_phone`);
+                
+                const iti = window.intlTelInput(phoneInput, {
+                    initialCountry: "auto",
+                    geoIpLookup: function(callback) {
+                        fetch("https://ipapi.co/json/")
+                            .then(res => res.json())
+                            .then(data => callback(data.country_code || "AE"))
+                            .catch(() => callback("AE"));
+                    },
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/utils.js",
+                    separateDialCode: true,
+                    preferredCountries: ['AE', 'SA', 'US', 'GB', 'IN', 'PK'],
+                    hiddenInput: "full_phone"
+                });
+                
+                phoneInput.addEventListener("input", function() {
+                    if (iti.isValidNumber()) {
+                        countryCodeInput.value = "+" + iti.getSelectedCountryData().dialCode;
+                        fullPhoneInput.value = iti.getNumber();
+                    }
+                });
+                
+                return { iti, phoneInput, countryCodeInput, fullPhoneInput };
             }
-    
-            let formData = new FormData(this);
-            let submitButton = this.querySelector('button[type="submit"]');
-            submitButton.disabled = true;
-            submitButton.innerHTML = "Sending...";
-    
-            fetch("../email_script/send_email_book_appointment.php", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                if (data.trim() === "success") {
-                    window.location.href = "../book appointment thankyou.html";
-                } else if (data.trim() === "bot_detected") {
-                    window.location.href = "../email_script/bot-detected.html";
-                } else {
-                    alert("There was an error. Please try again.");
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("There was an error. Please try again.");
-            })
-            .finally(() => {
-                submitButton.disabled = false;
-                submitButton.innerHTML = "Book Appointment <i class='icon-arrow-right-add'></i>";
-            });
-        });
-    
-        function setAppointmentType(value) {
-            document.getElementById("appointment_type").value = value;
-        }
-    </script>
+        
+            // Initialize both forms
+            const contactForm = initPhoneInput("contact_us");
+            const appointmentForm = initPhoneInput("appointment-form");
+        
+            // Common form submission handler
+            function setupForm(formId, successUrl, phoneData) {
+                document.querySelector(`#${formId}`).addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    
+                    if (!phoneData.iti.isValidNumber()) {
+                        alert("Please enter a valid phone number");
+                        return;
+                    }
+                    
+                    phoneData.countryCodeInput.value = "+" + phoneData.iti.getSelectedCountryData().dialCode;
+                    phoneData.fullPhoneInput.value = phoneData.iti.getNumber();
+                    
 
-<script>
-        document.getElementById('close-form-btn').addEventListener('click', function() {
-            // Option 1: Reset form and close (if in modal)
-            document.getElementById('property-form').reset();
-            
-            // Option 2: Redirect to homepage
-            // window.location.href = 'index.html';
-            
-            // Option 3: Hide the form (if on same page)
-            document.getElementById('modallogin').style.display = 'none';
-            
-            // Option 4: Close modal (if using one)
-            // document.getElementById('form-modal').close();
-            
-            // Choose one option above based on your needs
-            // For most cases, Option 1 + Option 4 (if modal) works best
+                    
+                    let formData = new FormData(this);
+                    let submitButton = this.querySelector('button[type="submit"]');
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = "Sending...";
+                    
+                    fetch(this.action, {
+                        method: this.method,
+                        body: formData
+                    })
+                    .then(response => {
+                        if (!response.ok) throw new Error("Network error");
+                        return response.text();
+                    })
+                    .then(data => {
+                        if (data.trim() === "success") {
+                            window.location.href = successUrl;
+                        } else if (data.trim() === "bot_detected") {
+                            window.location.href = "../email_script/bot-detected.html";
+                        } else {
+                            throw new Error("Server error: " + data);
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("Error submitting form. Please try again.");
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = formId === "contact_us" ? 
+                            "Send Message<i class='icon-arrow-right-add'></i>" : 
+                            "Book Appointment<i class='icon-arrow-right-add'></i>";
+                    });
+                });
+            }
+        
+            // Setup both forms
+            setupForm("contact_us", "../thankyou.html", contactForm);
+            setupForm("appointment-form", "../book appointment thankyou.html", appointmentForm);
+        
+            // Appointment type function
+            window.setAppointmentType = function(type) {
+                document.getElementById("appointment_type").value = type;
+            };
         });
     </script>
     <script>
@@ -976,8 +1010,6 @@
             document.getElementById("form_load_time").value = formLoadTime;
         });
     </script>
-
-<script src="../js/cookies.js"></script>
 </body>
 
 </html>

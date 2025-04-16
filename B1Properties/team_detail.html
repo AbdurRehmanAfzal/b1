@@ -44,6 +44,7 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/css/intlTelInput.min.css" />
 
  <script>
         !function(f,b,e,v,n,t,s)
@@ -321,8 +322,9 @@
                                                     <label for="">Name</label>
                                                 </fieldset>
                                                 <fieldset class="phone has-top-title">
-                                                    <input type="number" placeholder="Phone" class="" name="number" tabindex="2" value="" aria-required="true" required="">
-                                                    <label for="">Phone</label>
+                                                    <input type="tel" id="phone" placeholder="Phone" name="phone" required>
+                                        <input type="hidden" id="country_code" name="country_code">
+                                        <input type="hidden" id="full_phone" name="full_phone">
                                                 </fieldset>
                                                 <fieldset class="email has-top-title">
                                                     <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="" aria-required="true" required="">
@@ -914,7 +916,8 @@
         });
     </script>
 
-<script src="../js/cookies.js"></script>
+    <script src="../js/cookies.js"></script>
+   
 </body>
 
 </html>
