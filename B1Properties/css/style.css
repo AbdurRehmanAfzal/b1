@@ -6460,11 +6460,11 @@ ul.grid-tags li a:hover {
 }
 .slider.home9 .wrap-slider {
   position: relative;
-  border-radius: 24px;
+  border-radius: 0px;
   /* ../images/offplan/crestlane1/19.webp */
   /* ../images/offplan/edenpark/1.webp */
   /* ../images/offplan/dubai-hills/1.webp */
-  background-image: url(../images/offplan/palm-jebel-ali/6.webp);
+  background-image: url(../images/offplan/naya/1.webp);
   background-attachment: fixed;
 }
 .slider.home9 .wrap-slider::before {
@@ -6474,7 +6474,7 @@ ul.grid-tags li a:hover {
   left: 0;
   bottom: 0;
   right: 0;
-  border-radius: 24px;
+  border-radius: px;
   background: linear-gradient(180deg, rgb(6 6 6 / 0%) 0%, rgb(2 6 12 / 30%) 61.39%, rgb(0 0 0 / 90%) 100%);
 }
 .slider.home9 .wrap-slider .slider-item {
@@ -6491,7 +6491,7 @@ ul.grid-tags li a:hover {
   justify-content: start;
   gap: 20px;
   height: 100%;
-  padding: 20px 0;
+  padding: 20px 2px;
 }
 .slider.home9 .wrap-slider .slider-item .button-play-video .video-wrap {
   width: 86px;
@@ -10706,7 +10706,7 @@ body::-webkit-scrollbar {
   margin-top: 20px;
   margin-bottom: 50px;
   padding-top: 14px;
-  border: 1px solid var(--Border);
+  border: 0px solid var(--Border);
 }
 .property-single-wrap.v7 > .page-top .head-title {
   margin-top: 13px;
@@ -16081,6 +16081,192 @@ a {
   width: 40px;
   height: 40px;
   background-image: url('../images/icon/Tennis-Courts.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b1-flaticon-Health-Care-Centre::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Health-Care-Centre.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Shopping-Mall::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Shopping-Mall.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Water-Activity::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Water-Activity.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Yoga-Meditation::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Yoga-&-Meditation.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b1-flaticon-24x7-Security::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/24x7-Security.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Games-Room::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Games-Room.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Green-Surrounding::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Green-Surrounding.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Indoor-Games::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Indoor-Games.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Championship-Golf-Course::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Championship-Golf-Course.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Parking-Facility::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Parking-Facility.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Skating-Track::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Skating-Track.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b1-flaticon-Infinity-Pool::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Infinity-Pool.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-Ras-Al-Khor-Wildlife-Sanctuary::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Ras-Al-Khor-Wildlife-Sanctuary.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-Downtown-Dubai::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Downtown-Dubai.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-Jumeirah-Beach::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Jumeirah-Beach.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-The-Dubai-Mall::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/The-Dubai-Mall.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b1-flaticon-Community-Hall::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Community-Hall.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Sports-Court::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Sports-Court.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Supermarket::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Supermarket.webp');
   background-size: cover;
   background-repeat: no-repeat;
 }
