@@ -16275,6 +16275,55 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.b1-flaticon-Outdoor-Pool::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Outdoor-Pool.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Burj-Al-Arab::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Burj-Al-Arab.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Business-Bay-Metro::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Business-Bay-Metro.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Downtown::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Downtown.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Marina-Yacht-Club::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Marina-&-Yacht-Club.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .qr-container {
   display: flex;
