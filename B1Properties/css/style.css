@@ -9481,7 +9481,7 @@ body::-webkit-scrollbar {
   background-color: var(--Secondary);
   padding-top: 91px;
   padding-bottom: 94px;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 .account-bar.background-secondary {
   background-color: var(--Secondary);
