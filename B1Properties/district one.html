@@ -47,24 +47,48 @@
     <!-- intl-tel-input CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/css/intlTelInput.min.css" />
     <style>
-        .wrap-slider::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                180deg, 
-                rgb(6 6 6 / 80%) 0%,   
-                rgba(255, 255, 255, 0.123) 60%, 
-                rgb(0 0 0 / 90%) 100%  
-            );
-            pointer-events: none;
-        }
-        h1.wow.fadeInUp.capitalize-first-word {
+        
+       h1.wow.fadeInUp.capitalize-first-word {
             font-size: 4rem; /* Responsive font size */
         }
+        /* Make all slides the same height */
+            .swiper-slide {
+                height: auto !important; /* or set a fixed height if preferred */
+                display: flex;
+            }
+
+            /* Ensure the blog item fills the slide */
+            .wg-blog {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+            }
+
+            /* Make images consistent height */
+            .wg-blog .image {
+                height: 200px; /* Adjust this value as needed */
+                overflow: hidden; /* Ensure images don't overflow */
+            }
+
+            .wg-blog .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* This will crop images to fit */
+            }
+
+            /* Make content area consistent */
+            .wg-blog .content {
+                flex: 1; /* Takes remaining space */
+                display: flex;
+                flex-direction: column;
+                padding: 15px; /* Adjust as needed */
+            }
+
+            /* Push the button to bottom */
+            .wg-blog .tf-button-no-bg {
+                margin-top: auto;
+            }
         
         
     </style>

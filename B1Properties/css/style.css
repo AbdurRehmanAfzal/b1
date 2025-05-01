@@ -6464,7 +6464,7 @@ ul.grid-tags li a:hover {
   /* ../images/offplan/crestlane1/19.webp */
   /* ../images/offplan/edenpark/1.webp */
   /* ../images/offplan/dubai-hills/1.webp */
-  background-image: url(../images/offplan/naya/1.webp);
+  background-image: url(../images/offplan/alba/22.webp);
   background-attachment: fixed;
 }
 .slider.home9 .wrap-slider::before {
@@ -16098,6 +16098,62 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.b1-flaticon-Hospital::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Hospital.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b1-flaticon-Outdoor-Dining-Area::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Outdoor-Dining-Area.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b1-flaticon-Mosque::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Mosque.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b1-flaticon-Retail-and-Dining-Options:before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Retail-&-Dining-Options.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b1-flaticon-Housekeeping:before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Housekeeping.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.b1-flaticon-Retail-Outlets::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icon/Retail-Outlets.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 .b1-flaticon-Shopping-Mall::before {
   content: "";

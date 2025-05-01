@@ -48,24 +48,48 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/css/intlTelInput.min.css" />
     <style>
-        .wrap-slider::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                180deg, 
-                rgb(6 6 6 / 80%) 0%,   
-                rgba(255, 255, 255, 0.123) 60%, 
-                rgb(0 0 0 / 90%) 100%  
-            );
-            pointer-events: none;
-        }
-        h1.wow.fadeInUp.capitalize-first-word {
+        
+       h1.wow.fadeInUp.capitalize-first-word {
             font-size: 4rem; /* Responsive font size */
         }
+        /* Make all slides the same height */
+            .swiper-slide {
+                height: auto !important; /* or set a fixed height if preferred */
+                display: flex;
+            }
+
+            /* Ensure the blog item fills the slide */
+            .wg-blog {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+            }
+
+            /* Make images consistent height */
+            .wg-blog .image {
+                height: 200px; /* Adjust this value as needed */
+                overflow: hidden; /* Ensure images don't overflow */
+            }
+
+            .wg-blog .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* This will crop images to fit */
+            }
+
+            /* Make content area consistent */
+            .wg-blog .content {
+                flex: 1; /* Takes remaining space */
+                display: flex;
+                flex-direction: column;
+                padding: 15px; /* Adjust as needed */
+            }
+
+            /* Push the button to bottom */
+            .wg-blog .tf-button-no-bg {
+                margin-top: auto;
+            }
         /* For mobile devices (768px and below) */
         @media (max-width: 768px) {
             .content-left .flex.items-center {
@@ -771,6 +795,205 @@
                                     <div class="swiper-slide">
                                         <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
                                             <div class="image">
+                                                <img src="../images/offplan/acres/20.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="acres.html">Acres</a>
+                                                </div>
+                                                <a href="acres.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/alba/24.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="alba.html">Alba</a>
+                                                </div>
+                                                <a href="alba.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/amalfi/4.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="amalfi.html">Amalfi</a>
+                                                </div>
+                                                <a href="amalfi.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/como residence/7.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="como residence.html">Como Residence</a>
+                                                </div>
+                                                <a href="como residence.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/naya/3.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="naya.html">Naya</a>
+                                                </div>
+                                                <a href="naya.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/sanctuary/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="sanctuary.html">Sanctuary</a>
+                                                </div>
+                                                <a href="sanctuary.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/vela by ominyat/7.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="vela by ominyat.html">Vela by Ominyat</a>
+                                                </div>
+                                                <a href="vela by ominyat.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/watercrest/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="watercrest.html">Watercrest</a>
+                                                </div>
+                                                <a href="watercrest.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/vela vento/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="vela vento.html.html">Vela Vento</a>
+                                                </div>
+                                                <a href="vela vento.html.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/design quarter/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="design quarter.html">Design Quarter</a>
+                                                </div>
+                                                <a href="design quarter.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/crestlane1/5.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                
+                                                </div>
+                                                <div class="name">
+                                                    <a href="offplan_crestlane.html">Citywalk Crestlane </a>
+                                                </div>
+                                                <a href="offplan_crestlane.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
                                                 <img src="../images/offplan/palm-jebel-ali/2.webp" alt="">
                                             </div>
                                             <div class="content">
@@ -781,25 +1004,6 @@
                                                     <a href="palm jebel ali.html">Palm Jebel Ali</a>
                                                 </div>
                                                 <a href="palm jebel ali.html" class="tf-button-no-bg">
-                                                    More Detail 
-                                                    <i class="icon-arrow-right-add"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
-                                            <div class="image">
-                                                <img src="../images/offplan/edenpark/21.webp" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="sub-blog">
-                                                
-                                                </div>
-                                                <div class="name">
-                                                    <a href="edenpark.html">Eden house - the Park</a>
-                                                </div>
-                                                <a href="edenpark.html" class="tf-button-no-bg">
                                                     More Detail 
                                                     <i class="icon-arrow-right-add"></i>
                                                 </a>
@@ -825,24 +1029,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
-                                            <div class="image">
-                                                <img src="../images/offplan/dubai-hills/00.png" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="sub-blog">
-                                                </div>
-                                                <div class="name">
-                                                    <a href="edenhouse-dubaihills.html">Eden house - Dubai Hills Estate</a>
-                                                </div>
-                                                <a href="edenhouse-dubaihills.html" class="tf-button-no-bg">
-                                                    More Detail 
-                                                    <i class="icon-arrow-right-add"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="swiper-pagination auto-swiper-pagination discover-pagination" style="margin-top: 10px;"></div>
                             </div>

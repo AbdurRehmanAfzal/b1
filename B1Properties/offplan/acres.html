@@ -16,8 +16,8 @@
     <title>Acres | B1 Properties - Dubai Real Estate</title>
 
     <meta name="author" content="creativelayers">
-    <meta name="description" content="Discover Eden House, a premium off-plan property in Dubai. Learn about its features, location, and investment opportunities with B1 Properties.">
-    <meta name="keywords" content="Eden House, off-plan property Dubai, real estate investment, upcoming projects, Dubai developments">
+    <meta name="description" content="Discover Acres, a premium off-plan property in Dubai. Learn about its features, location, and investment opportunities with B1 Properties.">
+    <meta name="keywords" content="Acres, off-plan property Dubai, real estate investment, upcoming projects, Dubai developments">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -48,24 +48,48 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/css/intlTelInput.min.css" />
     <style>
-        .wrap-slider::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                180deg, 
-                rgb(6 6 6 / 80%) 0%,   
-                rgba(255, 255, 255, 0.123) 60%, 
-                rgb(0 0 0 / 90%) 100%  
-            );
-            pointer-events: none;
-        }
+        
         h1.wow.fadeInUp.capitalize-first-word {
-            font-size: 4rem; /* Responsive font size */
-        }
+                font-size: 4rem; /* Responsive font size */
+            }
+        /* Make all slides the same height */
+            .swiper-slide {
+                height: auto !important; /* or set a fixed height if preferred */
+                display: flex;
+            }
+
+            /* Ensure the blog item fills the slide */
+            .wg-blog {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+            }
+
+            /* Make images consistent height */
+            .wg-blog .image {
+                height: 200px; /* Adjust this value as needed */
+                overflow: hidden; /* Ensure images don't overflow */
+            }
+
+            .wg-blog .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* This will crop images to fit */
+            }
+
+            /* Make content area consistent */
+            .wg-blog .content {
+                flex: 1; /* Takes remaining space */
+                display: flex;
+                flex-direction: column;
+                padding: 15px; /* Adjust as needed */
+            }
+
+            /* Push the button to bottom */
+            .wg-blog .tf-button-no-bg {
+                margin-top: auto;
+            }
     </style>
 
  <script>
@@ -210,15 +234,14 @@
 
                 <!-- slider -->
                 <section class="slider home10">
-                    <div class="wrap-slider" style="background-image: url('../images/offplan/acres/2.webp'); background-size: cover; background-position: center;">
+                    <div class="wrap-slider" style="background-image: url('../images/offplan/acres/20.webp'); background-size: cover; background-position: center;">
                         <div class="slider-item">
                             <div class="cl-container">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="slider-content m-5">
-                                            <h1 class="wow fadeInUp capitalize-first-word">Eden house - the Park</h1>
-                                            <div class="text wow fadeInUp">Eden House is the essence of refined living, where community, sophistication,
-                                                and comfort come together in perfect harmony.</div>
+                                            <h1 class="wow fadeInUp capitalize-first-word">The Acres by Meraas</h1>
+                                            <div class="text wow fadeInUp">3-7 Bedroom Villas at The Acres by Meraas</div>
                                             <a href="#register-interest-section" class="tf-button-primary wow fadeInUp">Register Interest<i class="icon-arrow-right-add"></i></a>
                                         </div>
                                     </div>
@@ -228,19 +251,19 @@
                          <div class="counter">
                             <div class="number-counter">
                                 <div class="">
-                                    <span class="" data-speed="" data-to="" data-inviewport="yes">40/60</span>
+                                    <span class="" data-speed="" data-to="" data-inviewport="yes">65/35</span>
                                 </div>
                                 <p>Payment Plan</p>
                             </div>
                             <div class="number-counter">
                                 <div class="">
-                                    <span class="" data-speed="" data-to="" data-inviewport="yes">AED </span>3.24M
+                                    <span class="" data-speed="" data-to="" data-inviewport="yes">AED </span>5.09M
                                 </div>
                                 <p>Starting Price</p>
                             </div>
                             <div class="number-counter">
                                 <div class="">
-                                    <span class="" data-speed="" data-to="" data-inviewport="yes">Q1 2027</span>
+                                    <span class="" data-speed="" data-to="" data-inviewport="yes">Q4 2027</span>
                                 </div>
                                 <p>Handover in</p>
                             </div>
@@ -284,7 +307,7 @@
                             <div class="col-12">
                                 <div class="heading-section text-center">
                                     <h2 class="wow fadeInUp capitalize-first-word">Payment Plan</h2>
-                                    <div class="text wow fadeInUp text wow fadeInUp capitalize-first-word">Eden house - the Park offers a hassle-free payment plan designed to suit your lifestyle.</div>
+                                    <div class="text wow fadeInUp text wow fadeInUp capitalize-first-word">Acres offers a hassle-free payment plan designed to suit your lifestyle.</div>
                                 </div>
                             </div>
                         </div>
@@ -299,13 +322,13 @@
                                     </div>
                                     <div class="number-counter1">
                                         <div class="text-center">
-                                            <h1 style="font-size: 7rem;">30%</h1>
+                                            <h1 style="font-size: 7rem;">55%</h1>
                                         </div>
                                         <h4>During construction</h4>
                                     </div>
                                     <div class="number-counter1">
                                         <div class="text-center">
-                                            <h1 style="font-size: 7rem;">60%</h1>
+                                            <h1 style="font-size: 7rem;">35%</h1>
                                         </div>
                                         <h4>On handover</h4>
                                     </div>
@@ -332,14 +355,6 @@
                             <div class="col-12">
                                 <div class="inner">
                                     <div class="cities-item item-1 wow fadeInUp" data-wow-delay="0.1s">
-                                        <img src="../images/offplan/acres/21.webp" alt="">
-                                        <div class="content">
-                                            <p></p>
-                                            <h4></h4>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="cities-item item-2 wow fadeInUp" data-wow-delay="0.15s">
                                         <img src="../images/offplan/acres/13.webp" alt="">
                                         <div class="content">
                                             <p></p>
@@ -347,8 +362,16 @@
                                         </div>
                                         
                                     </div>
+                                    <div class="cities-item item-2 wow fadeInUp" data-wow-delay="0.15s">
+                                        <img src="../images/offplan/acres/12.webp" alt="">
+                                        <div class="content">
+                                            <p></p>
+                                            <h4></h4>
+                                        </div>
+                                        
+                                    </div>
                                     <div class="cities-item item-3 wow fadeInUp" data-wow-delay="0.2s">
-                                        <img src="../images/offplan/acres/14.webp" alt="">
+                                        <img src="../images/offplan/acres/9.webp" alt="">
                                         <div class="content">
                                             <p></p>
                                             <h4></h4>
@@ -356,7 +379,7 @@
                                         
                                     </div>
                                     <div class="cities-item item-4 wow fadeInUp" data-wow-delay="0.1s">
-                                        <img src="../images/offplan/acres/8.webp" alt="">
+                                        <img src="../images/offplan/acres/3.webp" alt="">
                                         <div class="content">
                                             <p></p>
                                             <h4></h4>
@@ -364,7 +387,7 @@
                                         
                                     </div>
                                     <div class="cities-item item-5 wow fadeInUp" data-wow-delay="0.15s">
-                                        <img src="../images/offplan/acres/16.webp" alt="">
+                                        <img src="../images/offplan/acres/30.webp" alt="">
                                         <div class="content">
                                             <p></p>
                                             <h4></h4>
@@ -372,7 +395,7 @@
                                         
                                     </div>
                                     <div class="cities-item item-6 wow fadeInUp" data-wow-delay="0.2s">
-                                        <img src="../images/offplan/acres/18.webp" alt="">
+                                        <img src="../images/offplan/acres/29.webp" alt="">
                                         <div class="content">
                                             <p></p>
                                             <h4></h4>
@@ -392,13 +415,23 @@
                             <div class="col-12">
                                 <div class="desc" style="text-align: justify;">
                                     <h4 class="wow fadeInUp capitalize-first-word">Description</h4>
-                                    <p class="wow fadeInUp capitalize-first-word">
-                                        <strong>Eden House</strong> is a distinctive residential concept, thoughtfully designed to foster <strong>community, connection, and a harmonious lifestyle</strong>.
-                                    </p>
+                                    <div class="property-description">
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            <strong>The Acres Estates by Meraas</strong> presents an <strong>exclusive collection</strong> of <strong>5, 6, and 7-bedroom villas</strong> in the heart of <strong>Dubailand</strong>, where <strong>modern architecture</strong> harmonizes with <strong>natural elements</strong> of stone, wood, and glass.
+                                        </p>
                                     
-                                    <p class="wow fadeInUp capitalize-first-word">
-                                        Featuring meticulously crafted <strong>modern homes, bespoke hospitality services, and unmatched city access</strong>, <strong>Eden House</strong> offers more than just a residence - it's a place where you truly belong.
-                                    </p>
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            These <strong>spacious retreats</strong> (6,913 to 11,089 sq.ft.) are enveloped in <strong>lush greenery</strong> and <strong>peaceful lagoons</strong>, offering the perfect balance of <strong>privacy</strong>, <strong>comfort</strong>, and <strong>connection to nature</strong>.
+                                        </p>
+                                    
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            Enjoy <strong>seamless connectivity</strong> via <strong>Sheikh Zayed Bin Hamdan Al Nahyan Street</strong> and <strong>Emirates Road</strong>, with easy access to Dubai's key destinations. The community features <strong>swimmable lagoons</strong>, <strong>fitness centers</strong>, <strong>children's play areas</strong>, and <strong>wellness gardens</strong>.
+                                        </p>
+                                    
+                                        <p class="wow fadeInUp capitalize-first-word">
+                                            With a <strong>flexible 65/35 payment plan</strong> and <strong>February 2028 handover</strong>, this is your opportunity to own a <strong>signature villa</strong> in one of Dubai's <strong>most prestigious neighborhoods</strong>.
+                                        </p>
+                                    </div>
                                     
                                     <div class="qr-container" style="">
                                         <img src="../images/offplan/acres/qr-acres.png" alt="QR Code">
@@ -416,17 +449,27 @@
                         <div class="row justify-between">
                             <div class="col-md-6 order-2 order-md-1">
                                 <div class="image2 wow fadeInLeft">
-                                    <img src="../images/offplan/acres/12.webp" alt="" style="border-radius: 10px;">
+                                    <img src="../images/offplan/acres/34.webp" alt="" style="border-radius: 10px;">
                                     
                                 </div>
                             </div>
                             <div class="col-xl-5 col-md-6 order-1 order-md-2">
                                 <div class="content">
-                                    <h2 class="wow fadeInUp capitalize-first-word">Eden House Private Residential Concierge</h2>
+                                    <h2 class="wow fadeInUp capitalize-first-word">Where Villas Grow from the Landscape</h2>
                                     <div class="text-content wow fadeInUp">
-                                        <p class="capitalize-first-word">
-                                            <strong>Convenience at Eden House The Park</strong> is elevated to an art form. Led by a team of seasoned hospitality professionals, our dedicated <strong>concierge</strong> and <strong>host services</strong> are designed to ensure every aspect of your day-to-day life flows effortlessly.
-                                        </p>
+                                        <div class="property-intro">
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Welcome to <strong>The Acres</strong>, a brand-new community of <strong>standalone villas</strong> nestled within <strong>pristine natural surroundings</strong>, where modern living harmonizes with untouched beauty.
+                                            </p>
+                                        
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                <strong>Serene gardens</strong> and <strong>azure lagoons</strong> grace this exclusive neighborhood, perfectly adapted to the <strong>undulating terrain</strong> and connected by <strong>meandering pathways</strong> that invite exploration at every turn.
+                                            </p>
+                                        
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                At The Acres, <strong>indoor and outdoor living blend seamlessly</strong> - where every architectural detail brings you closer to nature, and every moment celebrates the <strong>ever-flourishing environment</strong>.
+                                            </p>
+                                        </div>
                                     </div>
                                     <a href="#register-interest-section" class="tf-button-primary style-black wow fadeInUp">Register Interest <i class="icon-arrow-right-add"></i></a>
                                 </div>
@@ -440,18 +483,26 @@
                             
                             <div class="col-xl-5 col-md-6">
                                 <div class="content">
-                                    <h2 class="wow fadeInUp capitalize-first-word">Eco - Friendly</h2>
+                                    <h2 class="wow fadeInUp capitalize-first-word">Where Architecture and Nature Exist in Perfect Harmony</h2>
                                     <div class="text-content wow fadeInUp">
-                                        <p class="capitalize-first-word">
-                                            <strong>Eden House</strong> harmonizes modern living with <strong>eco-friendly design</strong>, seamlessly blending into nature while prioritizing the <strong>wellness of its residents</strong> through sustainable practices and serene, mindful spaces.
-                                        </p>
+                                        <div class="property-description">
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                Nestled in <strong>Dubailand's most coveted location</strong>, The Acres offers an <strong>exclusive opportunity</strong> to own a villa that embodies <strong>timeless elegance</strong> and <strong>tranquil living</strong>. Choose between two <strong>distinct collections</strong> - <strong>Ivory</strong> and <strong>Amber</strong> - each <strong>masterfully crafted</strong> with unique design elements that celebrate <strong>natural beauty</strong>.
+                                            </p>
+                                        
+                                            <p class="wow fadeInUp capitalize-first-word">
+                                                <strong>Open glass facades</strong>, <strong>handcrafted wood trim</strong>, and <strong>natural stone details</strong> create a <strong>seamless transition</strong> between indoor and outdoor spaces. The <strong>premium interiors</strong> enhance daily living with <strong>intelligent layouts</strong> and <strong>effortless functionality</strong>, designed for both <strong>comfort</strong> and <strong>sophistication</strong>.
+                                            </p>
+                                        
+                                          
+                                        </div>
                                     </div>
                                     <a href="#register-interest-section" class="tf-button-primary style-black wow fadeInUp">Register Interest <i class="icon-arrow-right-add"></i></a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="image2 wow fadeInLeft">
-                                    <img src="../images/offplan/acres/20.webp" alt="" style="border-radius: 10px;">
+                                    <img src="../images/offplan/acres/15.webp" alt="" style="border-radius: 10px;">
                                     
                                 </div>
                             </div>
@@ -479,77 +530,130 @@
                                    
                                 </div>
                                 <div class="box-items">
+                                    <!-- Water & Beach Amenities -->
                                     <div class="item wow fadeInUp">
                                         <div class="icon">
-                                            <i class="flaticon-Swimming-Pool"></i>
+                                            <i class="b1-flaticon-Beach-Access"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Swimming Pool</div>
+                                        <div class="text-content capitalize-first-word">Beach Access</div>
+                                        <div class="amenity-description">Private beach for relaxation</div>
                                     </div>
+                                    
                                     <div class="item wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="icon">
-                                            <i class="flaticon-water-featues"></i>
+                                            <i class="b1-flaticon-Infinity-Pool"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Water Features</div>
+                                        <div class="text-content capitalize-first-word">Infinity Pool</div>
+                                        <div class="amenity-description">Water flows over the edges</div>
                                     </div>
+                                
                                     <div class="item wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="icon">
-                                            <i class="flaticon-Supermarket"></i>
+                                            <i class="b1-flaticon-Marina-Yacht-Club"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Supermarket</div>
+                                        <div class="text-content capitalize-first-word">Marina & Yacht Club</div>
+                                        <div class="amenity-description">Luxury yacht berthing</div>
                                     </div>
+                                
+                                    <!-- Sports & Fitness -->
                                     <div class="item wow fadeInUp">
                                         <div class="icon">
-                                            <i class="flaticon-Restaurants"></i>
+                                            <i class="b1-flaticon-Cycling-Trails"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Restaurants</div>
+                                        <div class="text-content capitalize-first-word">Cycling Trails</div>
+                                        <div class="amenity-description">Low-impact cardio workout</div>
                                     </div>
+                                    
                                     <div class="item wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="icon">
-                                            <i class="flaticon-Fitness-Centre"></i>
+                                            <i class="b1-flaticon-Fitness-Centre"></i>
                                         </div>
                                         <div class="text-content capitalize-first-word">Fitness Centre</div>
+                                        <div class="amenity-description">Transform your lifestyle</div>
                                     </div>
+                                
                                     <div class="item wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="icon">
-                                            <i class="flaticon-GREEN-PARKS"></i>
+                                            <i class="b1-flaticon-Gymnasium"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Green Surrounding</div>
+                                        <div class="text-content capitalize-first-word">Gymnasium</div>
+                                        <div class="amenity-description">Complete fitness solutions</div>
                                     </div>
+                                
+                                    <!-- Family & Leisure -->
                                     <div class="item wow fadeInUp">
                                         <div class="icon">
-                                            <i class="flaticon-Kids-Play-Area"></i>
+                                            <i class="b1-flaticon-Kids-Play-Area"></i>
                                         </div>
                                         <div class="text-content capitalize-first-word">Kids Play Area</div>
+                                        <div class="amenity-description">Safe outdoor recreation</div>
                                     </div>
+                                    
                                     <div class="item wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="icon">
-                                            <i class="flaticon-Sports-Facilities"></i>
+                                            <i class="b1-flaticon-Park"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Sport Facilities</div>
+                                        <div class="text-content capitalize-first-word">Parks & Leisure</div>
+                                        <div class="amenity-description">Healthy outdoor living</div>
                                     </div>
+                                
                                     <div class="item wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="icon">
-                                            <i class="flaticon-Jogging-Trails"></i>
+                                            <i class="b1-flaticon-Indoor-Games"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Jogging Trails</div>
+                                        <div class="text-content capitalize-first-word">Indoor Games</div>
+                                        <div class="amenity-description">Tabletop entertainment</div>
                                     </div>
+                                
+                                    <!-- Dining & Retail -->
                                     <div class="item wow fadeInUp">
                                         <div class="icon">
-                                            <i class="flaticon-cinema-screen"></i>
+                                            <i class="b1-flaticon-Restaurants"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Water Cinema</div>
+                                        <div class="text-content capitalize-first-word">Restaurants</div>
+                                        <div class="amenity-description">Authentic global flavors</div>
                                     </div>
+                                    
                                     <div class="item wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="icon">
-                                            <i class="flaticon-Cycling-Trails"></i>
+                                            <i class="b1-flaticon-Supermarket"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Cycling Tracks</div>
+                                        <div class="text-content capitalize-first-word">Supermarket</div>
+                                        <div class="amenity-description">Daily essentials & groceries</div>
                                     </div>
+                                
+                                    <!-- Wellness -->
                                     <div class="item wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="icon">
-                                            <i class="flaticon-GREEN-PARKS"></i>
+                                            <i class="b1-flaticon-Spa-and-Sauna"></i>
                                         </div>
-                                        <div class="text-content capitalize-first-word">Community Park</div>
+                                        <div class="text-content capitalize-first-word">Spa & Sauna</div>
+                                        <div class="amenity-description">Ultimate relaxation</div>
+                                    </div>
+                                
+                                    <!-- Additional Amenities -->
+                                    <div class="item wow fadeInUp">
+                                        <div class="icon">
+                                            <i class="b1-flaticon-Health-Care-Centre"></i>
+                                        </div>
+                                        <div class="text-content capitalize-first-word">Health Care</div>
+                                        <div class="amenity-description">World-class medical facilities</div>
+                                    </div>
+                                    
+                                    <div class="item wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="icon">
+                                            <i class="b1-flaticon-Mosque"></i>
+                                        </div>
+                                        <div class="text-content capitalize-first-word">Mosque</div>
+                                        <div class="amenity-description">Community prayer space</div>
+                                    </div>
+                                
+                                    <div class="item wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="icon">
+                                            <i class="b1-flaticon-Schools"></i>
+                                        </div>
+                                        <div class="text-content capitalize-first-word">Schools</div>
+                                        <div class="amenity-description">Quality education nearby</div>
                                     </div>
                                 </div>
                                 
@@ -599,46 +703,29 @@
                                     <div class="wrap-file-item wow fadeInUp">
                                         <div class="file-item">
                                             <div>
-                                                <div class="name">Dubai Hills Golf Club</div>
-                                                <div class="size">5 Mins</div>
-                                            </div>
-                                        </div>
-                                        <div class="file-item">
-                                            <div>
-                                                <div class="name">Dubai Hills Mall</div>
-                                                <div class="size">10 Mins</div>
-                                            </div>
-                                        </div>
-                                        <div class="file-item">
-                                            <div>
-                                                <div class="name">Dubai Hills Park</div>
-                                                <div class="size">10 Mins</div>
-                                            </div>
-                                        </div>
-                                        <div class="file-item">
-                                            <div>
-                                                <div class="name">Jumeirah Beach</div>
-                                                <div class="size">20 Mins</div>
-                                            </div>
-                                        </div>
-                                        <div class="file-item">
-                                            <div>
-                                                <div class="name">Downtown Dubai</div>
-                                                <div class="size">20 Mins</div>
-                                            </div>
-                                        </div>
-                                        <div class="file-item">
-                                            <div>
-                                                <div class="name">Dubai Marina</div>
+                                                <div class="name">Burj Khalifa</div>
                                                 <div class="size">25 Mins</div>
                                             </div>
                                         </div>
                                         <div class="file-item">
                                             <div>
-                                                <div class="name">Dubai International Airport</div>
-                                                <div class="size">35 Mins</div>
+                                                <div class="name">Dubai Mall</div>
+                                                <div class="size">24 Mins</div>
                                             </div>
                                         </div>
+                                        <div class="file-item">
+                                            <div>
+                                                <div class="name">Dubai Hills Mall</div>
+                                                <div class="size">15 Mins</div>
+                                            </div>
+                                        </div>
+                                        <div class="file-item">
+                                            <div>
+                                                <div class="name">Mohammed Bin Zayed Road</div>
+                                                <div class="size">5 Mins</div>
+                                            </div>
+                                        </div>
+                                       
                                     </div>
                                 </div>
                                 
@@ -768,102 +855,265 @@
             <div class="space-20"></div>
 
              <!-- flat-news -->
-                <section class="tf-section flat-news style-1">
-                    <div class="cl-container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="heading-section text-center">
-                                    <h2 class="wow fadeInUp capitalize-first-word">More investment oppurtunities</h2>
-                                    <div class="text wow fadeInUp"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 ">
-                                <div class="swiper-container auto-swiper slider-news slider-auto">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
-                                                <div class="image">
-                                                    <img src="../images/offplan/crestlane1/5.webp" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <div class="sub-blog">
-                                                    
-                                                    </div>
-                                                    <div class="name">
-                                                        <a href="offplan_crestlane.html">Citywalk Crestlane </a>
-                                                    </div>
-                                                    <a href="offplan_crestlane.html" class="tf-button-no-bg">
-                                                        More Detail 
-                                                        <i class="icon-arrow-right-add"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
-                                                <div class="image">
-                                                    <img src="../images/offplan/palm-jebel-ali/2.webp" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <div class="sub-blog">
-                                                    
-                                                    </div>
-                                                    <div class="name">
-                                                        <a href="palm jebel ali.html">Palm Jebel Ali</a>
-                                                    </div>
-                                                    <a href="palm jebel ali.html" class="tf-button-no-bg">
-                                                        More Detail 
-                                                        <i class="icon-arrow-right-add"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
-                                                <div class="image">
-                                                    <img src="../images/offplan/emaar the oasis/1.webp" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <div class="sub-blog">
-                                                    
-                                                    </div>
-                                                    <div class="name">
-                                                       <a href="emaar the oasis.html">Emaar the Oasis</a>
-                                                    </div>
-                                                    <a href="emaar the oasis.html" class="tf-button-no-bg">
-                                                        More Detail 
-                                                        <i class="icon-arrow-right-add"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
-                                                <div class="image">
-                                                    <img src="../images/offplan/dubai-hills/00.png" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <div class="sub-blog">
-                                                    </div>
-                                                    <div class="name">
-                                                        <a href="edenhouse-dubaihills.html">Eden house - Dubai Hills Estate</a>
-                                                    </div>
-                                                    <a href="edenhouse-dubaihills.html" class="tf-button-no-bg">
-                                                        More Detail 
-                                                        <i class="icon-arrow-right-add"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination auto-swiper-pagination discover-pagination" style="margin-top: 10px;"></div>
-                                </div>
+             <section class="tf-section flat-news style-1">
+                <div class="cl-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="heading-section text-center">
+                                <h2 class="wow fadeInUp capitalize-first-word">More investment oppurtunities</h2>
+                                <div class="text wow fadeInUp"></div>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="swiper-container auto-swiper slider-news slider-auto">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/acres/20.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="acres.html">Acres</a>
+                                                </div>
+                                                <a href="acres.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/alba/24.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="alba.html">Alba</a>
+                                                </div>
+                                                <a href="alba.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/amalfi/4.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="amalfi.html">Amalfi</a>
+                                                </div>
+                                                <a href="amalfi.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/como residence/7.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="como residence.html">Como Residence</a>
+                                                </div>
+                                                <a href="como residence.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/naya/3.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="naya.html">Naya</a>
+                                                </div>
+                                                <a href="naya.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/sanctuary/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="sanctuary.html">Sanctuary</a>
+                                                </div>
+                                                <a href="sanctuary.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/vela by ominyat/7.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="vela by ominyat.html">Vela by Ominyat</a>
+                                                </div>
+                                                <a href="vela by ominyat.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/watercrest/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="watercrest.html">Watercrest</a>
+                                                </div>
+                                                <a href="watercrest.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/vela vento/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="vela vento.html.html">Vela Vento</a>
+                                                </div>
+                                                <a href="vela vento.html.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/design quarter/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                </div>
+                                                <div class="name">
+                                                    <a href="design quarter.html">Design Quarter</a>
+                                                </div>
+                                                <a href="design quarter.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/crestlane1/5.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                
+                                                </div>
+                                                <div class="name">
+                                                    <a href="offplan_crestlane.html">Citywalk Crestlane </a>
+                                                </div>
+                                                <a href="offplan_crestlane.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/palm-jebel-ali/2.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                
+                                                </div>
+                                                <div class="name">
+                                                    <a href="palm jebel ali.html">Palm Jebel Ali</a>
+                                                </div>
+                                                <a href="palm jebel ali.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wg-blog wow fadeInUp" data-wow-delay="0.15s">
+                                            <div class="image">
+                                                <img src="../images/offplan/emaar the oasis/1.webp" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="sub-blog">
+                                                
+                                                </div>
+                                                <div class="name">
+                                                   <a href="emaar the oasis.html">Emaar the Oasis</a>
+                                                </div>
+                                                <a href="emaar the oasis.html" class="tf-button-no-bg">
+                                                    More Detail 
+                                                    <i class="icon-arrow-right-add"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="swiper-pagination auto-swiper-pagination discover-pagination" style="margin-top: 10px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- /flat-news -->
             </div>
             <section class="account-bar">
