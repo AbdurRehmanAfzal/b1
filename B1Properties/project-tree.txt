@@ -189,10 +189,10 @@
 ├── robots.txt
 ├── sitemap.xml
 ├── sold
-│   ├── sold bluewater7.html
+│   ├── sold bluewater.html
 │   ├── sold casadelsole.html
 │   ├── sold framed allure.html
-│   ├── sold g23.html
+│   ├── sold kural vista.html
 │   ├── sold jbr.html
 │   ├── sold opus.html
 │   ├── sold riva del lusso.html
