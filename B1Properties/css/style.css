@@ -6983,7 +6983,7 @@ ul.grid-tags li a:hover {
 #header_main {
   position: relative;
   z-index: 100;
-  background: linear-gradient(to right, rgba(56, 47, 47, 0.829), rgba(41, 29, 29, 0.705));
+  background: linear-gradient(to right, #181616c5, rgba(36, 34, 34, 0.726));
   padding: 1px 1px;
 
 }
