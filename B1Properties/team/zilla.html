@@ -228,7 +228,8 @@
                                     <div class="sidebar-item sidebar-contact-info-1">
                                         <div class="sidebar-title">Contact Me</div>
                                         <div class="contact-info mb-0">
-                                            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+                                            <form class="form-send-message" id="contact_us" action="../email_script/send_email.php" method="post">
+                                                <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
                                                 <input type="hidden" name="form_load_time" id="form_load_time" value="">
                                                 <fieldset class="name has-top-title">
                                                     <input type="text" placeholder="Name" class="" name="name" tabindex="2" value="" aria-required="true" required="">
@@ -263,7 +264,7 @@
                                                 </div>
                                             </form>
                                         </div>
-                                    </div>                           
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-8">
